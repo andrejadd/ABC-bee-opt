@@ -16,9 +16,9 @@ Diwold, Konrad, et al. "Performance evaluation of artificial bee colony optimiza
 The directory 'ABC' contains the Java implementation besides various other Artificial Bee Colony selection and location update schemes. 
 
 
-Additional implementation are located in the following folders. I keep them together with ABC since they served as benchmark. 
-[please ask me to remove any in case of copyright infringements]
-(FIXME: add source, did I implement these? add citations) 
+Additional implementations are located in the following folders. I keep them together with ABC since they served as benchmark. 
+[Please ask me to remove any in case of copyright infringements.]
+
 
 	   ACOcont_CPP2008 : Ant Colony Optimization (ACO) for continuous parameters, C++ implementation from 2008
 	   ACOcont_R       : ACO implementation in R
