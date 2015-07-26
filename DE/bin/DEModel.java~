@@ -1,0 +1,156 @@
+
+
+
+import testfunction.*;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class DEModel implements ModelInterface {
+    
+    static Random generator;
+    private Blackboard bb;
+    // private ArrayList<Solution> gC_solutions = new ArrayList<Solution>();;
+
+    private ArrayList<DEAgent> agents;
+    private static TestFunction fct1;
+    private int nr_agents;
+    private int dimension;
+    private double gd_crossover;
+    private double gd_scaling;
+    private int gi_type;
+    
+    /* the rate of successful solution update */
+	private double gd_updaterate;
+
+    //public DEModel (int ai_dim, int ai_agents, TestFunction aC_fct, double ad_crossover, double ad_scaling) {
+	
+	public DEModel (TestFunction aC_fct, int ai_n, int ai_type) {
+		
+		generator = new Random(System.currentTimeMillis());
+		
+		nr_agents = ai_n;
+		dimension   = aC_fct.getDimension();
+		fct1 = aC_fct;
+		gd_crossover = 0.85;
+		gd_scaling = 0.5;
+		gi_type = ai_type;
+		
+		Initiate();
+    }
+
+    public void Initiate() {
+
+    	// holds all solutions
+    	bb = new Blackboard(nr_agents, dimension, fct1);  
+	
+    	// this is the swarm
+    	agents = new ArrayList<DEAgent>();
+		
+    	// Create agents with randomly uniform distribution in domain space
+    	for (int i = 0; i < nr_agents; i++) {	    
+	    
+    		// create random position
+    		double[] x = fct1.getRandomParam();
+
+    		// add to agent list
+    		agents.add(new DEAgent(bb, fct1, x, i, gd_crossover, gd_scaling, gi_type));
+
+    		// add to blackboard
+    		bb.add(x, fct1.solve(x) );
+    	}
+     }
+
+    public void Iterate() {
+
+    	/* modifies all positions according to DE algorithm
+    	   this does not change yet the agents actual position, cause we need it
+    	*/
+    	for (int i = 0; i < nr_agents; i++) {
+    		DEAgent a = (DEAgent) agents.get(i);
+    		a.modifyposition();
+    	}
+
+    	/* actually updates the position,value inside the agent
+    	   must be called after all agents modifyposition() was called because an agents takes 3 other agents
+    	   as reference and we want the old data, can be changed of course (and is probably better)
+    	*/
+    	for (int i = 0; i < nr_agents; i++) {
+    		DEAgent a = (DEAgent) agents.get(i);
+    		a.updateposition();
+    	}
+	
+    }
+
+
+    
+    public Solution getBestSolution() {
+
+    	return (Solution) bb.getBestSolution();
+
+    }
+    
+    public String getAgentData() {
+	
+	String tmp = new String();
+	
+	java.text.NumberFormat fn = (java.text.NumberFormat) java.text.NumberFormat.getInstance();
+	fn.setMaximumFractionDigits(3);
+
+	for (int i = 0; i < agents.size(); i++) {	    
+	    
+	    // create random position
+	    DEAgent tmpagent = (DEAgent) agents.get(i);
+	    
+	    for(int j = 0; j < dimension; j++) {
+		tmp += "\tx[" + j + "]=" + fn.format(tmpagent.position[j]) + " ";
+	    }
+
+	    tmp += ", value=" + fn.format(tmpagent.value) + "\n";
+	}
+	return tmp;
+	
+	}
+    
+    public void getData(double[] ada_x, double[] ada_y) {
+ 	   
+    }
+    
+    public double getBest() {
+    	return -1.0;
+    }
+
+    public ArrayList getSolutions(int li_type) {
+		return agents;
+	}
+    
+    public int getFctCalls() {
+		return fct1.callcounter;
+	}
+    
+    public int getFctID() {
+		return fct1.getID();
+	}
+    
+    public double getUpdateRate() {
+		return gd_updaterate;
+	}
+    
+    public int getPopSize() {
+		return agents.size();
+	}
+    
+    public void resetFctCounter() {
+		fct1.resetcallcounter();
+	}
+    
+    public String getFctName() {
+		return fct1.getName();
+	}
+    
+    public boolean optimaReached(double ad_value) {
+		   return fct1.optimaReached(ad_value);
+	   }
+}
+
+

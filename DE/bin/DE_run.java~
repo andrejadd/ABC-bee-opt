@@ -1,0 +1,73 @@
+import java.util.ArrayList;
+
+import testfunction.TestF1;
+import testfunction.TestF2;
+import testfunction.TestF3;
+import testfunction.TestF4;
+import testfunction.TestF5;
+import testfunction.TestF6;
+import testfunction.TestFunction;
+
+
+public class DE_run {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		if(args.length == 0) {
+			System.out.println("specify function: sc,sm,gr,rg,rn,ac and in addition 0|1 -> exp|bin");
+			System.exit(0);
+		}
+		
+		int li_type = 0; // 0 is de/rand/1/exp, 1 is de/rand/1/bin
+		if(args.length == 2) {
+			
+			li_type = new Integer(args[1]);
+		}
+		
+		int li_n = 50;
+		int li_mcn = 10000;
+		int li_runs = 100;
+		
+		/*  init the functions */
+		ArrayList<TestFunction>fct = new ArrayList<TestFunction>();
+				
+		String lC_arg = new String(args[0]);
+		if(lC_arg.equals("sc")) { fct.add(new TestF1(2, -100, 100, 0.00001, 0, 1, "Schaffer"));  }
+		if(lC_arg.equals("sm")) { fct.add(new TestF2(30, -100, 100, 0.01, 0, 2, "Sphere"));      }
+		if(lC_arg.equals("gr")) { fct.add(new TestF3(50, -600, 600, 0.1, 0, 3, "Griewank"));     }
+		if(lC_arg.equals("rg")) { fct.add(new TestF4(30, -5.12, 5.12, 100, 0, 4, "Rastrigin"));  }
+		if(lC_arg.equals("rn")) { fct.add(new TestF5(30, -30, 30, 100, 0, 5, "Rosenbrock"));     }
+		if(lC_arg.equals("ac")) { fct.add(new TestF6(30, -32, 32, 0.1, 0, 6, "Ackley"));         }
+		
+		
+		for(int i = 0; i < fct.size(); i++) {
+			TestFunction tmpfct = fct.get(i);
+			
+			int counter = 0;
+			do {
+			
+				ModelInterface lC_de = new DEModel(tmpfct, li_n, li_type);
+				tmpfct.resetcallcounter();
+			
+				Solution lC_sol;
+			
+				for(int j = 0; j < li_mcn; j++) {			
+					lC_de.Iterate();
+			
+					lC_sol = lC_de.getBestSolution();
+				
+					if(lC_de.optimaReached(lC_sol.value)) {
+//						System.out.print(tmpfct.callcounter + "\t" + j + "\t" +  lC_sol.value + "\n");
+						System.out.print(tmpfct.callcounter + "\n");
+						break;
+					}
+				}
+			} while(counter++ < li_runs);
+		}
+	}
+
+}
