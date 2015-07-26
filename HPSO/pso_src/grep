@@ -1,0 +1,5 @@
+#Sphere dim=30
+#H-PSO, size=31, height=3, branches=5, swapDelay=1
+#w=0.729, c1=1.494, c2=1.494, vmax=0, constriction=1
+14818
+avg steps 14818

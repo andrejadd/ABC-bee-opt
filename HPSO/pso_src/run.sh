@@ -1,0 +1,1 @@
+find $LOGPATH -name batchParameter -exec nice -19 python run_pso.py {} \; ; cd ../evaluate2/; find $LOGPATH -name batchParameter -exec nice -19 python processData.py {} \; ; find $LOGPATH -name batchParameter -exec nice -19 python doGraphPlot.py {} \;

@@ -1,0 +1,213 @@
+\hypertarget{classDynamicPyramidSwarm}{
+\section{DynamicPyramidSwarm Class Reference}
+\label{classDynamicPyramidSwarm}\index{DynamicPyramidSwarm@{DynamicPyramidSwarm}}
+}
+The \hyperlink{classDynamicPyramidSwarm}{DynamicPyramidSwarm} incorporates detection and response mechanisms for dynamic environments.  
+
+
+{\tt \#include $<$swarm.h$>$}
+
+Inheritance diagram for DynamicPyramidSwarm:Collaboration diagram for DynamicPyramidSwarm:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classDynamicPyramidSwarm_53de8f13494e7080a5535a17baa2ae71}{DynamicPyramidSwarm} (\hyperlink{classPSO}{PSO} $\ast$pso\_\-p, int \hyperlink{runpso_8cpp_439227feff9d7f55384e8780cfc2eb82}{size}, int \hyperlink{runpso_8cpp_70b5e28b5bc3d1b63a7435c5fe50b837}{dim}, double \hyperlink{classSwarm_b504e23c39413573e3685a88435f5f85}{min\_\-x}, double \hyperlink{classSwarm_e5075d21be96c1cdf441bc2b612177c1}{max\_\-x}, double \hyperlink{classSwarm_160c79397ea811636e17c0e4d6297729}{min\_\-v}, double \hyperlink{classSwarm_2b0dbde2c275f991580a07a745cb5ade}{max\_\-v}, int \hyperlink{classPyramidSwarm_147496f1f506ee3f2e82cadc9c235baf}{height}, int \hyperlink{classPyramidSwarm_b60c66cd8c7437c9b9abb2016a65e824}{branches}, int \hyperlink{classPyramidSwarm_b45f85f201faea37d41695fe4d3cae04}{swapDelay}, int \hyperlink{classSwarm_6ec8b4463d83af484788490c203ae166}{nrScouts})
+\begin{CompactList}\small\item\em Constructor for H-PSO, setting up the swarm and arranging it in a pyramid shape. \item\end{CompactList}\item 
+\hyperlink{classDynamicPyramidSwarm_d8b5d895a18016eccfdac566d9281bc6}{$\sim$DynamicPyramidSwarm} ()
+\begin{CompactList}\small\item\em The allocated ressources are freed. \item\end{CompactList}\item 
+bool \hyperlink{classDynamicPyramidSwarm_65efd123a0e770211a47fd384c36af12}{isDivided} ()
+\begin{CompactList}\small\item\em Return whether the swarm is currently divided. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+int \hyperlink{classDynamicPyramidSwarm_ffcde6a425fd052c0bd5a65124a204a1}{step} (int \hyperlink{runpso_8cpp_b4ae7205573977222eadd0795db193e2}{steps}=1)
+\begin{CompactList}\small\item\em The pyramidswarm does \hyperlink{runpso_8cpp_b4ae7205573977222eadd0795db193e2}{steps} steps. \item\end{CompactList}\item 
+void \hyperlink{classDynamicPyramidSwarm_22575508717d5555be45f05efaa8ee3e}{dividedHierarchicalCompare} ()
+\begin{CompactList}\small\item\em According to the pyramid hierarchy the birds are compared and swapped within the respective sub-swarm. \item\end{CompactList}\item 
+void \hyperlink{classDynamicPyramidSwarm_64639e24390ed1c07f615c979f1595bf}{dividedUpdateVel} ()
+\begin{CompactList}\small\item\em The velocities of the birds are updated within the respective sub-swarm. \item\end{CompactList}\item 
+void \hyperlink{classDynamicPyramidSwarm_82676482de529f96eecaeaead9fc29c2}{randomizeSubSwarms} (bool reset, bool randomizeTopSwarm)
+\begin{CompactList}\small\item\em The lower sub-swarms are re-randomized. \item\end{CompactList}\item 
+bool \hyperlink{classDynamicPyramidSwarm_ae6437872484ff8baa443d3c2beee820}{detectDynamicChange} ()
+\begin{CompactList}\small\item\em Apply detection method for changed environment. \item\end{CompactList}\item 
+void \hyperlink{classDynamicPyramidSwarm_fbbb06914f9500603fee564415d976ae}{respondToChange} ()
+\begin{CompactList}\small\item\em Respond to the change in the environment. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+int \hyperlink{classDynamicPyramidSwarm_1693ca6aad7a16e24a0554c1dfa4e285}{divisionDepth}
+\begin{CompactList}\small\item\em Sub-swarms are created by introducing a dividing line. \item\end{CompactList}\item 
+bool \hyperlink{classDynamicPyramidSwarm_cddb5d45ca6e266ac8b248aee744b9d9}{dividedSwarm}
+\begin{CompactList}\small\item\em The swarm is still divided. \item\end{CompactList}\item 
+int \hyperlink{classDynamicPyramidSwarm_3d2fa3e702d824e412c07673b54a87fa}{divisionDuration}
+\begin{CompactList}\small\item\em The duration of the division, for a duration based division. \item\end{CompactList}\item 
+map$<$ int, int $>$ \hyperlink{classDynamicPyramidSwarm_6251f69cae0650411648ce8d6de1bc2d}{gbestInSubswarm}
+\begin{CompactList}\small\item\em Dictionary for counting where gbest is in the divided swarm. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classDynamicPyramidSwarm}{DynamicPyramidSwarm} incorporates detection and response mechanisms for dynamic environments. 
+
+The \hyperlink{classDynamicPyramidSwarm}{DynamicPyramidSwarm} consists of a \hyperlink{classPyramidSwarm}{PyramidSwarm} and several scouts that monitor the environment 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDynamicPyramidSwarm_53de8f13494e7080a5535a17baa2ae71}{
+\index{DynamicPyramidSwarm@{DynamicPyramidSwarm}!DynamicPyramidSwarm@{DynamicPyramidSwarm}}
+\index{DynamicPyramidSwarm@{DynamicPyramidSwarm}!DynamicPyramidSwarm@{DynamicPyramidSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}DynamicPyramidSwarm::DynamicPyramidSwarm ({\bf PSO} $\ast$ {\em pso\_\-p}, \/  int {\em size}, \/  int {\em dim}, \/  double {\em min\_\-x}, \/  double {\em max\_\-x}, \/  double {\em min\_\-v}, \/  double {\em max\_\-v}, \/  int {\em height}, \/  int {\em branches}, \/  int {\em swapDelay}, \/  int {\em nrScouts})}}
+\label{classDynamicPyramidSwarm_53de8f13494e7080a5535a17baa2ae71}
+
+
+Constructor for H-PSO, setting up the swarm and arranging it in a pyramid shape. 
+
+\begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+pso\_\-p}]The \hyperlink{classPSO}{PSO} Algorithm for the parameters used \item[{\em 
+size}]The number of birds to create the \hyperlink{classPyramidSwarm}{PyramidSwarm} \item[{\em 
+dim}]The dimension of the search space, i.e. the function to be optimized \item[{\em 
+min\_\-x}]Lower bound of x dimension, x0 chosen randomly \item[{\em 
+max\_\-x}]Upper bound of x dimension, x0 chosen randomly \item[{\em 
+min\_\-v}]Lower bound of v dimension, v0 chosen randomly \item[{\em 
+max\_\-v}]Upper bound of v dimension, v0 chosen randomly \item[{\em 
+height}]The height (levels) of the pyramid \item[{\em 
+branches}]How many successors there are on the level below \item[{\em 
+swapDelay}]A swap is only allowed every swapDelay steps \item[{\em 
+nrScouts}]The number of birds for the scouting swarm \end{description}
+\end{Desc}
+\hypertarget{classDynamicPyramidSwarm_d8b5d895a18016eccfdac566d9281bc6}{
+\index{DynamicPyramidSwarm@{DynamicPyramidSwarm}!$\sim$DynamicPyramidSwarm@{$\sim$DynamicPyramidSwarm}}
+\index{$\sim$DynamicPyramidSwarm@{$\sim$DynamicPyramidSwarm}!DynamicPyramidSwarm@{DynamicPyramidSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}DynamicPyramidSwarm::$\sim$DynamicPyramidSwarm ()}}
+\label{classDynamicPyramidSwarm_d8b5d895a18016eccfdac566d9281bc6}
+
+
+The allocated ressources are freed. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDynamicPyramidSwarm_65efd123a0e770211a47fd384c36af12}{
+\index{DynamicPyramidSwarm@{DynamicPyramidSwarm}!isDivided@{isDivided}}
+\index{isDivided@{isDivided}!DynamicPyramidSwarm@{DynamicPyramidSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool DynamicPyramidSwarm::isDivided ()\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classDynamicPyramidSwarm_65efd123a0e770211a47fd384c36af12}
+
+
+Return whether the swarm is currently divided. 
+
+
+
+Reimplemented from \hyperlink{classSwarm_75d0b85dc6fa2ec069f1580e0386faee}{Swarm}.\hypertarget{classDynamicPyramidSwarm_ffcde6a425fd052c0bd5a65124a204a1}{
+\index{DynamicPyramidSwarm@{DynamicPyramidSwarm}!step@{step}}
+\index{step@{step}!DynamicPyramidSwarm@{DynamicPyramidSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int DynamicPyramidSwarm::step (int {\em steps} = {\tt 1})\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classDynamicPyramidSwarm_ffcde6a425fd052c0bd5a65124a204a1}
+
+
+The pyramidswarm does \hyperlink{runpso_8cpp_b4ae7205573977222eadd0795db193e2}{steps} steps. 
+
+Within one iteration the following actions are done for all the birds.\par
+ The current position is evaluated, within each neighbourhood the iteration best bird is determined and compared to the bird above, the arrangment is adjusted - the best bird per neighbourhood moves up one level, the current velocity is adjusted to the global best bird and the birds are moved. 
+
+Reimplemented from \hyperlink{classPyramidSwarm_a9a21f0581b43dc3549fee12d6f2229e}{PyramidSwarm}.\hypertarget{classDynamicPyramidSwarm_22575508717d5555be45f05efaa8ee3e}{
+\index{DynamicPyramidSwarm@{DynamicPyramidSwarm}!dividedHierarchicalCompare@{dividedHierarchicalCompare}}
+\index{dividedHierarchicalCompare@{dividedHierarchicalCompare}!DynamicPyramidSwarm@{DynamicPyramidSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void DynamicPyramidSwarm::dividedHierarchicalCompare ()\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classDynamicPyramidSwarm_22575508717d5555be45f05efaa8ee3e}
+
+
+According to the pyramid hierarchy the birds are compared and swapped within the respective sub-swarm. 
+
+Each bird is compared to its direct children and is swapped with the best sibling, if this one is better than the upper level node. This is done on each side of the dividing line at \hyperlink{classDynamicPyramidSwarm_1693ca6aad7a16e24a0554c1dfa4e285}{divisionDepth}. \hypertarget{classDynamicPyramidSwarm_64639e24390ed1c07f615c979f1595bf}{
+\index{DynamicPyramidSwarm@{DynamicPyramidSwarm}!dividedUpdateVel@{dividedUpdateVel}}
+\index{dividedUpdateVel@{dividedUpdateVel}!DynamicPyramidSwarm@{DynamicPyramidSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void DynamicPyramidSwarm::dividedUpdateVel ()\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classDynamicPyramidSwarm_64639e24390ed1c07f615c979f1595bf}
+
+
+The velocities of the birds are updated within the respective sub-swarm. 
+
+The children of each node update their velocity with their parent node as global best. This is done on each side of the dividing line at \hyperlink{classDynamicPyramidSwarm_1693ca6aad7a16e24a0554c1dfa4e285}{divisionDepth}. \hypertarget{classDynamicPyramidSwarm_82676482de529f96eecaeaead9fc29c2}{
+\index{DynamicPyramidSwarm@{DynamicPyramidSwarm}!randomizeSubSwarms@{randomizeSubSwarms}}
+\index{randomizeSubSwarms@{randomizeSubSwarms}!DynamicPyramidSwarm@{DynamicPyramidSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void DynamicPyramidSwarm::randomizeSubSwarms (bool {\em reset}, \/  bool {\em randomizeTopSwarm})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classDynamicPyramidSwarm_82676482de529f96eecaeaead9fc29c2}
+
+
+The lower sub-swarms are re-randomized. 
+
+The leader of the lower sub-swarms is re-randomized (random position and random velocity \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em reset}]The rest of the lower sub-swarms is reset (forget personal best) \item[{\em randomizeTopSwarm}]For SubSwarms$\ast$MergeNoMemory \end{description}
+\end{Desc}
+\hypertarget{classDynamicPyramidSwarm_ae6437872484ff8baa443d3c2beee820}{
+\index{DynamicPyramidSwarm@{DynamicPyramidSwarm}!detectDynamicChange@{detectDynamicChange}}
+\index{detectDynamicChange@{detectDynamicChange}!DynamicPyramidSwarm@{DynamicPyramidSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool DynamicPyramidSwarm::detectDynamicChange ()\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classDynamicPyramidSwarm_ae6437872484ff8baa443d3c2beee820}
+
+
+Apply detection method for changed environment. 
+
+Depending on \hyperlink{classSwarm_fccbdf32a0ea11cb33665d64ffb15c56}{detectionMethod} it is checked for a change in the evalutation function. The \hyperlink{pso_8h_ea087f59f65df7bbf4798bccd8a02416ebd06eaa1852db2ca2e4569c0a4aa7a1}{scoutDetectChange} method can be used here. \begin{Desc}
+\item[Returns:]True if the environment changed. \end{Desc}
+
+
+Reimplemented from \hyperlink{classSwarm_2ff0a2521e41d8b26e031e5a08c583b5}{Swarm}.\hypertarget{classDynamicPyramidSwarm_fbbb06914f9500603fee564415d976ae}{
+\index{DynamicPyramidSwarm@{DynamicPyramidSwarm}!respondToChange@{respondToChange}}
+\index{respondToChange@{respondToChange}!DynamicPyramidSwarm@{DynamicPyramidSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void DynamicPyramidSwarm::respondToChange ()\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classDynamicPyramidSwarm_fbbb06914f9500603fee564415d976ae}
+
+
+Respond to the change in the environment. 
+
+If the responseMethod dividePyramid is selected, several pyramid connections are separated and no swaps are possible. Otherwise \hyperlink{classSwarm_f98488b9ca17c07c89a591040f360db6}{Swarm::respondToChange} is called 
+
+Reimplemented from \hyperlink{classSwarm_f98488b9ca17c07c89a591040f360db6}{Swarm}.
+
+\subsection{Field Documentation}
+\hypertarget{classDynamicPyramidSwarm_1693ca6aad7a16e24a0554c1dfa4e285}{
+\index{DynamicPyramidSwarm@{DynamicPyramidSwarm}!divisionDepth@{divisionDepth}}
+\index{divisionDepth@{divisionDepth}!DynamicPyramidSwarm@{DynamicPyramidSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf DynamicPyramidSwarm::divisionDepth}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classDynamicPyramidSwarm_1693ca6aad7a16e24a0554c1dfa4e285}
+
+
+Sub-swarms are created by introducing a dividing line. 
+
+Particles at divisionDepth (root is depth 0) no longer receive update from their predecessors and they cannot swap upwards. \hypertarget{classDynamicPyramidSwarm_cddb5d45ca6e266ac8b248aee744b9d9}{
+\index{DynamicPyramidSwarm@{DynamicPyramidSwarm}!dividedSwarm@{dividedSwarm}}
+\index{dividedSwarm@{dividedSwarm}!DynamicPyramidSwarm@{DynamicPyramidSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool {\bf DynamicPyramidSwarm::dividedSwarm}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classDynamicPyramidSwarm_cddb5d45ca6e266ac8b248aee744b9d9}
+
+
+The swarm is still divided. 
+
+\hypertarget{classDynamicPyramidSwarm_3d2fa3e702d824e412c07673b54a87fa}{
+\index{DynamicPyramidSwarm@{DynamicPyramidSwarm}!divisionDuration@{divisionDuration}}
+\index{divisionDuration@{divisionDuration}!DynamicPyramidSwarm@{DynamicPyramidSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf DynamicPyramidSwarm::divisionDuration}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classDynamicPyramidSwarm_3d2fa3e702d824e412c07673b54a87fa}
+
+
+The duration of the division, for a duration based division. 
+
+\hypertarget{classDynamicPyramidSwarm_6251f69cae0650411648ce8d6de1bc2d}{
+\index{DynamicPyramidSwarm@{DynamicPyramidSwarm}!gbestInSubswarm@{gbestInSubswarm}}
+\index{gbestInSubswarm@{gbestInSubswarm}!DynamicPyramidSwarm@{DynamicPyramidSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}map$<$int, int$>$ {\bf DynamicPyramidSwarm::gbestInSubswarm}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classDynamicPyramidSwarm_6251f69cae0650411648ce8d6de1bc2d}
+
+
+Dictionary for counting where gbest is in the divided swarm. 
+
+If the swarm is divided, the count is increased for the subswarm that gbest belonged to 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+/home/andrej/workspace/hpso/pso\_\-src/\hyperlink{swarm_8h}{swarm.h}\item 
+/home/andrej/workspace/hpso/pso\_\-src/\hyperlink{swarm_8cpp}{swarm.cpp}\end{CompactItemize}

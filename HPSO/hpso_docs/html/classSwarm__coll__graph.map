@@ -1,0 +1,5 @@
+<area shape="rect" href="$classBird.html" title="The individual bird." alt="" coords="117,286,160,310">
+<area shape="rect" href="$classPSO.html" title="The Particle Swarm Optimization algorithm." alt="" coords="220,190,268,214">
+<area shape="rect" href="$classPsoStatistics.html" title="All of the data for evaluation is collected here." alt="" coords="252,94,351,118">
+<area shape="rect" href="$classFunction.html" title="The optimized function." alt="" coords="375,94,447,118">
+<area shape="rect" href="$classSequenceGenerator.html" title="Generate a reproducable sequence." alt="" coords="343,6,479,30">

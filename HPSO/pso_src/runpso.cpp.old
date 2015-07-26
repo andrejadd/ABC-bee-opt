@@ -1,0 +1,302 @@
+#include "pso.h"
+#include <getopt.h>
+#include <fstream>
+#include <sstream>
+#include <unistd.h>
+
+#define SETTINGS 1
+
+int intparam[SETTINGS][3] = {
+	//steps, localSearch_freq, swarm_type
+	{1000,0,2},
+/*	{5000,10,0},
+	{9000,100,0},
+	{10000,0,3},
+	{5000,10,3},
+	{9000,100,3}*/
+};
+
+//GLOBAL PARAMETERS
+int runs=1;
+int steps=1000;
+
+int dim = 30;
+int size = 31;
+int height = 3;
+int branches = 5; // nsize
+int swapDelay = 1;
+double w = 0.729;
+double wmin = 0.729;
+double c1 = 1.494;
+double c2 = c1;
+double vmaxRatio = 0.0;
+double constriction = 1.0;
+int outsteps = 0;
+
+
+//dynamic parameter
+int moveFrequency = 1;
+double moveDistance = 1.024;
+optimumMoveStyle_type optimumMoveStyle = linearOptMove; //exponentialLinearOptMove;
+updateStyle_type updateStyle = updatePeriodic;
+detectionMethod_type detectionMethod = hierarchyChangeDetect; //noDetect;// upToDate; //gbestDetectChange;
+responseMethod_type responseMethod = noResponse; //randomize16reset;
+
+//noisy parameter
+noiseStyle_type noiseStyle = noNoise; //noisyPosition;
+double noiseSigma = 0.1;
+
+int nrNoisySwapChecks = 1;
+reuseOldValue_type noisyReuseOldValue = reuseLastBestValue;
+bool noisyRefineBestValue = true;
+bool noisyFirstComparePbestValues = false;
+int hierachyChangeDetectThreshold =5;
+
+
+/*AA specifies the type of PSO swarm here */
+swarm_type swarm = pyramidSwarm;
+
+/*AA specifies the test function here */
+function_type function = sphere;
+
+localsearchMode_type localsearch = nolocalsearch;
+double localsearchParameter = 0.01;
+double sidestepMagnitude = 10;
+
+
+ofstream sidestepStat_out;
+char* sidestepStatFile = NULL;
+double* avgSidestepStats;
+
+
+int readOptions(int argc, char** argv) {
+	
+		int c;
+	
+	   static struct option long_options[] =
+	     {
+		   /* These options set a flag. */
+		   //{"verbose", no_argument,       &verbose_flag, 1},
+		   /* These options don't set a flag.
+		  We distinguish them by their indices. */
+		   {"sidestep",     no_argument,       0, 's'},
+		   {"dim",  required_argument, 0, 'd'},
+		   {"pso",  required_argument, 0, 'p'},
+		   {"height",  required_argument, 0, 'h'},
+		   {"branches",  required_argument, 0, 'b'},
+		   {"outsteps",  required_argument, 0, 'o'},
+		   {"sidestepMag",  required_argument, 0, 'M'},
+		   {"sidestepInit",  required_argument, 0, 'I'},
+		   {"sidestepFile",  required_argument, 0, 'S'},
+		   {"seed",  required_argument, 0, 'r'},
+		   {"dynStyle",  required_argument, 0, 'D'},
+		   {"moveFreq",  required_argument, 0, 'F'},
+		   {"moveDist",  required_argument, 0, 'W'},
+		   {"moveStyle",  required_argument, 0, 'Y'},
+		   {"detect",  required_argument, 0, 'C'},
+		   {"response",  required_argument, 0, 'R'},
+		   {"noiseStyle",  required_argument, 0, 'N'},
+		   {"noiseSigma",  required_argument, 0, 'O'},
+		   {"noiseHThresh",  required_argument, 0, 'T'},
+		   {0, 0, 0, 0}
+	 };
+
+	/* getopt_long stores the option index here. */
+	int option_index = 0;
+	
+    while ((c = getopt_long(argc, argv, "M:I:S:n:r:h:b:d:p:f:so:D:F:W:Y:C:R:N:O:T:", long_options, &option_index)) != -1)
+         switch (c)
+           {
+           	case 'd':
+           	dim = atoi(optarg);
+           	break;
+           	//case 'v':
+           	//sscanf(optarg, "%lf,%lf", &maxVel[0], &maxVel[1]);
+           	//break;
+           case 'o':
+        	 outsteps = atoi(optarg);
+        	 break;
+           case 'n':
+        	 size = atoi(optarg);
+        	 break;
+           case 'h':
+        	 height = atoi(optarg);
+        	 break;
+           case 'b':
+        	 branches = atoi(optarg);
+        	 break;
+           case 'D':
+        	 updateStyle = (updateStyle_type) atoi(optarg);
+        	 break;
+	       case 'F':
+        	 moveFrequency = atoi(optarg);
+        	 break;
+           case 'W':
+        	 moveDistance = atof(optarg);
+        	 break;
+           case 'Y':
+        	 optimumMoveStyle = (optimumMoveStyle_type) atoi(optarg);
+        	 break;
+           case 'C':
+        	 detectionMethod = (detectionMethod_type) atoi(optarg);
+        	 break;
+           case 'R':
+        	 responseMethod = (responseMethod_type) atoi(optarg);
+        	 break;
+           case 'N':
+        	 noiseStyle = (noiseStyle_type) atoi(optarg);
+        	 break;
+           case 'O':
+        	 noiseSigma = atof(optarg);
+        	 break;
+           case 'T':
+        	 hierachyChangeDetectThreshold = atof(optarg);
+        	 break;
+           case 'M':
+        	 sidestepMagnitude = atof(optarg);
+        	 break;
+           case 'I':
+        	 localsearchParameter = atof(optarg);
+        	 break;
+           case 'S':
+             sidestepStatFile = optarg;
+             sidestepStat_out.open(sidestepStatFile, ios::out);
+             break;        	 
+           case 'f':
+        	 function = (function_type) atoi(optarg);
+        	 break;
+           case 'p':
+        	 swarm = (swarm_type) atoi(optarg);
+        	 break;
+           case 'r':
+        	 fixSeed(atoll(optarg));
+        	 break;
+           case 's':
+        	 localsearch = sidestep;
+        	 break;
+           case '?':
+             if (isprint (optopt))
+               fprintf (stderr, "Unknown option `-%c'.\n", optopt);
+             else
+               fprintf (stderr,
+                        "Unknown option character `\\x%x'.\n",
+                        optopt);
+             return 1;
+           default:
+             abort ();
+           }
+  	
+	
+	
+	if (optind + 2 != argc) {
+		cerr << "usage: runpso runs steps" << endl;
+		exit(-1);
+	}
+	
+	
+	runs = atoi(argv[optind]);
+	steps = atoi(argv[optind+1]);
+	if (outsteps == 0)
+		outsteps = steps;
+	
+}
+
+void readFile(char* paramfile) {
+	string line;
+	ostringstream param;
+	ifstream myfile (paramfile);
+	if (myfile.is_open()) {
+		while (! myfile.eof() ) {
+			getline (myfile,line);
+			if ((line.substr(0,1) != "#") && (!line.empty())) {
+				param << line << " ";
+			}
+		}
+		myfile.close();
+		cout << param.str() << endl;
+	}
+	
+	else cout << "Unable to open file"; 
+	
+}
+
+int main(int argc, char** argvw) {
+	TRACE_IN("main");
+	cout.precision(10);
+	
+	
+	if (argc == 2)
+		readFile(argv[1]);
+	else
+		readOptions(argc, argv);
+
+	if (sidestepStatFile != NULL) {
+		avgSidestepStats = new double[dim];
+		for (int d=0; d<dim; d++)
+			avgSidestepStats[d] = 0.0;
+	}
+	
+
+	for (int set=0; set<SETTINGS; set++) {
+		
+		for (int run=0; run<runs; run++) {
+		  cout << "#" << "Setting " << set << ", Run" << run << endl;
+		  PSO* p = new PSO(w, wmin, c1, c2, vmaxRatio, constriction, size, dim, height, branches, swapDelay, function, noiseStyle, noiseSigma, swarm);
+
+		  p->setLocalsearchParameters(localsearch, localsearchParameter, sidestepMagnitude);
+		  p->setDynamicParameters(moveFrequency, moveDistance, optimumMoveStyle, updateStyle, detectionMethod, responseMethod);
+		  
+		  p->setNoiseParameters(nrNoisySwapChecks, noisyReuseOldValue, noisyRefineBestValue, noisyFirstComparePbestValues, hierachyChangeDetectThreshold);
+		  
+		  if (run==0) {
+			cout << p->printParameter("#");
+			cout << "#step | best " << endl;
+			
+			if (sidestepStatFile != NULL) 
+				sidestepStat_out << "#step | avg number sidesteps/dim | for each dim ..." << endl;
+		  }
+
+		  for (int i=0; i<steps/outsteps; i++) {
+			
+		    p->step(outsteps);
+			
+			//cout << i << " " << p->stat->getNrEvaluations(i) << " "<< p->stat->getGlobalBest(i) <<  endl;
+			cout << (i+1)*outsteps << " " << p->stat->getGlobalBest((i+1)*outsteps-1) <<  endl;
+			for (int d=0; d<dim; d++)
+				cout << p->getGlobalBestPos(d) << " ";
+			cout << endl;
+//			cout << p->getBestValue(0) << endl;
+			
+		  
+		  if (sidestepStatFile != NULL) {
+			double* sidestepStats = p->getSidestepStats();
+			double tmpAvg = 0.0;
+			for (int d=0; d<dim; d++)
+				tmpAvg += sidestepStats[d];
+			sidestepStat_out << (i+1)*outsteps << " " << tmpAvg/dim ;
+			for (int d=0; d<dim; d++)
+				sidestepStat_out << " " << sidestepStats[d];
+			sidestepStat_out << endl;
+				
+		  }
+		  
+		  }
+			delete p;
+			cout << "---" << endl;
+			if (sidestepStatFile != NULL)
+				sidestepStat_out << "---" << endl;
+				
+			//ensure different random seeds
+			sleep(1);				
+		}
+
+		if (sidestepStatFile != NULL) {
+			sidestepStat_out.close();
+		}
+		//ensure different random seeds
+
+		
+	}
+ 	TRACE_OUT("main",0);
+  return 0;
+}

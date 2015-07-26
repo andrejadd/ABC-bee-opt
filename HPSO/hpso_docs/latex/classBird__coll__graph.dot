@@ -1,0 +1,20 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  Node1 [label="Bird",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="mySwarm"];
+  Node2 [label="Swarm",height=0.2,width=0.4,color="black",URL="$classSwarm.html",tooltip="The Swarm class containing and controlling the individual birds."];
+  Node1 -> Node2 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="globalBestScout\nscouts\nglobalBestBird"];
+  Node3 -> Node2 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="pso"];
+  Node3 [label="PSO",height=0.2,width=0.4,color="black",URL="$classPSO.html",tooltip="The Particle Swarm Optimization algorithm."];
+  Node4 -> Node3 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="stat"];
+  Node4 [label="PsoStatistics",height=0.2,width=0.4,color="black",URL="$classPsoStatistics.html",tooltip="All of the data for evaluation is collected here."];
+  Node2 -> Node3 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="swarm"];
+  Node5 -> Node3 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="optFunction"];
+  Node5 [label="Function",height=0.2,width=0.4,color="black",URL="$classFunction.html",tooltip="The optimized function."];
+  Node6 -> Node5 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="moveSequence"];
+  Node6 [label="SequenceGenerator",height=0.2,width=0.4,color="black",URL="$classSequenceGenerator.html",tooltip="Generate a reproducable sequence."];
+  Node3 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="psoAlgo"];
+}

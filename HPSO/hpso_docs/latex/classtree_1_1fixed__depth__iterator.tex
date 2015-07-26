@@ -1,0 +1,175 @@
+\hypertarget{classtree_1_1fixed__depth__iterator}{
+\section{tree$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator Class Reference}
+\label{classtree_1_1fixed__depth__iterator}\index{tree::fixed\_\-depth\_\-iterator@{tree::fixed\_\-depth\_\-iterator}}
+}
+{\tt \#include $<$tree.hh$>$}
+
+Inheritance diagram for tree$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator:Collaboration diagram for tree$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classtree_1_1fixed__depth__iterator_10f1d20ec2b62e4370a560ebcd84ad54}{fixed\_\-depth\_\-iterator} ()
+\item 
+\hyperlink{classtree_1_1fixed__depth__iterator_a9c0c41473a4d70efa17d7906829823c}{fixed\_\-depth\_\-iterator} (\hyperlink{classtree__node__}{tree\_\-node} $\ast$)
+\item 
+\hyperlink{classtree_1_1fixed__depth__iterator_64403be9e04a8e4929531b8e227b5d94}{fixed\_\-depth\_\-iterator} (const \hyperlink{classtree_1_1iterator__base}{iterator\_\-base} \&)
+\item 
+\hyperlink{classtree_1_1fixed__depth__iterator_949317e3e8a986e72e0a8dbb79a00b03}{fixed\_\-depth\_\-iterator} (const \hyperlink{classtree_1_1sibling__iterator}{sibling\_\-iterator} \&)
+\item 
+\hyperlink{classtree_1_1fixed__depth__iterator_4416f43946317c249652270fec7c84a6}{fixed\_\-depth\_\-iterator} (const \hyperlink{classtree_1_1fixed__depth__iterator}{fixed\_\-depth\_\-iterator} \&)
+\item 
+bool \hyperlink{classtree_1_1fixed__depth__iterator_cb39be8cb92b1acd5aca197ad6df179b}{operator==} (const \hyperlink{classtree_1_1fixed__depth__iterator}{fixed\_\-depth\_\-iterator} \&) const 
+\item 
+bool \hyperlink{classtree_1_1fixed__depth__iterator_978b6d94930a7a6e4f3464fa24e502b8}{operator!=} (const \hyperlink{classtree_1_1fixed__depth__iterator}{fixed\_\-depth\_\-iterator} \&) const 
+\item 
+\hyperlink{classtree_1_1fixed__depth__iterator}{fixed\_\-depth\_\-iterator} \& \hyperlink{classtree_1_1fixed__depth__iterator_71bcee62caa033974d5c0d94ab0dc0c6}{operator++} ()
+\item 
+\hyperlink{classtree_1_1fixed__depth__iterator}{fixed\_\-depth\_\-iterator} \& \hyperlink{classtree_1_1fixed__depth__iterator_39a2c5b5048ec0dfff33fbb55bd7767e}{operator--} ()
+\item 
+\hyperlink{classtree_1_1fixed__depth__iterator}{fixed\_\-depth\_\-iterator} \hyperlink{classtree_1_1fixed__depth__iterator_f1a1bf2404498a385611f938c2d6a750}{operator++} (int)
+\item 
+\hyperlink{classtree_1_1fixed__depth__iterator}{fixed\_\-depth\_\-iterator} \hyperlink{classtree_1_1fixed__depth__iterator_b404acdf3639ea5e5ce2ae65b77b94c7}{operator--} (int)
+\item 
+\hyperlink{classtree_1_1fixed__depth__iterator}{fixed\_\-depth\_\-iterator} \& \hyperlink{classtree_1_1fixed__depth__iterator_6909c400794c6feb49d75b99dbf6aa00}{operator+=} (unsigned int)
+\item 
+\hyperlink{classtree_1_1fixed__depth__iterator}{fixed\_\-depth\_\-iterator} \& \hyperlink{classtree_1_1fixed__depth__iterator_e8ccf119ae29e96044d9a4eeca2a539d}{operator-=} (unsigned int)
+\end{CompactItemize}
+\subsection*{Data Fields}
+\begin{CompactItemize}
+\item 
+\hyperlink{classtree__node__}{tree\_\-node} $\ast$ \hyperlink{classtree_1_1fixed__depth__iterator_5f6c92f12c4281e94e950ccd70833985}{first\_\-parent\_\-}
+\end{CompactItemize}
+\subsection*{Private Member Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{classtree_1_1fixed__depth__iterator_d4a7326054e3770ab7b2e98d70cbc31e}{set\_\-first\_\-parent\_\-} ()
+\item 
+void \hyperlink{classtree_1_1fixed__depth__iterator_aa76856fbd25e52e8e0104ba744b0246}{find\_\-leftmost\_\-parent\_\-} ()
+\end{CompactItemize}
+\subsubsection*{template$<$class T, class tree\_\-node\_\-allocator = std::allocator$<$tree\_\-node\_\-$<$T$>$ $>$$>$ class tree$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classtree_1_1fixed__depth__iterator_10f1d20ec2b62e4370a560ebcd84ad54}{
+\index{tree::fixed\_\-depth\_\-iterator@{tree::fixed\_\-depth\_\-iterator}!fixed\_\-depth\_\-iterator@{fixed\_\-depth\_\-iterator}}
+\index{fixed\_\-depth\_\-iterator@{fixed\_\-depth\_\-iterator}!tree::fixed_depth_iterator@{tree::fixed\_\-depth\_\-iterator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class tree\_\-node\_\-allocator$>$ {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator::fixed\_\-depth\_\-iterator ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classtree_1_1fixed__depth__iterator_10f1d20ec2b62e4370a560ebcd84ad54}
+
+
+\hypertarget{classtree_1_1fixed__depth__iterator_a9c0c41473a4d70efa17d7906829823c}{
+\index{tree::fixed\_\-depth\_\-iterator@{tree::fixed\_\-depth\_\-iterator}!fixed\_\-depth\_\-iterator@{fixed\_\-depth\_\-iterator}}
+\index{fixed\_\-depth\_\-iterator@{fixed\_\-depth\_\-iterator}!tree::fixed_depth_iterator@{tree::fixed\_\-depth\_\-iterator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class tree\_\-node\_\-allocator$>$ {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator::fixed\_\-depth\_\-iterator ({\bf tree\_\-node} $\ast$ {\em tn})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classtree_1_1fixed__depth__iterator_a9c0c41473a4d70efa17d7906829823c}
+
+
+\hypertarget{classtree_1_1fixed__depth__iterator_64403be9e04a8e4929531b8e227b5d94}{
+\index{tree::fixed\_\-depth\_\-iterator@{tree::fixed\_\-depth\_\-iterator}!fixed\_\-depth\_\-iterator@{fixed\_\-depth\_\-iterator}}
+\index{fixed\_\-depth\_\-iterator@{fixed\_\-depth\_\-iterator}!tree::fixed_depth_iterator@{tree::fixed\_\-depth\_\-iterator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class tree\_\-node\_\-allocator$>$ {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator::fixed\_\-depth\_\-iterator (const {\bf iterator\_\-base} \& {\em other})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classtree_1_1fixed__depth__iterator_64403be9e04a8e4929531b8e227b5d94}
+
+
+\hypertarget{classtree_1_1fixed__depth__iterator_949317e3e8a986e72e0a8dbb79a00b03}{
+\index{tree::fixed\_\-depth\_\-iterator@{tree::fixed\_\-depth\_\-iterator}!fixed\_\-depth\_\-iterator@{fixed\_\-depth\_\-iterator}}
+\index{fixed\_\-depth\_\-iterator@{fixed\_\-depth\_\-iterator}!tree::fixed_depth_iterator@{tree::fixed\_\-depth\_\-iterator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class tree\_\-node\_\-allocator$>$ {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator::fixed\_\-depth\_\-iterator (const {\bf sibling\_\-iterator} \& {\em other})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classtree_1_1fixed__depth__iterator_949317e3e8a986e72e0a8dbb79a00b03}
+
+
+\hypertarget{classtree_1_1fixed__depth__iterator_4416f43946317c249652270fec7c84a6}{
+\index{tree::fixed\_\-depth\_\-iterator@{tree::fixed\_\-depth\_\-iterator}!fixed\_\-depth\_\-iterator@{fixed\_\-depth\_\-iterator}}
+\index{fixed\_\-depth\_\-iterator@{fixed\_\-depth\_\-iterator}!tree::fixed_depth_iterator@{tree::fixed\_\-depth\_\-iterator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class tree\_\-node\_\-allocator$>$ {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator::fixed\_\-depth\_\-iterator (const {\bf fixed\_\-depth\_\-iterator} \& {\em other})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classtree_1_1fixed__depth__iterator_4416f43946317c249652270fec7c84a6}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classtree_1_1fixed__depth__iterator_cb39be8cb92b1acd5aca197ad6df179b}{
+\index{tree::fixed\_\-depth\_\-iterator@{tree::fixed\_\-depth\_\-iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!tree::fixed_depth_iterator@{tree::fixed\_\-depth\_\-iterator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class tree\_\-node\_\-allocator = std::allocator$<$tree\_\-node\_\-$<$T$>$ $>$$>$ bool {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator::operator== (const {\bf fixed\_\-depth\_\-iterator} \&) const}}
+\label{classtree_1_1fixed__depth__iterator_cb39be8cb92b1acd5aca197ad6df179b}
+
+
+\hypertarget{classtree_1_1fixed__depth__iterator_978b6d94930a7a6e4f3464fa24e502b8}{
+\index{tree::fixed\_\-depth\_\-iterator@{tree::fixed\_\-depth\_\-iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!tree::fixed_depth_iterator@{tree::fixed\_\-depth\_\-iterator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class tree\_\-node\_\-allocator = std::allocator$<$tree\_\-node\_\-$<$T$>$ $>$$>$ bool {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator::operator!= (const {\bf fixed\_\-depth\_\-iterator} \&) const}}
+\label{classtree_1_1fixed__depth__iterator_978b6d94930a7a6e4f3464fa24e502b8}
+
+
+\hypertarget{classtree_1_1fixed__depth__iterator_71bcee62caa033974d5c0d94ab0dc0c6}{
+\index{tree::fixed\_\-depth\_\-iterator@{tree::fixed\_\-depth\_\-iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!tree::fixed_depth_iterator@{tree::fixed\_\-depth\_\-iterator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class tree\_\-node\_\-allocator$>$ {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::{\bf fixed\_\-depth\_\-iterator} \& {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator::operator++ ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classtree_1_1fixed__depth__iterator_71bcee62caa033974d5c0d94ab0dc0c6}
+
+
+\hypertarget{classtree_1_1fixed__depth__iterator_39a2c5b5048ec0dfff33fbb55bd7767e}{
+\index{tree::fixed\_\-depth\_\-iterator@{tree::fixed\_\-depth\_\-iterator}!operator--@{operator--}}
+\index{operator--@{operator--}!tree::fixed_depth_iterator@{tree::fixed\_\-depth\_\-iterator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class tree\_\-node\_\-allocator$>$ {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::{\bf fixed\_\-depth\_\-iterator} \& {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator::operator-- ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classtree_1_1fixed__depth__iterator_39a2c5b5048ec0dfff33fbb55bd7767e}
+
+
+\hypertarget{classtree_1_1fixed__depth__iterator_f1a1bf2404498a385611f938c2d6a750}{
+\index{tree::fixed\_\-depth\_\-iterator@{tree::fixed\_\-depth\_\-iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!tree::fixed_depth_iterator@{tree::fixed\_\-depth\_\-iterator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class tree\_\-node\_\-allocator$>$ {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::{\bf fixed\_\-depth\_\-iterator} {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator::operator++ (int)\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classtree_1_1fixed__depth__iterator_f1a1bf2404498a385611f938c2d6a750}
+
+
+\hypertarget{classtree_1_1fixed__depth__iterator_b404acdf3639ea5e5ce2ae65b77b94c7}{
+\index{tree::fixed\_\-depth\_\-iterator@{tree::fixed\_\-depth\_\-iterator}!operator--@{operator--}}
+\index{operator--@{operator--}!tree::fixed_depth_iterator@{tree::fixed\_\-depth\_\-iterator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class tree\_\-node\_\-allocator$>$ {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::{\bf fixed\_\-depth\_\-iterator} {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator::operator-- (int)\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classtree_1_1fixed__depth__iterator_b404acdf3639ea5e5ce2ae65b77b94c7}
+
+
+\hypertarget{classtree_1_1fixed__depth__iterator_6909c400794c6feb49d75b99dbf6aa00}{
+\index{tree::fixed\_\-depth\_\-iterator@{tree::fixed\_\-depth\_\-iterator}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!tree::fixed_depth_iterator@{tree::fixed\_\-depth\_\-iterator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class tree\_\-node\_\-allocator$>$ {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::{\bf fixed\_\-depth\_\-iterator} \& {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator::operator+= (unsigned int {\em num})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classtree_1_1fixed__depth__iterator_6909c400794c6feb49d75b99dbf6aa00}
+
+
+\hypertarget{classtree_1_1fixed__depth__iterator_e8ccf119ae29e96044d9a4eeca2a539d}{
+\index{tree::fixed\_\-depth\_\-iterator@{tree::fixed\_\-depth\_\-iterator}!operator-=@{operator-=}}
+\index{operator-=@{operator-=}!tree::fixed_depth_iterator@{tree::fixed\_\-depth\_\-iterator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class tree\_\-node\_\-allocator$>$ {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::{\bf fixed\_\-depth\_\-iterator} \& {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator::operator-= (unsigned int {\em num})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classtree_1_1fixed__depth__iterator_e8ccf119ae29e96044d9a4eeca2a539d}
+
+
+\hypertarget{classtree_1_1fixed__depth__iterator_d4a7326054e3770ab7b2e98d70cbc31e}{
+\index{tree::fixed\_\-depth\_\-iterator@{tree::fixed\_\-depth\_\-iterator}!set\_\-first\_\-parent\_\-@{set\_\-first\_\-parent\_\-}}
+\index{set\_\-first\_\-parent\_\-@{set\_\-first\_\-parent\_\-}!tree::fixed_depth_iterator@{tree::fixed\_\-depth\_\-iterator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class tree\_\-node\_\-allocator$>$ void {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator::set\_\-first\_\-parent\_\- ()\hspace{0.3cm}{\tt  \mbox{[}inline, private\mbox{]}}}}
+\label{classtree_1_1fixed__depth__iterator_d4a7326054e3770ab7b2e98d70cbc31e}
+
+
+\hypertarget{classtree_1_1fixed__depth__iterator_aa76856fbd25e52e8e0104ba744b0246}{
+\index{tree::fixed\_\-depth\_\-iterator@{tree::fixed\_\-depth\_\-iterator}!find\_\-leftmost\_\-parent\_\-@{find\_\-leftmost\_\-parent\_\-}}
+\index{find\_\-leftmost\_\-parent\_\-@{find\_\-leftmost\_\-parent\_\-}!tree::fixed_depth_iterator@{tree::fixed\_\-depth\_\-iterator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class tree\_\-node\_\-allocator$>$ void {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::fixed\_\-depth\_\-iterator::find\_\-leftmost\_\-parent\_\- ()\hspace{0.3cm}{\tt  \mbox{[}inline, private\mbox{]}}}}
+\label{classtree_1_1fixed__depth__iterator_aa76856fbd25e52e8e0104ba744b0246}
+
+
+
+
+\subsection{Field Documentation}
+\hypertarget{classtree_1_1fixed__depth__iterator_5f6c92f12c4281e94e950ccd70833985}{
+\index{tree::fixed\_\-depth\_\-iterator@{tree::fixed\_\-depth\_\-iterator}!first\_\-parent\_\-@{first\_\-parent\_\-}}
+\index{first\_\-parent\_\-@{first\_\-parent\_\-}!tree::fixed_depth_iterator@{tree::fixed\_\-depth\_\-iterator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class tree\_\-node\_\-allocator = std::allocator$<$tree\_\-node\_\-$<$T$>$ $>$$>$ {\bf tree\_\-node}$\ast$ {\bf tree}$<$ T, tree\_\-node\_\-allocator $>$::{\bf fixed\_\-depth\_\-iterator::first\_\-parent\_\-}}}
+\label{classtree_1_1fixed__depth__iterator_5f6c92f12c4281e94e950ccd70833985}
+
+
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/home/andrej/workspace/hpso/pso\_\-src/\hyperlink{tree_8hh}{tree.hh}\end{CompactItemize}

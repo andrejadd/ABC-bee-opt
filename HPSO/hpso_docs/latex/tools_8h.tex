@@ -1,0 +1,342 @@
+\hypertarget{tools_8h}{
+\section{/home/andrej/workspace/hpso/pso\_\-src/tools.h File Reference}
+\label{tools_8h}\index{/home/andrej/workspace/hpso/pso\_\-src/tools.h@{/home/andrej/workspace/hpso/pso\_\-src/tools.h}}
+}
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include $<$string$>$}\par
+{\tt \#include $<$vector$>$}\par
+{\tt \#include $<$gsl/gsl\_\-rng.h$>$}\par
+{\tt \#include $<$gsl/gsl\_\-randist.h$>$}\par
+{\tt \#include $<$math.h$>$}\par
+
+
+Include dependency graph for tools.h:
+
+This graph shows which files directly or indirectly include this file:\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+class \hyperlink{classSequenceGenerator}{SequenceGenerator}
+\begin{CompactList}\small\item\em Generate a reproducable sequence. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{tools_8h_c18de1c03bed2f39bb7f60436fe64403}{INDENTATION}~2
+\item 
+\#define \hyperlink{tools_8h_502b06aa5ad25116c775d201326bad52}{INDENT}~BLANKLINE.substr(0,(\hyperlink{tools_8h_5064504bf5b7c9547bec5a73db938948}{indentLevel})$\ast$INDENTATION)
+\item 
+\#define \hyperlink{tools_8h_ebe6e9948961ddab0d54c66229cb6d24}{INDENT\_\-INC}~BLANKLINE.substr(0,(\hyperlink{tools_8h_5064504bf5b7c9547bec5a73db938948}{indentLevel}++)$\ast$INDENTATION)
+\item 
+\#define \hyperlink{tools_8h_1627cb4067f62884ebe4c2b38985106d}{INDENT\_\-DEC}~BLANKLINE.substr(0,(--\hyperlink{tools_8h_5064504bf5b7c9547bec5a73db938948}{indentLevel})$\ast$INDENTATION)
+\item 
+\#define \hyperlink{tools_8h_acc3ee1a7f283f8ef65cea31f4436a95}{MAX}(x, y)~((x) $>$ (y) ? (x) : (y))
+\item 
+\#define \hyperlink{tools_8h_996f7be338ccb40d1a2a5abc1ad61759}{ABS}(x)~((x)$>$0 ? (x) : -(x))
+\item 
+\#define \hyperlink{tools_8h_fce5864678f6abfb944a7930e0fafe50}{OUTPUT}(x)~\char`\"{}\char`\"{}
+\item 
+\#define \hyperlink{tools_8h_ff734568e358208768b7eef2fe2b12d1}{OUTPUT1}(x, arg1)~\char`\"{}\char`\"{}
+\item 
+\#define \hyperlink{tools_8h_ef8562a0042015c268ba6fa791a02033}{OUTPUT2}(x, arg1, arg2)~\char`\"{}\char`\"{}
+\item 
+\#define \hyperlink{tools_8h_f461b98bae6c47eda3b76459962a73b6}{TRACE\_\-IN}(x)~\char`\"{}\char`\"{}
+\item 
+\#define \hyperlink{tools_8h_2592708319f4d50d9a510c623130c0eb}{TRACE\_\-IN1}(x, arg1)~\char`\"{}\char`\"{}
+\item 
+\#define \hyperlink{tools_8h_a338b62a5aea8f24f851500e45ab2a42}{TRACE\_\-OUT}(x, ok)~\char`\"{}\char`\"{}
+\item 
+\#define \hyperlink{tools_8h_f7c95fb2cfd927f7e516e8b79fe99db4}{TRACEV\_\-IN}(x)~\char`\"{}\char`\"{}
+\item 
+\#define \hyperlink{tools_8h_b7c9cb976ddbc5e5f8a8e59a002e2e84}{TRACEV\_\-IN1}(x, arg1)~\char`\"{}\char`\"{}
+\item 
+\#define \hyperlink{tools_8h_1eecf6579bf3d252e8d4c0874a1e0d38}{TRACEV\_\-OUT}(x, ok)~\char`\"{}\char`\"{}
+\item 
+\#define \hyperlink{tools_8h_3dfa58b1c5c2943dd49d8aa1981d377d}{DEBUG}(x)~\char`\"{}\char`\"{}
+\item 
+\#define \hyperlink{tools_8h_89b63c19bbe1875b550393f9dcd35743}{DEBUG1}(x, arg1)~\char`\"{}\char`\"{}
+\item 
+\#define \hyperlink{tools_8h_e4bebc874cce37c896ed73eff78ae496}{DEBUG2}(x, arg1, arg2)~\char`\"{}\char`\"{}
+\item 
+\#define \hyperlink{tools_8h_9e5589c3d93cc75263821a80449de461}{DEBUGV}(x)~\char`\"{}\char`\"{}
+\item 
+\#define \hyperlink{tools_8h_fd1b588d3c19183cf25978577a518a5b}{DEBUGV1}(x, arg1)~\char`\"{}\char`\"{}
+\item 
+\#define \hyperlink{tools_8h_4b2c58ff4c5b9cb51f898ad000f94de6}{DEBUGV2}(x, arg1, arg2)~\char`\"{}\char`\"{}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int \hyperlink{tools_8h_408603fbae06f78007387a2af6fd60c4}{getMaxHeight} (int minDegree, int swarmsize)
+\begin{CompactList}\small\item\em Little helper function calculating the maximum height. \item\end{CompactList}\item 
+void \hyperlink{tools_8h_ea080d716cc71d1a8bad850f4397f240}{fixSeed} (unsigned seed)
+\item 
+void \hyperlink{tools_8h_f394aa73d9d7e8bc72ee8233f6c74fbc}{freeRng} ()
+\begin{CompactList}\small\item\em Free the RNG ressources. \item\end{CompactList}\item 
+double \hyperlink{tools_8h_4e18622b1241fd9510728a92cc37c471}{randDoubleGaussian} (double sigma)
+\begin{CompactList}\small\item\em Return gaussian distributed double from \mbox{[}0;1). \item\end{CompactList}\item 
+double \hyperlink{tools_8h_f2a7cdf42aa11ce7d0b94e306f4226bc}{randDouble} ()
+\begin{CompactList}\small\item\em Return double from \mbox{[}0;1). \item\end{CompactList}\item 
+double \hyperlink{tools_8h_9ace512de549f107381a747c6677e990}{randDoubleRange} (double min, double max)
+\begin{CompactList}\small\item\em Wrapper to GSL \hyperlink{classFunction}{Function} call. \item\end{CompactList}\item 
+int \hyperlink{tools_8h_5112f83bc0660a5a31f59132cfc50716}{randIntRange} (int min, int max)
+\begin{CompactList}\small\item\em Wrapper to GSL \hyperlink{classFunction}{Function} call. \item\end{CompactList}\item 
+string \hyperlink{tools_8h_780124363ffebca8fda6873b02186a7f}{printVec} (const vector$<$ double $>$ \&)
+\item 
+double \hyperlink{tools_8h_a9e6ed8a690638455cc83a18b1755042}{euclideanDistance} (const vector$<$ double $>$ \&v1, const vector$<$ double $>$ \&v2)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+int \hyperlink{tools_8h_5064504bf5b7c9547bec5a73db938948}{indentLevel}
+\item 
+string \hyperlink{tools_8h_e2955012a234eb73d729ff4576aa4776}{BLANKLINE}
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{tools_8h_996f7be338ccb40d1a2a5abc1ad61759}{
+\index{tools.h@{tools.h}!ABS@{ABS}}
+\index{ABS@{ABS}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define ABS(x)~((x)$>$0 ? (x) : -(x))}}
+\label{tools_8h_996f7be338ccb40d1a2a5abc1ad61759}
+
+
+\hypertarget{tools_8h_3dfa58b1c5c2943dd49d8aa1981d377d}{
+\index{tools.h@{tools.h}!DEBUG@{DEBUG}}
+\index{DEBUG@{DEBUG}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define DEBUG(x)~\char`\"{}\char`\"{}}}
+\label{tools_8h_3dfa58b1c5c2943dd49d8aa1981d377d}
+
+
+\hypertarget{tools_8h_89b63c19bbe1875b550393f9dcd35743}{
+\index{tools.h@{tools.h}!DEBUG1@{DEBUG1}}
+\index{DEBUG1@{DEBUG1}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define DEBUG1(x, \/  arg1)~\char`\"{}\char`\"{}}}
+\label{tools_8h_89b63c19bbe1875b550393f9dcd35743}
+
+
+\hypertarget{tools_8h_e4bebc874cce37c896ed73eff78ae496}{
+\index{tools.h@{tools.h}!DEBUG2@{DEBUG2}}
+\index{DEBUG2@{DEBUG2}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define DEBUG2(x, \/  arg1, \/  arg2)~\char`\"{}\char`\"{}}}
+\label{tools_8h_e4bebc874cce37c896ed73eff78ae496}
+
+
+\hypertarget{tools_8h_9e5589c3d93cc75263821a80449de461}{
+\index{tools.h@{tools.h}!DEBUGV@{DEBUGV}}
+\index{DEBUGV@{DEBUGV}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define DEBUGV(x)~\char`\"{}\char`\"{}}}
+\label{tools_8h_9e5589c3d93cc75263821a80449de461}
+
+
+\hypertarget{tools_8h_fd1b588d3c19183cf25978577a518a5b}{
+\index{tools.h@{tools.h}!DEBUGV1@{DEBUGV1}}
+\index{DEBUGV1@{DEBUGV1}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define DEBUGV1(x, \/  arg1)~\char`\"{}\char`\"{}}}
+\label{tools_8h_fd1b588d3c19183cf25978577a518a5b}
+
+
+\hypertarget{tools_8h_4b2c58ff4c5b9cb51f898ad000f94de6}{
+\index{tools.h@{tools.h}!DEBUGV2@{DEBUGV2}}
+\index{DEBUGV2@{DEBUGV2}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define DEBUGV2(x, \/  arg1, \/  arg2)~\char`\"{}\char`\"{}}}
+\label{tools_8h_4b2c58ff4c5b9cb51f898ad000f94de6}
+
+
+\hypertarget{tools_8h_502b06aa5ad25116c775d201326bad52}{
+\index{tools.h@{tools.h}!INDENT@{INDENT}}
+\index{INDENT@{INDENT}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define INDENT~BLANKLINE.substr(0,({\bf indentLevel})$\ast$INDENTATION)}}
+\label{tools_8h_502b06aa5ad25116c775d201326bad52}
+
+
+\hypertarget{tools_8h_1627cb4067f62884ebe4c2b38985106d}{
+\index{tools.h@{tools.h}!INDENT\_\-DEC@{INDENT\_\-DEC}}
+\index{INDENT\_\-DEC@{INDENT\_\-DEC}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define INDENT\_\-DEC~BLANKLINE.substr(0,(--{\bf indentLevel})$\ast$INDENTATION)}}
+\label{tools_8h_1627cb4067f62884ebe4c2b38985106d}
+
+
+\hypertarget{tools_8h_ebe6e9948961ddab0d54c66229cb6d24}{
+\index{tools.h@{tools.h}!INDENT\_\-INC@{INDENT\_\-INC}}
+\index{INDENT\_\-INC@{INDENT\_\-INC}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define INDENT\_\-INC~BLANKLINE.substr(0,({\bf indentLevel}++)$\ast$INDENTATION)}}
+\label{tools_8h_ebe6e9948961ddab0d54c66229cb6d24}
+
+
+\hypertarget{tools_8h_c18de1c03bed2f39bb7f60436fe64403}{
+\index{tools.h@{tools.h}!INDENTATION@{INDENTATION}}
+\index{INDENTATION@{INDENTATION}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define INDENTATION~2}}
+\label{tools_8h_c18de1c03bed2f39bb7f60436fe64403}
+
+
+\hypertarget{tools_8h_acc3ee1a7f283f8ef65cea31f4436a95}{
+\index{tools.h@{tools.h}!MAX@{MAX}}
+\index{MAX@{MAX}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define MAX(x, \/  y)~((x) $>$ (y) ? (x) : (y))}}
+\label{tools_8h_acc3ee1a7f283f8ef65cea31f4436a95}
+
+
+\hypertarget{tools_8h_fce5864678f6abfb944a7930e0fafe50}{
+\index{tools.h@{tools.h}!OUTPUT@{OUTPUT}}
+\index{OUTPUT@{OUTPUT}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define OUTPUT(x)~\char`\"{}\char`\"{}}}
+\label{tools_8h_fce5864678f6abfb944a7930e0fafe50}
+
+
+\hypertarget{tools_8h_ff734568e358208768b7eef2fe2b12d1}{
+\index{tools.h@{tools.h}!OUTPUT1@{OUTPUT1}}
+\index{OUTPUT1@{OUTPUT1}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define OUTPUT1(x, \/  arg1)~\char`\"{}\char`\"{}}}
+\label{tools_8h_ff734568e358208768b7eef2fe2b12d1}
+
+
+\hypertarget{tools_8h_ef8562a0042015c268ba6fa791a02033}{
+\index{tools.h@{tools.h}!OUTPUT2@{OUTPUT2}}
+\index{OUTPUT2@{OUTPUT2}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define OUTPUT2(x, \/  arg1, \/  arg2)~\char`\"{}\char`\"{}}}
+\label{tools_8h_ef8562a0042015c268ba6fa791a02033}
+
+
+\hypertarget{tools_8h_f461b98bae6c47eda3b76459962a73b6}{
+\index{tools.h@{tools.h}!TRACE\_\-IN@{TRACE\_\-IN}}
+\index{TRACE\_\-IN@{TRACE\_\-IN}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TRACE\_\-IN(x)~\char`\"{}\char`\"{}}}
+\label{tools_8h_f461b98bae6c47eda3b76459962a73b6}
+
+
+\hypertarget{tools_8h_2592708319f4d50d9a510c623130c0eb}{
+\index{tools.h@{tools.h}!TRACE\_\-IN1@{TRACE\_\-IN1}}
+\index{TRACE\_\-IN1@{TRACE\_\-IN1}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TRACE\_\-IN1(x, \/  arg1)~\char`\"{}\char`\"{}}}
+\label{tools_8h_2592708319f4d50d9a510c623130c0eb}
+
+
+\hypertarget{tools_8h_a338b62a5aea8f24f851500e45ab2a42}{
+\index{tools.h@{tools.h}!TRACE\_\-OUT@{TRACE\_\-OUT}}
+\index{TRACE\_\-OUT@{TRACE\_\-OUT}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TRACE\_\-OUT(x, \/  ok)~\char`\"{}\char`\"{}}}
+\label{tools_8h_a338b62a5aea8f24f851500e45ab2a42}
+
+
+\hypertarget{tools_8h_f7c95fb2cfd927f7e516e8b79fe99db4}{
+\index{tools.h@{tools.h}!TRACEV\_\-IN@{TRACEV\_\-IN}}
+\index{TRACEV\_\-IN@{TRACEV\_\-IN}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TRACEV\_\-IN(x)~\char`\"{}\char`\"{}}}
+\label{tools_8h_f7c95fb2cfd927f7e516e8b79fe99db4}
+
+
+\hypertarget{tools_8h_b7c9cb976ddbc5e5f8a8e59a002e2e84}{
+\index{tools.h@{tools.h}!TRACEV\_\-IN1@{TRACEV\_\-IN1}}
+\index{TRACEV\_\-IN1@{TRACEV\_\-IN1}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TRACEV\_\-IN1(x, \/  arg1)~\char`\"{}\char`\"{}}}
+\label{tools_8h_b7c9cb976ddbc5e5f8a8e59a002e2e84}
+
+
+\hypertarget{tools_8h_1eecf6579bf3d252e8d4c0874a1e0d38}{
+\index{tools.h@{tools.h}!TRACEV\_\-OUT@{TRACEV\_\-OUT}}
+\index{TRACEV\_\-OUT@{TRACEV\_\-OUT}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TRACEV\_\-OUT(x, \/  ok)~\char`\"{}\char`\"{}}}
+\label{tools_8h_1eecf6579bf3d252e8d4c0874a1e0d38}
+
+
+
+
+\subsection{Function Documentation}
+\hypertarget{tools_8h_a9e6ed8a690638455cc83a18b1755042}{
+\index{tools.h@{tools.h}!euclideanDistance@{euclideanDistance}}
+\index{euclideanDistance@{euclideanDistance}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double euclideanDistance (const vector$<$ double $>$ \& {\em v1}, \/  const vector$<$ double $>$ \& {\em v2})}}
+\label{tools_8h_a9e6ed8a690638455cc83a18b1755042}
+
+
+\hypertarget{tools_8h_ea080d716cc71d1a8bad850f4397f240}{
+\index{tools.h@{tools.h}!fixSeed@{fixSeed}}
+\index{fixSeed@{fixSeed}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void fixSeed (unsigned {\em seed})}}
+\label{tools_8h_ea080d716cc71d1a8bad850f4397f240}
+
+
+\hypertarget{tools_8h_f394aa73d9d7e8bc72ee8233f6c74fbc}{
+\index{tools.h@{tools.h}!freeRng@{freeRng}}
+\index{freeRng@{freeRng}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void freeRng ()}}
+\label{tools_8h_f394aa73d9d7e8bc72ee8233f6c74fbc}
+
+
+Free the RNG ressources. 
+
+\hypertarget{tools_8h_408603fbae06f78007387a2af6fd60c4}{
+\index{tools.h@{tools.h}!getMaxHeight@{getMaxHeight}}
+\index{getMaxHeight@{getMaxHeight}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int getMaxHeight (int {\em minDegree}, \/  int {\em swarmsize})}}
+\label{tools_8h_408603fbae06f78007387a2af6fd60c4}
+
+
+Little helper function calculating the maximum height. 
+
+of a regularly built pyramid of \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em minDegree}]minimum degree \end{description}
+\end{Desc}
+\hypertarget{tools_8h_780124363ffebca8fda6873b02186a7f}{
+\index{tools.h@{tools.h}!printVec@{printVec}}
+\index{printVec@{printVec}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}string printVec (const vector$<$ double $>$ \&)}}
+\label{tools_8h_780124363ffebca8fda6873b02186a7f}
+
+
+\hypertarget{tools_8h_f2a7cdf42aa11ce7d0b94e306f4226bc}{
+\index{tools.h@{tools.h}!randDouble@{randDouble}}
+\index{randDouble@{randDouble}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double randDouble ()}}
+\label{tools_8h_f2a7cdf42aa11ce7d0b94e306f4226bc}
+
+
+Return double from \mbox{[}0;1). 
+
+\hypertarget{tools_8h_4e18622b1241fd9510728a92cc37c471}{
+\index{tools.h@{tools.h}!randDoubleGaussian@{randDoubleGaussian}}
+\index{randDoubleGaussian@{randDoubleGaussian}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double randDoubleGaussian (double {\em sigma})}}
+\label{tools_8h_4e18622b1241fd9510728a92cc37c471}
+
+
+Return gaussian distributed double from \mbox{[}0;1). 
+
+\hypertarget{tools_8h_9ace512de549f107381a747c6677e990}{
+\index{tools.h@{tools.h}!randDoubleRange@{randDoubleRange}}
+\index{randDoubleRange@{randDoubleRange}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double randDoubleRange (double {\em min}, \/  double {\em max})}}
+\label{tools_8h_9ace512de549f107381a747c6677e990}
+
+
+Wrapper to GSL \hyperlink{classFunction}{Function} call. 
+
+Returns double from range \mbox{[}min,max) \hypertarget{tools_8h_5112f83bc0660a5a31f59132cfc50716}{
+\index{tools.h@{tools.h}!randIntRange@{randIntRange}}
+\index{randIntRange@{randIntRange}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int randIntRange (int {\em min}, \/  int {\em max})}}
+\label{tools_8h_5112f83bc0660a5a31f59132cfc50716}
+
+
+Wrapper to GSL \hyperlink{classFunction}{Function} call. 
+
+Returns int from range \mbox{[}min,max\mbox{]} 
+
+\subsection{Variable Documentation}
+\hypertarget{tools_8h_e2955012a234eb73d729ff4576aa4776}{
+\index{tools.h@{tools.h}!BLANKLINE@{BLANKLINE}}
+\index{BLANKLINE@{BLANKLINE}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}string {\bf BLANKLINE}}}
+\label{tools_8h_e2955012a234eb73d729ff4576aa4776}
+
+
+\hypertarget{tools_8h_5064504bf5b7c9547bec5a73db938948}{
+\index{tools.h@{tools.h}!indentLevel@{indentLevel}}
+\index{indentLevel@{indentLevel}!tools.h@{tools.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf indentLevel}}}
+\label{tools_8h_5064504bf5b7c9547bec5a73db938948}
+
+

@@ -1,0 +1,41 @@
+#usage ./runpso $(cat parameter.pf | grep ^#) runs steps
+#outsteps
+--outsteps 10
+#PSO type
+-p0
+#dimension
+-d30
+#swarmsize
+-n20
+#function
+-f12
+#height
+-h2
+#branches (nsize=1)
+-b1
+
+#dynamic parameter
+#detectStyle
+--detect 1
+#responseStyle
+--response 4
+#updateStyle
+--dynStyle 0
+#moveFrequency
+--moveFreq 100
+#moveDistance
+--moveDist 0.1
+#moveStyle
+--moveStyle 1
+
+#noise parameter
+#noiseStyle
+--noiseStyle 0
+#noiseSigma
+--noiseSigma 0.1
+#hierarchyChangeDetectThreshold
+--noiseHThresh 6
+
+
+#random seed
+#-r0

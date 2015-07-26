@@ -1,0 +1,900 @@
+\hypertarget{namespacepsostart}{
+\section{psostart Namespace Reference}
+\label{namespacepsostart}\index{psostart@{psostart}}
+}
+
+
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+def \hyperlink{namespacepsostart_46de2e454e8f5515ab708b73b048290c}{initParameter}
+\item 
+def \hyperlink{namespacepsostart_535536df8dda7d5b4bdcb24c0cc4ef1c}{openParamWindow}
+\item 
+def \hyperlink{namespacepsostart_373a16f17d46de694c2e909df34a6959}{stopExecution}
+\item 
+def \hyperlink{namespacepsostart_54da7e101aee6e4874e0e8f725267920}{newPSO}
+\item 
+def \hyperlink{namespacepsostart_b16f0613573a26782623601f5311b1cd}{clearOpt}
+\item 
+def \hyperlink{namespacepsostart_3c2fc695e3997b0bff7cddfb8c832834}{clearLevel}
+\item 
+def \hyperlink{namespacepsostart_50d9c4abda05d089b5a7ae925c7a2ba3}{clearVel}
+\item 
+def \hyperlink{namespacepsostart_da7f48a1a5af9be960f84bcf824048e7}{clearIndividualBest}
+\item 
+def \hyperlink{namespacepsostart_30b25a03549a24379c2bc24719b2f9e3}{updateIndividualBest}
+\item 
+def \hyperlink{namespacepsostart_c11d727534d1250233b64a93f3f3cb7a}{updateVel}
+\item 
+def \hyperlink{namespacepsostart_d1847be4b615bd0ff48b394c0a87c06b}{updateLevel\_\-old}
+\item 
+def \hyperlink{namespacepsostart_51a068be9b5acbd1b3efe519bb9a8889}{updateLevel}
+\item 
+def \hyperlink{namespacepsostart_6198f0bf7f2b5cb4e8ef30f833cd330d}{updateDiversity}
+\item 
+def \hyperlink{namespacepsostart_41a266932f22b150471c377521350b49}{updateOptimization}
+\item 
+def \hyperlink{namespacepsostart_3b593b84164761e4d5faa573593f2eea}{posPostscript}
+\item 
+def \hyperlink{namespacepsostart_426451722c8ab591f51f6bf2f8b574a0}{updatePos}
+\item 
+def \hyperlink{namespacepsostart_952ed2c117d6b30cdc76dcbeec8e2648}{animate}
+\item 
+def \hyperlink{namespacepsostart_5f4510c654c11f9563d93168d8e8a79d}{untilGoal}
+\item 
+def \hyperlink{namespacepsostart_bde7b09ba08380884f780c01920a0fe6}{maxY}
+\item 
+def \hyperlink{namespacepsostart_cdf8c0a98654013e6c8154ca856a6a77}{symbolsOnOff}
+\item 
+def \hyperlink{namespacepsostart_f3fe32915af5f6cb095ba0746ed8ad18}{smooth}
+\item 
+def \hyperlink{namespacepsostart_71d637a8ccfe37c4783356eb773fc939}{initIndividualBest}
+\item 
+def \hyperlink{namespacepsostart_0abfc7cedfcbc57d2f8c758ade95fc53}{initVel}
+\item 
+def \hyperlink{namespacepsostart_26ae226d8a56f01c4ad8de5499c4c42d}{initPos}
+\item 
+def \hyperlink{namespacepsostart_dbf928f72dda2c955f6245de30c92a9c}{initLevel}
+\item 
+def \hyperlink{namespacepsostart_6caa54532dab5827895d1d10621282c8}{initDiversity}
+\item 
+def \hyperlink{namespacepsostart_6042fe4e98a1279b95d7789fd881f38f}{initOpt}
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+int \hyperlink{namespacepsostart_f9fd983d5b47b56a5522ca953d16996f}{step} = 0
+\item 
+\hyperlink{namespacepsostart_3cd1480e6bb9b8b9ce11a0e7cff137c3}{DIVERSITY} = False
+\item 
+\hyperlink{namespacepsostart_c4e0e1009671f83d53078da786b64bce}{SHOWSWAPS} = False
+\item 
+int \hyperlink{namespacepsostart_955e2448af0db62cef11a23f08cf20c8}{UPDATESTEP} = 1
+\item 
+list \hyperlink{namespacepsostart_ee730049d118cbfc995e5e7f12469d3d}{COLORMAP} = \mbox{[}'coral', 'blue', 'green3', 'orange', 'navy', 'magenta3', 'cyan', 'deeppink', 'forestgreen', 'orangered', 'olivedrab', 'peru', 'purple', 'red4', 'steelblue', 'springgreen', 'turquoise4', 'lightslategrey'\mbox{]}
+\item 
+\hyperlink{namespacepsostart_444d7eb0307e3f2a481d35f6e99da2bc}{SWARM\_\-DISPLAY} = SWARM
+\item 
+\hyperlink{namespacepsostart_5de92f4d164f675bd3917d65b6687266}{FUNCTION\_\-DISPLAY} = FUNCTION
+\item 
+string \hyperlink{namespacepsostart_af21f1269d56b7712e089a0f3ac34417}{POSITION\_\-DISPLAY} = \char`\"{}subtree\char`\"{}
+\item 
+\hyperlink{namespacepsostart_fbfb114617ecd765efb5729837d9a1a8}{NO\_\-OUTPUT} = False
+\item 
+int \hyperlink{namespacepsostart_69037b57c1ff25824dbcbbe17807d2d7}{MAX\_\-Y} = 4000
+\item 
+\hyperlink{namespacepsostart_302a241641c5bb2a7c560bc1a216ff64}{SWARMTYPE} = \hyperlink{namespacepso_958a3bcd6a80cc329bf7ee6ee063e7b9}{pso.seqSwarm}
+\item 
+\hyperlink{namespacepsostart_03fea5b845e55f82f3c7d947c79222b0}{OPTFUNCTION} = \hyperlink{namespacepso_b5880ea7f40f444b4960ea8bee95ff27}{pso.rastrigin}
+\item 
+int \hyperlink{namespacepsostart_20ff68f62c8d02cee1a5fe3c9a2883ed}{DIM} = 30
+\item 
+int \hyperlink{namespacepsostart_ba1e88de83b58e8cdc0184dc3407c373}{SWARMSIZE} = 30
+\item 
+int \hyperlink{namespacepsostart_f25b4590bbc3756e6f18e18686ed8938}{NR\_\-SCOUTS} = 0
+\item 
+\hyperlink{namespacepsostart_1fa98a85b621e24c1fe7ec83dcb072cf}{SIZE} = \hyperlink{namespacepsostart_ba1e88de83b58e8cdc0184dc3407c373}{SWARMSIZE}+\hyperlink{namespacepsostart_f25b4590bbc3756e6f18e18686ed8938}{NR\_\-SCOUTS}
+\item 
+int \hyperlink{namespacepsostart_3169f3551a7343c45c9e96aa8b60666d}{HEIGHT} = 4
+\item 
+int \hyperlink{namespacepsostart_11d3269a3043128b12801302bf4d8124}{BRANCHES} = 1
+\item 
+int \hyperlink{namespacepsostart_05cfdb315414f0d5976c3928efa64836}{SWAPDELAY} = 1
+\item 
+int \hyperlink{namespacepsostart_4baead81c8a51f0adb3699b010c3c02d}{GOAL} = 100
+\item 
+float \hyperlink{namespacepsostart_456afd2b02fe9acb6fab27940564b3e4}{W} = 0.729
+\item 
+float \hyperlink{namespacepsostart_82069834d25d8c4ee86ed668b81b7a1d}{WMIN} = 0.729
+\item 
+float \hyperlink{namespacepsostart_c56aa33bfc600b93a9cd5e53a40e5a74}{C1} = 1.494
+\item 
+\hyperlink{namespacepsostart_1987bb801c56c9308fe4aa22e828f42b}{C2} = \hyperlink{namespacepsostart_c56aa33bfc600b93a9cd5e53a40e5a74}{C1}
+\item 
+float \hyperlink{namespacepsostart_554ac1511096aa0bf399bb4bff5f267a}{VMAXRATIO} = 0.0
+\item 
+float \hyperlink{namespacepsostart_56788cb88647cd2b8eb88c38b81783ff}{CONSTRICTION} = 1.0
+\item 
+int \hyperlink{namespacepsostart_4eb0db99f944d03199e893e85f1a9e1d}{MAXSTEP} = 0
+\item 
+int \hyperlink{namespacepsostart_4f07a0ef99fa188d1a7858455c612f2c}{DECREASEBRANCHFREQ} = 20
+\item 
+int \hyperlink{namespacepsostart_68dd12c702b13dada8e2cf3f4d5bfd0e}{MINBRANCHDEGREE} = 2
+\item 
+int \hyperlink{namespacepsostart_b930a0309b8be9032c4a279ba8c8319a}{DECREASEBRANCHSTEP} = 4
+\item 
+\hyperlink{namespacepsostart_6322494f399c399aa59241046c0641cb}{DECREASEBRANCHACTION} = \hyperlink{namespacepso_2737e8486a12d9feb9ae65b954f424e3}{pso.bestSubtreeNoAction}
+\item 
+\hyperlink{namespacepsostart_814e0d868ce1bc57620a30199da53ca0}{NOISESTYLE} = \hyperlink{namespacepso_3ed42a0d68c0db8bc6613d3b4b1821ed}{pso.noNoise}
+\item 
+float \hyperlink{namespacepsostart_f9890e0280edab811a334354909f7c98}{NOISESIGMA} = 0.1
+\item 
+int \hyperlink{namespacepsostart_b2a0815fb64577d432f816c6cd0f9178}{MOVEFREQUENCY} = 100
+\item 
+int \hyperlink{namespacepsostart_509e6c062fe0b5ac8f25398216e67f89}{MOVEDISTANCE} = 5
+\item 
+\hyperlink{namespacepsostart_1580bebace469bf87b3e2c861e983cbc}{OPTIMUMMOVESTYLE} = \hyperlink{namespacepso_45a31f10e8595a3d9ac89f76b52886e5}{pso.exponentialLinearOptMove}
+\item 
+\hyperlink{namespacepsostart_4c6c05045fa85150949a9e5ebfa9615b}{UPDATESTYLE} = \hyperlink{namespacepso_8f17d13a72a14e5dcca6538e168f02ba}{pso.updatePeriodic}
+\item 
+\hyperlink{namespacepsostart_39c48e09a2e1c40cae381743eef64319}{DETECTIONMETHOD} = \hyperlink{namespacepso_f18f59b20d4081e64b956a3c8f29105e}{pso.gbestDetectChange}
+\item 
+\hyperlink{namespacepsostart_769be171b1c94fde02394d2a4efe160f}{RESPONSEMETHOD} = \hyperlink{namespacepso_58d899f781247c69ee071e1117ded9b2}{pso.noResponse}
+\item 
+int \hyperlink{namespacepsostart_6c58ebff0b415a15377d7bce5d77f1a2}{NRSWAPCHECKS} = 1
+\item 
+\hyperlink{namespacepsostart_ef42863a90b026064acb46a439ad66a4}{REUSEOLDVALUE} = \hyperlink{namespacepso_72127295dfa004794c965c42900116d2}{pso.reuseLastBestValue}
+\item 
+\hyperlink{namespacepsostart_0683581f443a1833094be4af9bfa53fc}{REFINEBESTVALUE} = True
+\item 
+\hyperlink{namespacepsostart_652fecc2783c6751fe8ea9ef83805747}{FIRSTCOMPAREPBEST} = False
+\item 
+int \hyperlink{namespacepsostart_869ea53446100d3296786868d2c17965}{HIERARCHYCHANGE} = 5
+\item 
+\hyperlink{namespacepsostart_212b7e52d588d863bbc6b9f2dc1a302a}{p} = None
+\item 
+tuple \hyperlink{namespacepsostart_38617951b9c3a3f6bc520f849c3daa46}{psoParam} = \hyperlink{classpsoParameter_1_1PsoParameter3}{PsoParameter3}()
+\item 
+\hyperlink{namespacepsostart_c9e1e4f950b30610115554fde9b24315}{vel} = None
+\item 
+list \hyperlink{namespacepsostart_ce591784a486a55bff5e9eefe6143db8}{vector\_\-x} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespacepsostart_804613fe2ccb90fc68ae55454b45086e}{vector\_\-y} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespacepsostart_44f8a24c235a0dab6015706df65ef687}{vector2\_\-x} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespacepsostart_e3fbef44f0ac39316031f1849adf2f7b}{vector2\_\-y} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespacepsostart_5f1379b781c073c257cbcf71f5441e2e}{vector3\_\-x} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespacepsostart_310eb124618fa97b0e053e7f99598122}{vector3\_\-y} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespacepsostart_dd73efc9aeeedb85bf87ecd3cb22632d}{vector\_\-x\_\-level} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespacepsostart_153af18e59f1c0fd2819ce28b6284e2f}{vector\_\-y\_\-level} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespacepsostart_17225f0f703ff68e39b1466c10eb833c}{vector\_\-x\_\-pos} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespacepsostart_2199cd5cd71d450746a957acdccb8042}{vector\_\-y\_\-pos} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespacepsostart_106a94902d0877943428c3d1edea2167}{vector\_\-x\_\-div} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespacepsostart_17ee232a94f4121a3be65ff3b515d183}{vector\_\-y\_\-div} = \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{namespacepsostart_a4626f705c0ad45f935cbdc017503911}{g\_\-pos} = None
+\item 
+\hyperlink{namespacepsostart_579ddeab252424f678b85072ac2783ce}{g2} = None
+\item 
+\hyperlink{namespacepsostart_53a8463b5040b72717e300fff85403c3}{g3} = None
+\item 
+\hyperlink{namespacepsostart_112eb4712e14a578b7c44cef2b0e5b1f}{stop} = False
+\item 
+\hyperlink{namespacepsostart_603522924f52baf38e412d8667edd3a5}{sleepScale} = None
+\item 
+\hyperlink{namespacepsostart_16120c58348b037f3026552129c4a703}{globalBestLabel} = None
+\item 
+\hyperlink{namespacepsostart_be59abaa2019ac92419e98b269eb793d}{paramWindow} = None
+\item 
+tuple \hyperlink{namespacepsostart_6f96baa861a0624d8fc7f23a25059d9f}{master} = Tk()
+\item 
+tuple \hyperlink{namespacepsostart_9e1a1e315c078ee7ab2876530b46f706}{top} = Toplevel()
+\item 
+tuple \hyperlink{namespacepsostart_713a0c7137e9e999e15e95c7c6f968d2}{top2} = Toplevel()
+\item 
+tuple \hyperlink{namespacepsostart_7b05fb7d8575f94e505d13af00c8af04}{positionDisplay} = Toplevel()
+\item 
+tuple \hyperlink{namespacepsostart_064c9be2d06affdbfa450b811666f684}{buttons} = Pmw.ButtonBox(\hyperlink{namespacepsostart_6f96baa861a0624d8fc7f23a25059d9f}{master}, labelpos='n', label\_\-text='Options')
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacepsostart_952ed2c117d6b30cdc76dcbeec8e2648}{
+\index{psostart@{psostart}!animate@{animate}}
+\index{animate@{animate}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::animate ( {\em repeat} = {\tt True})}}
+\label{namespacepsostart_952ed2c117d6b30cdc76dcbeec8e2648}
+
+
+\hypertarget{namespacepsostart_da7f48a1a5af9be960f84bcf824048e7}{
+\index{psostart@{psostart}!clearIndividualBest@{clearIndividualBest}}
+\index{clearIndividualBest@{clearIndividualBest}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::clearIndividualBest ()}}
+\label{namespacepsostart_da7f48a1a5af9be960f84bcf824048e7}
+
+
+\hypertarget{namespacepsostart_3c2fc695e3997b0bff7cddfb8c832834}{
+\index{psostart@{psostart}!clearLevel@{clearLevel}}
+\index{clearLevel@{clearLevel}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::clearLevel ()}}
+\label{namespacepsostart_3c2fc695e3997b0bff7cddfb8c832834}
+
+
+\hypertarget{namespacepsostart_b16f0613573a26782623601f5311b1cd}{
+\index{psostart@{psostart}!clearOpt@{clearOpt}}
+\index{clearOpt@{clearOpt}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::clearOpt ()}}
+\label{namespacepsostart_b16f0613573a26782623601f5311b1cd}
+
+
+\hypertarget{namespacepsostart_50d9c4abda05d089b5a7ae925c7a2ba3}{
+\index{psostart@{psostart}!clearVel@{clearVel}}
+\index{clearVel@{clearVel}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::clearVel ()}}
+\label{namespacepsostart_50d9c4abda05d089b5a7ae925c7a2ba3}
+
+
+\hypertarget{namespacepsostart_6caa54532dab5827895d1d10621282c8}{
+\index{psostart@{psostart}!initDiversity@{initDiversity}}
+\index{initDiversity@{initDiversity}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::initDiversity ()}}
+\label{namespacepsostart_6caa54532dab5827895d1d10621282c8}
+
+
+\hypertarget{namespacepsostart_71d637a8ccfe37c4783356eb773fc939}{
+\index{psostart@{psostart}!initIndividualBest@{initIndividualBest}}
+\index{initIndividualBest@{initIndividualBest}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::initIndividualBest ( {\em top})}}
+\label{namespacepsostart_71d637a8ccfe37c4783356eb773fc939}
+
+
+\hypertarget{namespacepsostart_dbf928f72dda2c955f6245de30c92a9c}{
+\index{psostart@{psostart}!initLevel@{initLevel}}
+\index{initLevel@{initLevel}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::initLevel ()}}
+\label{namespacepsostart_dbf928f72dda2c955f6245de30c92a9c}
+
+
+\hypertarget{namespacepsostart_6042fe4e98a1279b95d7789fd881f38f}{
+\index{psostart@{psostart}!initOpt@{initOpt}}
+\index{initOpt@{initOpt}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::initOpt ( {\em window})}}
+\label{namespacepsostart_6042fe4e98a1279b95d7789fd881f38f}
+
+
+\hypertarget{namespacepsostart_46de2e454e8f5515ab708b73b048290c}{
+\index{psostart@{psostart}!initParameter@{initParameter}}
+\index{initParameter@{initParameter}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::initParameter ()}}
+\label{namespacepsostart_46de2e454e8f5515ab708b73b048290c}
+
+
+\hypertarget{namespacepsostart_26ae226d8a56f01c4ad8de5499c4c42d}{
+\index{psostart@{psostart}!initPos@{initPos}}
+\index{initPos@{initPos}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::initPos ( {\em window})}}
+\label{namespacepsostart_26ae226d8a56f01c4ad8de5499c4c42d}
+
+
+\hypertarget{namespacepsostart_0abfc7cedfcbc57d2f8c758ade95fc53}{
+\index{psostart@{psostart}!initVel@{initVel}}
+\index{initVel@{initVel}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::initVel ( {\em top})}}
+\label{namespacepsostart_0abfc7cedfcbc57d2f8c758ade95fc53}
+
+
+\hypertarget{namespacepsostart_bde7b09ba08380884f780c01920a0fe6}{
+\index{psostart@{psostart}!maxY@{maxY}}
+\index{maxY@{maxY}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::maxY ()}}
+\label{namespacepsostart_bde7b09ba08380884f780c01920a0fe6}
+
+
+\hypertarget{namespacepsostart_54da7e101aee6e4874e0e8f725267920}{
+\index{psostart@{psostart}!newPSO@{newPSO}}
+\index{newPSO@{newPSO}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::newPSO ( {\em init} = {\tt False})}}
+\label{namespacepsostart_54da7e101aee6e4874e0e8f725267920}
+
+
+\hypertarget{namespacepsostart_535536df8dda7d5b4bdcb24c0cc4ef1c}{
+\index{psostart@{psostart}!openParamWindow@{openParamWindow}}
+\index{openParamWindow@{openParamWindow}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::openParamWindow ()}}
+\label{namespacepsostart_535536df8dda7d5b4bdcb24c0cc4ef1c}
+
+
+\hypertarget{namespacepsostart_3b593b84164761e4d5faa573593f2eea}{
+\index{psostart@{psostart}!posPostscript@{posPostscript}}
+\index{posPostscript@{posPostscript}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::posPostscript ()}}
+\label{namespacepsostart_3b593b84164761e4d5faa573593f2eea}
+
+
+\hypertarget{namespacepsostart_f3fe32915af5f6cb095ba0746ed8ad18}{
+\index{psostart@{psostart}!smooth@{smooth}}
+\index{smooth@{smooth}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::smooth ()}}
+\label{namespacepsostart_f3fe32915af5f6cb095ba0746ed8ad18}
+
+
+\hypertarget{namespacepsostart_373a16f17d46de694c2e909df34a6959}{
+\index{psostart@{psostart}!stopExecution@{stopExecution}}
+\index{stopExecution@{stopExecution}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::stopExecution ()}}
+\label{namespacepsostart_373a16f17d46de694c2e909df34a6959}
+
+
+\hypertarget{namespacepsostart_cdf8c0a98654013e6c8154ca856a6a77}{
+\index{psostart@{psostart}!symbolsOnOff@{symbolsOnOff}}
+\index{symbolsOnOff@{symbolsOnOff}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::symbolsOnOff ()}}
+\label{namespacepsostart_cdf8c0a98654013e6c8154ca856a6a77}
+
+
+\hypertarget{namespacepsostart_5f4510c654c11f9563d93168d8e8a79d}{
+\index{psostart@{psostart}!untilGoal@{untilGoal}}
+\index{untilGoal@{untilGoal}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::untilGoal ()}}
+\label{namespacepsostart_5f4510c654c11f9563d93168d8e8a79d}
+
+
+\hypertarget{namespacepsostart_6198f0bf7f2b5cb4e8ef30f833cd330d}{
+\index{psostart@{psostart}!updateDiversity@{updateDiversity}}
+\index{updateDiversity@{updateDiversity}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::updateDiversity ( {\em step})}}
+\label{namespacepsostart_6198f0bf7f2b5cb4e8ef30f833cd330d}
+
+
+\hypertarget{namespacepsostart_30b25a03549a24379c2bc24719b2f9e3}{
+\index{psostart@{psostart}!updateIndividualBest@{updateIndividualBest}}
+\index{updateIndividualBest@{updateIndividualBest}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::updateIndividualBest ()}}
+\label{namespacepsostart_30b25a03549a24379c2bc24719b2f9e3}
+
+
+\hypertarget{namespacepsostart_51a068be9b5acbd1b3efe519bb9a8889}{
+\index{psostart@{psostart}!updateLevel@{updateLevel}}
+\index{updateLevel@{updateLevel}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::updateLevel ( {\em step})}}
+\label{namespacepsostart_51a068be9b5acbd1b3efe519bb9a8889}
+
+
+\hypertarget{namespacepsostart_d1847be4b615bd0ff48b394c0a87c06b}{
+\index{psostart@{psostart}!updateLevel\_\-old@{updateLevel\_\-old}}
+\index{updateLevel\_\-old@{updateLevel\_\-old}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::updateLevel\_\-old ( {\em step})}}
+\label{namespacepsostart_d1847be4b615bd0ff48b394c0a87c06b}
+
+
+\hypertarget{namespacepsostart_41a266932f22b150471c377521350b49}{
+\index{psostart@{psostart}!updateOptimization@{updateOptimization}}
+\index{updateOptimization@{updateOptimization}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::updateOptimization ( {\em step})}}
+\label{namespacepsostart_41a266932f22b150471c377521350b49}
+
+
+\hypertarget{namespacepsostart_426451722c8ab591f51f6bf2f8b574a0}{
+\index{psostart@{psostart}!updatePos@{updatePos}}
+\index{updatePos@{updatePos}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::updatePos ()}}
+\label{namespacepsostart_426451722c8ab591f51f6bf2f8b574a0}
+
+
+\hypertarget{namespacepsostart_c11d727534d1250233b64a93f3f3cb7a}{
+\index{psostart@{psostart}!updateVel@{updateVel}}
+\index{updateVel@{updateVel}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}def psostart::updateVel ()}}
+\label{namespacepsostart_c11d727534d1250233b64a93f3f3cb7a}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacepsostart_11d3269a3043128b12801302bf4d8124}{
+\index{psostart@{psostart}!BRANCHES@{BRANCHES}}
+\index{BRANCHES@{BRANCHES}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::BRANCHES} = 1}}
+\label{namespacepsostart_11d3269a3043128b12801302bf4d8124}
+
+
+\hypertarget{namespacepsostart_064c9be2d06affdbfa450b811666f684}{
+\index{psostart@{psostart}!buttons@{buttons}}
+\index{buttons@{buttons}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf psostart::buttons} = Pmw.ButtonBox({\bf master}, labelpos='n', label\_\-text='Options')}}
+\label{namespacepsostart_064c9be2d06affdbfa450b811666f684}
+
+
+\hypertarget{namespacepsostart_c56aa33bfc600b93a9cd5e53a40e5a74}{
+\index{psostart@{psostart}!C1@{C1}}
+\index{C1@{C1}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float {\bf psostart::C1} = 1.494}}
+\label{namespacepsostart_c56aa33bfc600b93a9cd5e53a40e5a74}
+
+
+\hypertarget{namespacepsostart_1987bb801c56c9308fe4aa22e828f42b}{
+\index{psostart@{psostart}!C2@{C2}}
+\index{C2@{C2}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::C2} = {\bf C1}}}
+\label{namespacepsostart_1987bb801c56c9308fe4aa22e828f42b}
+
+
+\hypertarget{namespacepsostart_ee730049d118cbfc995e5e7f12469d3d}{
+\index{psostart@{psostart}!COLORMAP@{COLORMAP}}
+\index{COLORMAP@{COLORMAP}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}list {\bf psostart::COLORMAP} = \mbox{[}'coral', 'blue', 'green3', 'orange', 'navy', 'magenta3', 'cyan', 'deeppink', 'forestgreen', 'orangered', 'olivedrab', 'peru', 'purple', 'red4', 'steelblue', 'springgreen', 'turquoise4', 'lightslategrey'\mbox{]}}}
+\label{namespacepsostart_ee730049d118cbfc995e5e7f12469d3d}
+
+
+\hypertarget{namespacepsostart_56788cb88647cd2b8eb88c38b81783ff}{
+\index{psostart@{psostart}!CONSTRICTION@{CONSTRICTION}}
+\index{CONSTRICTION@{CONSTRICTION}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float {\bf psostart::CONSTRICTION} = 1.0}}
+\label{namespacepsostart_56788cb88647cd2b8eb88c38b81783ff}
+
+
+\hypertarget{namespacepsostart_6322494f399c399aa59241046c0641cb}{
+\index{psostart@{psostart}!DECREASEBRANCHACTION@{DECREASEBRANCHACTION}}
+\index{DECREASEBRANCHACTION@{DECREASEBRANCHACTION}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::DECREASEBRANCHACTION} = {\bf pso.bestSubtreeNoAction}}}
+\label{namespacepsostart_6322494f399c399aa59241046c0641cb}
+
+
+\hypertarget{namespacepsostart_4f07a0ef99fa188d1a7858455c612f2c}{
+\index{psostart@{psostart}!DECREASEBRANCHFREQ@{DECREASEBRANCHFREQ}}
+\index{DECREASEBRANCHFREQ@{DECREASEBRANCHFREQ}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::DECREASEBRANCHFREQ} = 20}}
+\label{namespacepsostart_4f07a0ef99fa188d1a7858455c612f2c}
+
+
+\hypertarget{namespacepsostart_b930a0309b8be9032c4a279ba8c8319a}{
+\index{psostart@{psostart}!DECREASEBRANCHSTEP@{DECREASEBRANCHSTEP}}
+\index{DECREASEBRANCHSTEP@{DECREASEBRANCHSTEP}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::DECREASEBRANCHSTEP} = 4}}
+\label{namespacepsostart_b930a0309b8be9032c4a279ba8c8319a}
+
+
+\hypertarget{namespacepsostart_39c48e09a2e1c40cae381743eef64319}{
+\index{psostart@{psostart}!DETECTIONMETHOD@{DETECTIONMETHOD}}
+\index{DETECTIONMETHOD@{DETECTIONMETHOD}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::DETECTIONMETHOD} = {\bf pso.gbestDetectChange}}}
+\label{namespacepsostart_39c48e09a2e1c40cae381743eef64319}
+
+
+\hypertarget{namespacepsostart_20ff68f62c8d02cee1a5fe3c9a2883ed}{
+\index{psostart@{psostart}!DIM@{DIM}}
+\index{DIM@{DIM}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::DIM} = 30}}
+\label{namespacepsostart_20ff68f62c8d02cee1a5fe3c9a2883ed}
+
+
+\hypertarget{namespacepsostart_3cd1480e6bb9b8b9ce11a0e7cff137c3}{
+\index{psostart@{psostart}!DIVERSITY@{DIVERSITY}}
+\index{DIVERSITY@{DIVERSITY}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::DIVERSITY} = False}}
+\label{namespacepsostart_3cd1480e6bb9b8b9ce11a0e7cff137c3}
+
+
+\hypertarget{namespacepsostart_652fecc2783c6751fe8ea9ef83805747}{
+\index{psostart@{psostart}!FIRSTCOMPAREPBEST@{FIRSTCOMPAREPBEST}}
+\index{FIRSTCOMPAREPBEST@{FIRSTCOMPAREPBEST}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::FIRSTCOMPAREPBEST} = False}}
+\label{namespacepsostart_652fecc2783c6751fe8ea9ef83805747}
+
+
+\hypertarget{namespacepsostart_5de92f4d164f675bd3917d65b6687266}{
+\index{psostart@{psostart}!FUNCTION\_\-DISPLAY@{FUNCTION\_\-DISPLAY}}
+\index{FUNCTION\_\-DISPLAY@{FUNCTION\_\-DISPLAY}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::FUNCTION\_\-DISPLAY} = FUNCTION}}
+\label{namespacepsostart_5de92f4d164f675bd3917d65b6687266}
+
+
+\hypertarget{namespacepsostart_579ddeab252424f678b85072ac2783ce}{
+\index{psostart@{psostart}!g2@{g2}}
+\index{g2@{g2}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::g2} = None}}
+\label{namespacepsostart_579ddeab252424f678b85072ac2783ce}
+
+
+\hypertarget{namespacepsostart_53a8463b5040b72717e300fff85403c3}{
+\index{psostart@{psostart}!g3@{g3}}
+\index{g3@{g3}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::g3} = None}}
+\label{namespacepsostart_53a8463b5040b72717e300fff85403c3}
+
+
+\hypertarget{namespacepsostart_a4626f705c0ad45f935cbdc017503911}{
+\index{psostart@{psostart}!g\_\-pos@{g\_\-pos}}
+\index{g\_\-pos@{g\_\-pos}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::g\_\-pos} = None}}
+\label{namespacepsostart_a4626f705c0ad45f935cbdc017503911}
+
+
+\hypertarget{namespacepsostart_16120c58348b037f3026552129c4a703}{
+\index{psostart@{psostart}!globalBestLabel@{globalBestLabel}}
+\index{globalBestLabel@{globalBestLabel}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf psostart::globalBestLabel} = None}}
+\label{namespacepsostart_16120c58348b037f3026552129c4a703}
+
+
+\hypertarget{namespacepsostart_4baead81c8a51f0adb3699b010c3c02d}{
+\index{psostart@{psostart}!GOAL@{GOAL}}
+\index{GOAL@{GOAL}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::GOAL} = 100}}
+\label{namespacepsostart_4baead81c8a51f0adb3699b010c3c02d}
+
+
+\hypertarget{namespacepsostart_3169f3551a7343c45c9e96aa8b60666d}{
+\index{psostart@{psostart}!HEIGHT@{HEIGHT}}
+\index{HEIGHT@{HEIGHT}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::HEIGHT} = 4}}
+\label{namespacepsostart_3169f3551a7343c45c9e96aa8b60666d}
+
+
+\hypertarget{namespacepsostart_869ea53446100d3296786868d2c17965}{
+\index{psostart@{psostart}!HIERARCHYCHANGE@{HIERARCHYCHANGE}}
+\index{HIERARCHYCHANGE@{HIERARCHYCHANGE}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::HIERARCHYCHANGE} = 5}}
+\label{namespacepsostart_869ea53446100d3296786868d2c17965}
+
+
+\hypertarget{namespacepsostart_6f96baa861a0624d8fc7f23a25059d9f}{
+\index{psostart@{psostart}!master@{master}}
+\index{master@{master}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf psostart::master} = Tk()}}
+\label{namespacepsostart_6f96baa861a0624d8fc7f23a25059d9f}
+
+
+\hypertarget{namespacepsostart_69037b57c1ff25824dbcbbe17807d2d7}{
+\index{psostart@{psostart}!MAX\_\-Y@{MAX\_\-Y}}
+\index{MAX\_\-Y@{MAX\_\-Y}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::MAX\_\-Y} = 4000}}
+\label{namespacepsostart_69037b57c1ff25824dbcbbe17807d2d7}
+
+
+\hypertarget{namespacepsostart_4eb0db99f944d03199e893e85f1a9e1d}{
+\index{psostart@{psostart}!MAXSTEP@{MAXSTEP}}
+\index{MAXSTEP@{MAXSTEP}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::MAXSTEP} = 0}}
+\label{namespacepsostart_4eb0db99f944d03199e893e85f1a9e1d}
+
+
+\hypertarget{namespacepsostart_68dd12c702b13dada8e2cf3f4d5bfd0e}{
+\index{psostart@{psostart}!MINBRANCHDEGREE@{MINBRANCHDEGREE}}
+\index{MINBRANCHDEGREE@{MINBRANCHDEGREE}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::MINBRANCHDEGREE} = 2}}
+\label{namespacepsostart_68dd12c702b13dada8e2cf3f4d5bfd0e}
+
+
+\hypertarget{namespacepsostart_509e6c062fe0b5ac8f25398216e67f89}{
+\index{psostart@{psostart}!MOVEDISTANCE@{MOVEDISTANCE}}
+\index{MOVEDISTANCE@{MOVEDISTANCE}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::MOVEDISTANCE} = 5}}
+\label{namespacepsostart_509e6c062fe0b5ac8f25398216e67f89}
+
+
+\hypertarget{namespacepsostart_b2a0815fb64577d432f816c6cd0f9178}{
+\index{psostart@{psostart}!MOVEFREQUENCY@{MOVEFREQUENCY}}
+\index{MOVEFREQUENCY@{MOVEFREQUENCY}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::MOVEFREQUENCY} = 100}}
+\label{namespacepsostart_b2a0815fb64577d432f816c6cd0f9178}
+
+
+\hypertarget{namespacepsostart_fbfb114617ecd765efb5729837d9a1a8}{
+\index{psostart@{psostart}!NO\_\-OUTPUT@{NO\_\-OUTPUT}}
+\index{NO\_\-OUTPUT@{NO\_\-OUTPUT}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::NO\_\-OUTPUT} = False}}
+\label{namespacepsostart_fbfb114617ecd765efb5729837d9a1a8}
+
+
+\hypertarget{namespacepsostart_f9890e0280edab811a334354909f7c98}{
+\index{psostart@{psostart}!NOISESIGMA@{NOISESIGMA}}
+\index{NOISESIGMA@{NOISESIGMA}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float {\bf psostart::NOISESIGMA} = 0.1}}
+\label{namespacepsostart_f9890e0280edab811a334354909f7c98}
+
+
+\hypertarget{namespacepsostart_814e0d868ce1bc57620a30199da53ca0}{
+\index{psostart@{psostart}!NOISESTYLE@{NOISESTYLE}}
+\index{NOISESTYLE@{NOISESTYLE}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::NOISESTYLE} = {\bf pso.noNoise}}}
+\label{namespacepsostart_814e0d868ce1bc57620a30199da53ca0}
+
+
+\hypertarget{namespacepsostart_f25b4590bbc3756e6f18e18686ed8938}{
+\index{psostart@{psostart}!NR\_\-SCOUTS@{NR\_\-SCOUTS}}
+\index{NR\_\-SCOUTS@{NR\_\-SCOUTS}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::NR\_\-SCOUTS} = 0}}
+\label{namespacepsostart_f25b4590bbc3756e6f18e18686ed8938}
+
+
+\hypertarget{namespacepsostart_6c58ebff0b415a15377d7bce5d77f1a2}{
+\index{psostart@{psostart}!NRSWAPCHECKS@{NRSWAPCHECKS}}
+\index{NRSWAPCHECKS@{NRSWAPCHECKS}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::NRSWAPCHECKS} = 1}}
+\label{namespacepsostart_6c58ebff0b415a15377d7bce5d77f1a2}
+
+
+\hypertarget{namespacepsostart_03fea5b845e55f82f3c7d947c79222b0}{
+\index{psostart@{psostart}!OPTFUNCTION@{OPTFUNCTION}}
+\index{OPTFUNCTION@{OPTFUNCTION}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::OPTFUNCTION} = {\bf pso.rastrigin}}}
+\label{namespacepsostart_03fea5b845e55f82f3c7d947c79222b0}
+
+
+\hypertarget{namespacepsostart_1580bebace469bf87b3e2c861e983cbc}{
+\index{psostart@{psostart}!OPTIMUMMOVESTYLE@{OPTIMUMMOVESTYLE}}
+\index{OPTIMUMMOVESTYLE@{OPTIMUMMOVESTYLE}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::OPTIMUMMOVESTYLE} = {\bf pso.exponentialLinearOptMove}}}
+\label{namespacepsostart_1580bebace469bf87b3e2c861e983cbc}
+
+
+\hypertarget{namespacepsostart_212b7e52d588d863bbc6b9f2dc1a302a}{
+\index{psostart@{psostart}!p@{p}}
+\index{p@{p}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::p} = None}}
+\label{namespacepsostart_212b7e52d588d863bbc6b9f2dc1a302a}
+
+
+\hypertarget{namespacepsostart_be59abaa2019ac92419e98b269eb793d}{
+\index{psostart@{psostart}!paramWindow@{paramWindow}}
+\index{paramWindow@{paramWindow}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::paramWindow} = None}}
+\label{namespacepsostart_be59abaa2019ac92419e98b269eb793d}
+
+
+\hypertarget{namespacepsostart_af21f1269d56b7712e089a0f3ac34417}{
+\index{psostart@{psostart}!POSITION\_\-DISPLAY@{POSITION\_\-DISPLAY}}
+\index{POSITION\_\-DISPLAY@{POSITION\_\-DISPLAY}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}string {\bf psostart::POSITION\_\-DISPLAY} = \char`\"{}subtree\char`\"{}}}
+\label{namespacepsostart_af21f1269d56b7712e089a0f3ac34417}
+
+
+\hypertarget{namespacepsostart_7b05fb7d8575f94e505d13af00c8af04}{
+\index{psostart@{psostart}!positionDisplay@{positionDisplay}}
+\index{positionDisplay@{positionDisplay}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf psostart::positionDisplay} = Toplevel()}}
+\label{namespacepsostart_7b05fb7d8575f94e505d13af00c8af04}
+
+
+\hypertarget{namespacepsostart_38617951b9c3a3f6bc520f849c3daa46}{
+\index{psostart@{psostart}!psoParam@{psoParam}}
+\index{psoParam@{psoParam}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf psostart::psoParam} = {\bf PsoParameter3}()}}
+\label{namespacepsostart_38617951b9c3a3f6bc520f849c3daa46}
+
+
+\hypertarget{namespacepsostart_0683581f443a1833094be4af9bfa53fc}{
+\index{psostart@{psostart}!REFINEBESTVALUE@{REFINEBESTVALUE}}
+\index{REFINEBESTVALUE@{REFINEBESTVALUE}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::REFINEBESTVALUE} = True}}
+\label{namespacepsostart_0683581f443a1833094be4af9bfa53fc}
+
+
+\hypertarget{namespacepsostart_769be171b1c94fde02394d2a4efe160f}{
+\index{psostart@{psostart}!RESPONSEMETHOD@{RESPONSEMETHOD}}
+\index{RESPONSEMETHOD@{RESPONSEMETHOD}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::RESPONSEMETHOD} = {\bf pso.noResponse}}}
+\label{namespacepsostart_769be171b1c94fde02394d2a4efe160f}
+
+
+\hypertarget{namespacepsostart_ef42863a90b026064acb46a439ad66a4}{
+\index{psostart@{psostart}!REUSEOLDVALUE@{REUSEOLDVALUE}}
+\index{REUSEOLDVALUE@{REUSEOLDVALUE}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::REUSEOLDVALUE} = {\bf pso.reuseLastBestValue}}}
+\label{namespacepsostart_ef42863a90b026064acb46a439ad66a4}
+
+
+\hypertarget{namespacepsostart_c4e0e1009671f83d53078da786b64bce}{
+\index{psostart@{psostart}!SHOWSWAPS@{SHOWSWAPS}}
+\index{SHOWSWAPS@{SHOWSWAPS}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::SHOWSWAPS} = False}}
+\label{namespacepsostart_c4e0e1009671f83d53078da786b64bce}
+
+
+\hypertarget{namespacepsostart_1fa98a85b621e24c1fe7ec83dcb072cf}{
+\index{psostart@{psostart}!SIZE@{SIZE}}
+\index{SIZE@{SIZE}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::SIZE} = {\bf SWARMSIZE}+{\bf NR\_\-SCOUTS}}}
+\label{namespacepsostart_1fa98a85b621e24c1fe7ec83dcb072cf}
+
+
+\hypertarget{namespacepsostart_603522924f52baf38e412d8667edd3a5}{
+\index{psostart@{psostart}!sleepScale@{sleepScale}}
+\index{sleepScale@{sleepScale}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf psostart::sleepScale} = None}}
+\label{namespacepsostart_603522924f52baf38e412d8667edd3a5}
+
+
+\hypertarget{namespacepsostart_f9fd983d5b47b56a5522ca953d16996f}{
+\index{psostart@{psostart}!step@{step}}
+\index{step@{step}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::step} = 0}}
+\label{namespacepsostart_f9fd983d5b47b56a5522ca953d16996f}
+
+
+\hypertarget{namespacepsostart_112eb4712e14a578b7c44cef2b0e5b1f}{
+\index{psostart@{psostart}!stop@{stop}}
+\index{stop@{stop}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::stop} = False}}
+\label{namespacepsostart_112eb4712e14a578b7c44cef2b0e5b1f}
+
+
+\hypertarget{namespacepsostart_05cfdb315414f0d5976c3928efa64836}{
+\index{psostart@{psostart}!SWAPDELAY@{SWAPDELAY}}
+\index{SWAPDELAY@{SWAPDELAY}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::SWAPDELAY} = 1}}
+\label{namespacepsostart_05cfdb315414f0d5976c3928efa64836}
+
+
+\hypertarget{namespacepsostart_444d7eb0307e3f2a481d35f6e99da2bc}{
+\index{psostart@{psostart}!SWARM\_\-DISPLAY@{SWARM\_\-DISPLAY}}
+\index{SWARM\_\-DISPLAY@{SWARM\_\-DISPLAY}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::SWARM\_\-DISPLAY} = SWARM}}
+\label{namespacepsostart_444d7eb0307e3f2a481d35f6e99da2bc}
+
+
+\hypertarget{namespacepsostart_ba1e88de83b58e8cdc0184dc3407c373}{
+\index{psostart@{psostart}!SWARMSIZE@{SWARMSIZE}}
+\index{SWARMSIZE@{SWARMSIZE}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::SWARMSIZE} = 30}}
+\label{namespacepsostart_ba1e88de83b58e8cdc0184dc3407c373}
+
+
+\hypertarget{namespacepsostart_302a241641c5bb2a7c560bc1a216ff64}{
+\index{psostart@{psostart}!SWARMTYPE@{SWARMTYPE}}
+\index{SWARMTYPE@{SWARMTYPE}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::SWARMTYPE} = {\bf pso.seqSwarm}}}
+\label{namespacepsostart_302a241641c5bb2a7c560bc1a216ff64}
+
+
+\hypertarget{namespacepsostart_9e1a1e315c078ee7ab2876530b46f706}{
+\index{psostart@{psostart}!top@{top}}
+\index{top@{top}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf psostart::top} = Toplevel()}}
+\label{namespacepsostart_9e1a1e315c078ee7ab2876530b46f706}
+
+
+\hypertarget{namespacepsostart_713a0c7137e9e999e15e95c7c6f968d2}{
+\index{psostart@{psostart}!top2@{top2}}
+\index{top2@{top2}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf psostart::top2} = Toplevel()}}
+\label{namespacepsostart_713a0c7137e9e999e15e95c7c6f968d2}
+
+
+\hypertarget{namespacepsostart_955e2448af0db62cef11a23f08cf20c8}{
+\index{psostart@{psostart}!UPDATESTEP@{UPDATESTEP}}
+\index{UPDATESTEP@{UPDATESTEP}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf psostart::UPDATESTEP} = 1}}
+\label{namespacepsostart_955e2448af0db62cef11a23f08cf20c8}
+
+
+\hypertarget{namespacepsostart_4c6c05045fa85150949a9e5ebfa9615b}{
+\index{psostart@{psostart}!UPDATESTYLE@{UPDATESTYLE}}
+\index{UPDATESTYLE@{UPDATESTYLE}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::UPDATESTYLE} = {\bf pso.updatePeriodic}}}
+\label{namespacepsostart_4c6c05045fa85150949a9e5ebfa9615b}
+
+
+\hypertarget{namespacepsostart_44f8a24c235a0dab6015706df65ef687}{
+\index{psostart@{psostart}!vector2\_\-x@{vector2\_\-x}}
+\index{vector2\_\-x@{vector2\_\-x}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}list {\bf psostart::vector2\_\-x} = \mbox{[}$\,$\mbox{]}}}
+\label{namespacepsostart_44f8a24c235a0dab6015706df65ef687}
+
+
+\hypertarget{namespacepsostart_e3fbef44f0ac39316031f1849adf2f7b}{
+\index{psostart@{psostart}!vector2\_\-y@{vector2\_\-y}}
+\index{vector2\_\-y@{vector2\_\-y}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}list {\bf psostart::vector2\_\-y} = \mbox{[}$\,$\mbox{]}}}
+\label{namespacepsostart_e3fbef44f0ac39316031f1849adf2f7b}
+
+
+\hypertarget{namespacepsostart_5f1379b781c073c257cbcf71f5441e2e}{
+\index{psostart@{psostart}!vector3\_\-x@{vector3\_\-x}}
+\index{vector3\_\-x@{vector3\_\-x}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}list {\bf psostart::vector3\_\-x} = \mbox{[}$\,$\mbox{]}}}
+\label{namespacepsostart_5f1379b781c073c257cbcf71f5441e2e}
+
+
+\hypertarget{namespacepsostart_310eb124618fa97b0e053e7f99598122}{
+\index{psostart@{psostart}!vector3\_\-y@{vector3\_\-y}}
+\index{vector3\_\-y@{vector3\_\-y}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}list {\bf psostart::vector3\_\-y} = \mbox{[}$\,$\mbox{]}}}
+\label{namespacepsostart_310eb124618fa97b0e053e7f99598122}
+
+
+\hypertarget{namespacepsostart_ce591784a486a55bff5e9eefe6143db8}{
+\index{psostart@{psostart}!vector\_\-x@{vector\_\-x}}
+\index{vector\_\-x@{vector\_\-x}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}list {\bf psostart::vector\_\-x} = \mbox{[}$\,$\mbox{]}}}
+\label{namespacepsostart_ce591784a486a55bff5e9eefe6143db8}
+
+
+\hypertarget{namespacepsostart_106a94902d0877943428c3d1edea2167}{
+\index{psostart@{psostart}!vector\_\-x\_\-div@{vector\_\-x\_\-div}}
+\index{vector\_\-x\_\-div@{vector\_\-x\_\-div}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}list {\bf psostart::vector\_\-x\_\-div} = \mbox{[}$\,$\mbox{]}}}
+\label{namespacepsostart_106a94902d0877943428c3d1edea2167}
+
+
+\hypertarget{namespacepsostart_dd73efc9aeeedb85bf87ecd3cb22632d}{
+\index{psostart@{psostart}!vector\_\-x\_\-level@{vector\_\-x\_\-level}}
+\index{vector\_\-x\_\-level@{vector\_\-x\_\-level}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}list {\bf psostart::vector\_\-x\_\-level} = \mbox{[}$\,$\mbox{]}}}
+\label{namespacepsostart_dd73efc9aeeedb85bf87ecd3cb22632d}
+
+
+\hypertarget{namespacepsostart_17225f0f703ff68e39b1466c10eb833c}{
+\index{psostart@{psostart}!vector\_\-x\_\-pos@{vector\_\-x\_\-pos}}
+\index{vector\_\-x\_\-pos@{vector\_\-x\_\-pos}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}list {\bf psostart::vector\_\-x\_\-pos} = \mbox{[}$\,$\mbox{]}}}
+\label{namespacepsostart_17225f0f703ff68e39b1466c10eb833c}
+
+
+\hypertarget{namespacepsostart_804613fe2ccb90fc68ae55454b45086e}{
+\index{psostart@{psostart}!vector\_\-y@{vector\_\-y}}
+\index{vector\_\-y@{vector\_\-y}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}list {\bf psostart::vector\_\-y} = \mbox{[}$\,$\mbox{]}}}
+\label{namespacepsostart_804613fe2ccb90fc68ae55454b45086e}
+
+
+\hypertarget{namespacepsostart_17ee232a94f4121a3be65ff3b515d183}{
+\index{psostart@{psostart}!vector\_\-y\_\-div@{vector\_\-y\_\-div}}
+\index{vector\_\-y\_\-div@{vector\_\-y\_\-div}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}list {\bf psostart::vector\_\-y\_\-div} = \mbox{[}$\,$\mbox{]}}}
+\label{namespacepsostart_17ee232a94f4121a3be65ff3b515d183}
+
+
+\hypertarget{namespacepsostart_153af18e59f1c0fd2819ce28b6284e2f}{
+\index{psostart@{psostart}!vector\_\-y\_\-level@{vector\_\-y\_\-level}}
+\index{vector\_\-y\_\-level@{vector\_\-y\_\-level}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}list {\bf psostart::vector\_\-y\_\-level} = \mbox{[}$\,$\mbox{]}}}
+\label{namespacepsostart_153af18e59f1c0fd2819ce28b6284e2f}
+
+
+\hypertarget{namespacepsostart_2199cd5cd71d450746a957acdccb8042}{
+\index{psostart@{psostart}!vector\_\-y\_\-pos@{vector\_\-y\_\-pos}}
+\index{vector\_\-y\_\-pos@{vector\_\-y\_\-pos}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}list {\bf psostart::vector\_\-y\_\-pos} = \mbox{[}$\,$\mbox{]}}}
+\label{namespacepsostart_2199cd5cd71d450746a957acdccb8042}
+
+
+\hypertarget{namespacepsostart_c9e1e4f950b30610115554fde9b24315}{
+\index{psostart@{psostart}!vel@{vel}}
+\index{vel@{vel}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf psostart::vel} = None}}
+\label{namespacepsostart_c9e1e4f950b30610115554fde9b24315}
+
+
+\hypertarget{namespacepsostart_554ac1511096aa0bf399bb4bff5f267a}{
+\index{psostart@{psostart}!VMAXRATIO@{VMAXRATIO}}
+\index{VMAXRATIO@{VMAXRATIO}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float {\bf psostart::VMAXRATIO} = 0.0}}
+\label{namespacepsostart_554ac1511096aa0bf399bb4bff5f267a}
+
+
+\hypertarget{namespacepsostart_456afd2b02fe9acb6fab27940564b3e4}{
+\index{psostart@{psostart}!W@{W}}
+\index{W@{W}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float {\bf psostart::W} = 0.729}}
+\label{namespacepsostart_456afd2b02fe9acb6fab27940564b3e4}
+
+
+\hypertarget{namespacepsostart_82069834d25d8c4ee86ed668b81b7a1d}{
+\index{psostart@{psostart}!WMIN@{WMIN}}
+\index{WMIN@{WMIN}!psostart@{psostart}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float {\bf psostart::WMIN} = 0.729}}
+\label{namespacepsostart_82069834d25d8c4ee86ed668b81b7a1d}
+
+

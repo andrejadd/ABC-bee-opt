@@ -1,0 +1,859 @@
+\hypertarget{classSwarm}{
+\section{Swarm Class Reference}
+\label{classSwarm}\index{Swarm@{Swarm}}
+}
+The \hyperlink{classSwarm}{Swarm} class containing and controlling the individual birds.  
+
+
+{\tt \#include $<$swarm.h$>$}
+
+Inheritance diagram for Swarm:Collaboration diagram for Swarm:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classSwarm_9ab165396fc3ac7f37007c3942deb98f}{Swarm} (\hyperlink{classPSO}{PSO} $\ast$pso\_\-p, int \hyperlink{runpso_8cpp_439227feff9d7f55384e8780cfc2eb82}{size}, int \hyperlink{runpso_8cpp_70b5e28b5bc3d1b63a7435c5fe50b837}{dim}, double \hyperlink{classSwarm_b504e23c39413573e3685a88435f5f85}{min\_\-x}, double \hyperlink{classSwarm_e5075d21be96c1cdf441bc2b612177c1}{max\_\-x}, double \hyperlink{classSwarm_160c79397ea811636e17c0e4d6297729}{min\_\-v}, double \hyperlink{classSwarm_2b0dbde2c275f991580a07a745cb5ade}{max\_\-v}, int nrScouts\_\-in=0)
+\begin{CompactList}\small\item\em Constructor for the swarm. \item\end{CompactList}\item 
+virtual \hyperlink{classSwarm_5d74bf7e768edf0d8930ba187005a583}{$\sim$Swarm} ()
+\begin{CompactList}\small\item\em The allocated ressources are freed. \item\end{CompactList}\item 
+void \hyperlink{classSwarm_a76268fe09067ed70b04d8bd9d487a22}{localSearch} ()
+\item 
+virtual void \hyperlink{classSwarm_3e480dd422f3babe42d22d5af097c2ba}{printSwarm} ()
+\item 
+virtual int \hyperlink{classSwarm_7ab61f9797ce80e2edfb2bd881d7147c}{step} (int \hyperlink{runpso_8cpp_b4ae7205573977222eadd0795db193e2}{steps}=1)
+\begin{CompactList}\small\item\em The swarm does \hyperlink{runpso_8cpp_b4ae7205573977222eadd0795db193e2}{steps} steps. \item\end{CompactList}\item 
+double \hyperlink{classSwarm_29b92fc70b57a38a6db7a03d6f9df4ea}{getGlobalBestValue} ()
+\begin{CompactList}\small\item\em Return the overall best value found. \item\end{CompactList}\item 
+\hyperlink{pso_8h_ea087f59f65df7bbf4798bccd8a02416}{detectionMethod\_\-type} \hyperlink{classSwarm_1f6eec525de52241c5b1272a07361e20}{get\_\-detectionMethod} ()
+\item 
+\hyperlink{pso_8h_0c2464ff08436288377b981af15bbb6d}{responseMethod\_\-type} \hyperlink{classSwarm_eee2a8aaef1290bf85df295881aab486}{get\_\-responseMethod} ()
+\item 
+void \hyperlink{classSwarm_b90bce798796c7b9cee3322e7531df34}{set\_\-detectionMethod} (\hyperlink{pso_8h_ea087f59f65df7bbf4798bccd8a02416}{detectionMethod\_\-type} detectionMethod\_\-in)
+\item 
+void \hyperlink{classSwarm_896cd984569235391fc53353d87a9337}{set\_\-responseMethod} (\hyperlink{pso_8h_0c2464ff08436288377b981af15bbb6d}{responseMethod\_\-type} responseMethod\_\-in)
+\item 
+void \hyperlink{classSwarm_ba26dbec7b48abc3e5d964ac3b512ed0}{setInitialSidestep} (double sidestep)
+\item 
+vector$<$ double $>$ \hyperlink{classSwarm_71be1e7ff66391d2f1e12f742ed9794d}{getMeanPosition} ()
+\begin{CompactList}\small\item\em Return the current mean position of the swarm. \item\end{CompactList}\item 
+double \hyperlink{classSwarm_3f51b2c5d7a170f17b7290857c2ba3cb}{getAverageDiversity} ()
+\item 
+double \hyperlink{classSwarm_40ac578ec7abab1bfd2a0d4fc4051811}{getMedianDiversity} ()
+\item 
+virtual double \hyperlink{classSwarm_71dc0d0753bfea580e841234b9c63ebc}{getAverageDiversitySubtree} (int subtreeNr)
+\item 
+virtual double \hyperlink{classSwarm_4f31a2aeda867e79eab25b1a108f1c6f}{getMedianDiversitySubtree} (int subtreeNr)
+\item 
+\hyperlink{classBird}{Bird} $\ast$ \hyperlink{classSwarm_b762d426b74600501d4c80431df380a9}{getBird} (int i)
+\begin{CompactList}\small\item\em Return the bird or scout with index i. \item\end{CompactList}\item 
+vector$<$ \hyperlink{classBird}{Bird} $\ast$ $>$ \hyperlink{classSwarm_3459aae3e91fa3330ea467deccee3c13}{getBirds} ()
+\item 
+\hyperlink{classBird}{Bird} $\ast$ \hyperlink{classSwarm_7636f17fe7017c9665678e85e20b9779}{getGlobalBestBird} ()
+\begin{CompactList}\small\item\em Return the global best bird. \item\end{CompactList}\item 
+bool \hyperlink{classSwarm_a94833190b28c495684e9681ee91b3b8}{isScout} (int i)
+\begin{CompactList}\small\item\em Determines whether bird i is a scout. \item\end{CompactList}\item 
+virtual int \hyperlink{classSwarm_98b6b325d8caffbc62010f80a229ad6c}{getPyramidLevelBird} (int bird\_\-i)
+\begin{CompactList}\small\item\em Just a stub that is implemented in \hyperlink{classPyramidSwarm_756af67d13a153ab3d2581673733b474}{PyramidSwarm::getPyramidLevelBird}. \item\end{CompactList}\item 
+virtual int \hyperlink{classSwarm_c2cd792ce6be2f833f9a37377e1e0885}{getPyramidSubtreeBird} (int bird\_\-i)
+\begin{CompactList}\small\item\em Just a stub that is implemented in \hyperlink{classPyramidSwarm_756af67d13a153ab3d2581673733b474}{PyramidSwarm::getPyramidLevelBird}. \item\end{CompactList}\item 
+virtual int \hyperlink{classSwarm_dc807f39f42c11f5ba10c0a82f1e6f4e}{getUseScoutBird} (int bird\_\-i)
+\begin{CompactList}\small\item\em Just a stub that is implemented in \hyperlink{classSwarm_dc807f39f42c11f5ba10c0a82f1e6f4e}{PyramidSwarm::getUseScoutBird}. \item\end{CompactList}\item 
+virtual int \hyperlink{classSwarm_73a690fe6e3d6550098dc8ffc2f977c2}{getActualHeight} ()
+\begin{CompactList}\small\item\em Required for \hyperlink{classPyramidSwarm}{PyramidSwarm}. \item\end{CompactList}\item 
+virtual int \hyperlink{classSwarm_c248592977868472b6874016ad273dbb}{getBranches} ()
+\begin{CompactList}\small\item\em Required for \hyperlink{classPyramidSwarm}{PyramidSwarm}. \item\end{CompactList}\item 
+virtual bool \hyperlink{classSwarm_75d0b85dc6fa2ec069f1580e0386faee}{isDivided} ()
+\begin{CompactList}\small\item\em Required for \hyperlink{classDynamicPyramidSwarm}{DynamicPyramidSwarm}. \item\end{CompactList}\item 
+virtual void \hyperlink{classSwarm_be7aff8e0df635ac00082fd6cd418356}{decreaseBranchDegree} ()
+\begin{CompactList}\small\item\em Implemented in \hyperlink{classAdaptivePyramidSwarm}{AdaptivePyramidSwarm}. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classBird}{Bird} $\ast$ \hyperlink{classSwarm_96527c398560529a5e3bf7cb4c2f5886}{createBird} (double \hyperlink{classSwarm_b504e23c39413573e3685a88435f5f85}{min\_\-x}, double \hyperlink{classSwarm_e5075d21be96c1cdf441bc2b612177c1}{max\_\-x}, double \hyperlink{classSwarm_160c79397ea811636e17c0e4d6297729}{min\_\-v}, double \hyperlink{classSwarm_2b0dbde2c275f991580a07a745cb5ade}{max\_\-v}, int index=\hyperlink{swarm_8h_364ae2e19d6ffa3e6a93a9971c4595c9}{MINUSONE})
+\begin{CompactList}\small\item\em Create a single bird. \item\end{CompactList}\item 
+virtual void \hyperlink{classSwarm_1ba247983a6f20d0e835c696748a530b}{createSwarm} (double \hyperlink{classSwarm_b504e23c39413573e3685a88435f5f85}{min\_\-x}, double \hyperlink{classSwarm_e5075d21be96c1cdf441bc2b612177c1}{max\_\-x}, double \hyperlink{classSwarm_160c79397ea811636e17c0e4d6297729}{min\_\-v}, double \hyperlink{classSwarm_2b0dbde2c275f991580a07a745cb5ade}{max\_\-v})
+\begin{CompactList}\small\item\em Create the birds. \item\end{CompactList}\item 
+\hyperlink{classBird}{Bird} $\ast$ \hyperlink{classSwarm_5371bfef5da1070085c0f98498d01783}{createNewBird} (double \hyperlink{classSwarm_b504e23c39413573e3685a88435f5f85}{min\_\-x}, double \hyperlink{classSwarm_e5075d21be96c1cdf441bc2b612177c1}{max\_\-x}, double \hyperlink{classSwarm_160c79397ea811636e17c0e4d6297729}{min\_\-v}, double \hyperlink{classSwarm_2b0dbde2c275f991580a07a745cb5ade}{max\_\-v})
+\begin{CompactList}\small\item\em Create a new particle. \item\end{CompactList}\item 
+void \hyperlink{classSwarm_c4550c4e3a04350e6b3d1481b896ee8a}{removeBird} (int index)
+\begin{CompactList}\small\item\em Delete the particle with the given index. \item\end{CompactList}\item 
+virtual void \hyperlink{classSwarm_6f91dff59bba147f5983b8fb77a4db7c}{createScouts} (double \hyperlink{classSwarm_b504e23c39413573e3685a88435f5f85}{min\_\-x}, double \hyperlink{classSwarm_e5075d21be96c1cdf441bc2b612177c1}{max\_\-x}, double \hyperlink{classSwarm_160c79397ea811636e17c0e4d6297729}{min\_\-v}, double \hyperlink{classSwarm_2b0dbde2c275f991580a07a745cb5ade}{max\_\-v})
+\begin{CompactList}\small\item\em Create the scouts. \item\end{CompactList}\item 
+virtual \hyperlink{classBird}{Bird} $\ast$ \hyperlink{classSwarm_a7bea159365345bccd57ac10f06e812b}{evaluatePos} ()
+\begin{CompactList}\small\item\em All the particles in the swarm evaluate their current position. \item\end{CompactList}\item 
+virtual void \hyperlink{classSwarm_e0647f4af56497d936dafc35aa7989bf}{compare} (\hyperlink{classBird}{Bird} $\ast$itrBestBird)
+\begin{CompactList}\small\item\em Compare iteration best particle to the global best and update. \item\end{CompactList}\item 
+virtual void \hyperlink{classSwarm_be668c680f5bdd27bd2c4244a8a431bf}{updateVel} ()
+\begin{CompactList}\small\item\em The velocity is updated according to the globalBestBird. \item\end{CompactList}\item 
+virtual void \hyperlink{classSwarm_41d6aa35d312751a1f9cb6977a545beb}{move} ()
+\begin{CompactList}\small\item\em All the particles in the swarm are moved. \item\end{CompactList}\item 
+virtual \hyperlink{classBird}{Bird} $\ast$ \hyperlink{classSwarm_39eaa4eed93a5d2731f5b1d5ecac8fa5}{evaluateScouts} ()
+\begin{CompactList}\small\item\em All the scouts evaluate their current position. \item\end{CompactList}\item 
+virtual void \hyperlink{classSwarm_a2b011c3d98a6f761691a0e52bec6001}{compareScouts} (\hyperlink{classBird}{Bird} $\ast$itrBestBird)
+\begin{CompactList}\small\item\em Compare iteration best scout to the currently best one and update. \item\end{CompactList}\item 
+virtual void \hyperlink{classSwarm_9e891ddba8f8890e9f48a06067a76a73}{updateScoutVel} ()
+\begin{CompactList}\small\item\em The velocity is updated according to a randomly chosen position. \item\end{CompactList}\item 
+virtual void \hyperlink{classSwarm_4fc3581725e33c1fe2d089f5980d3454}{moveScouts} ()
+\begin{CompactList}\small\item\em All the scouts are moved. \item\end{CompactList}\item 
+void \hyperlink{classSwarm_7e8309edaf059226c469e7d6a05caddd}{randomizeBird} (\hyperlink{classBird}{Bird} $\ast$birdPtr, const vector$<$ double $>$ \&bestVector, bool useBestPos)
+\begin{CompactList}\small\item\em The bird is re-randomized. \item\end{CompactList}\item 
+void \hyperlink{classSwarm_93f011b4e32128da1ff11431ce98a577}{randomizeReset} (double portion, bool reset)
+\begin{CompactList}\small\item\em A certain portion of the swarm is re-randomized. \item\end{CompactList}\item 
+virtual void \hyperlink{classSwarm_8315401d37a75266d77f71a66660d1ae}{applyScout} (bool force=false)
+\begin{CompactList}\small\item\em If the best scout is better than the gbest individual it is reset. \item\end{CompactList}\item 
+void \hyperlink{classSwarm_40a832e5094cc0bef13d9c6ab83b98c5}{updateMeanPosition} ()
+\begin{CompactList}\small\item\em Determine the current mean position of the swarm. \item\end{CompactList}\item 
+void \hyperlink{classSwarm_5ef674f56c0bb5276aab56f456bd16b4}{updateMaxDistance} ()
+\begin{CompactList}\small\item\em Determine the maximum distance between two birds. \item\end{CompactList}\item 
+virtual void \hyperlink{classSwarm_849d8809ea9c26d9bc0010968bf1020c}{calculateDiversity} ()
+\begin{CompactList}\small\item\em Calculate the diversity. \item\end{CompactList}\item 
+double $\ast$ \hyperlink{classSwarm_e8074ca91d00f4dd90b2d1101db2b9cd}{calculateDimensionVariance} ()
+\begin{CompactList}\small\item\em For each dimension calculate the variance of the best positions. \item\end{CompactList}\item 
+virtual bool \hyperlink{classSwarm_2ff0a2521e41d8b26e031e5a08c583b5}{detectDynamicChange} ()
+\begin{CompactList}\small\item\em Apply detection method for changed environment. \item\end{CompactList}\item 
+virtual void \hyperlink{classSwarm_f98488b9ca17c07c89a591040f360db6}{respondToChange} ()
+\begin{CompactList}\small\item\em Respond to the change in the environment. \item\end{CompactList}\item 
+void \hyperlink{classSwarm_68f5ddc7a3335954f42cc01366ab374d}{updateBestValues} ()
+\begin{CompactList}\small\item\em All individuals update their personal best position. \item\end{CompactList}\item 
+bool \hyperlink{classSwarm_37d9b1abc4dac92ed426bcc50912fc76}{noisyBirdIsBetter} (\hyperlink{classBird}{Bird} $\ast$newBird, \hyperlink{classBird}{Bird} $\ast$oldBird)
+\begin{CompactList}\small\item\em check whether the new position is better -- in the precense of noise \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+\hyperlink{classPSO}{PSO} $\ast$ \hyperlink{classSwarm_0e0ea6b1259774c2b2390536e936bcfc}{pso}
+\begin{CompactList}\small\item\em The \hyperlink{classPSO}{PSO} algorithm with the parameters used. \item\end{CompactList}\item 
+vector$<$ \hyperlink{classBird}{Bird} $\ast$ $>$ \hyperlink{classSwarm_74191c7a473df093f5537f8d6d5ca1a6}{birds}
+\begin{CompactList}\small\item\em The individual birds. \item\end{CompactList}\item 
+\hyperlink{classBird}{Bird} $\ast$$\ast$ \hyperlink{classSwarm_9520522dd61ae47abc1781be180c01e3}{scouts}
+\begin{CompactList}\small\item\em The additional particles used for scouting are stored separately. \item\end{CompactList}\item 
+int \hyperlink{classSwarm_0ed97963cfeb4f2b8eee5c4fb6f6dcde}{swarmsize}
+\begin{CompactList}\small\item\em The number of birds. \item\end{CompactList}\item 
+int \hyperlink{classSwarm_6ec8b4463d83af484788490c203ae166}{nrScouts}
+\begin{CompactList}\small\item\em The number of scouts. \item\end{CompactList}\item 
+int \hyperlink{classSwarm_9e9e482ef70387a81721eb5e2b998725}{lastBirdIndex}
+\begin{CompactList}\small\item\em The last index given to a new particle. \item\end{CompactList}\item 
+double \hyperlink{classSwarm_b504e23c39413573e3685a88435f5f85}{min\_\-x}
+\begin{CompactList}\small\item\em The range of the initial search space. \item\end{CompactList}\item 
+double \hyperlink{classSwarm_e5075d21be96c1cdf441bc2b612177c1}{max\_\-x}
+\item 
+double \hyperlink{classSwarm_160c79397ea811636e17c0e4d6297729}{min\_\-v}
+\begin{CompactList}\small\item\em The range of the initial velocity. \item\end{CompactList}\item 
+double \hyperlink{classSwarm_2b0dbde2c275f991580a07a745cb5ade}{max\_\-v}
+\item 
+vector$<$ double $>$ \hyperlink{classSwarm_5fd39f652507dce962342f4f3569b9e3}{meanPosition}
+\begin{CompactList}\small\item\em The current mean position of the swarm. \item\end{CompactList}\item 
+double \hyperlink{classSwarm_74a5d2ee1990cb31d93ceff20080ec6c}{averageDiversity}
+\begin{CompactList}\small\item\em The current average distance to the mean position. \item\end{CompactList}\item 
+double \hyperlink{classSwarm_97f31d54d0cc328f7ca763c447338b02}{medianDiversity}
+\begin{CompactList}\small\item\em The current median distance to the mean position. \item\end{CompactList}\item 
+double \hyperlink{classSwarm_a2cca0442b7f5e40f52dfd22d0d2b7e7}{maxDistance}
+\begin{CompactList}\small\item\em The maximum distance between two birds. \item\end{CompactList}\item 
+\hyperlink{classBird}{Bird} $\ast$ \hyperlink{classSwarm_847c3f9482dcc400c9a0b6adf923c475}{globalBestBird}
+\begin{CompactList}\small\item\em Pointer to the current best bird. \item\end{CompactList}\item 
+\hyperlink{classBird}{Bird} $\ast$ \hyperlink{classSwarm_a584ad92de2862942728b4d4a38bafd1}{globalBestScout}
+\begin{CompactList}\small\item\em Pointer to the current best scout. \item\end{CompactList}\item 
+\hyperlink{pso_8h_ea087f59f65df7bbf4798bccd8a02416}{detectionMethod\_\-type} \hyperlink{classSwarm_fccbdf32a0ea11cb33665d64ffb15c56}{detectionMethod}
+\begin{CompactList}\small\item\em How to detect dynamic changes in the evaluation function. \item\end{CompactList}\item 
+\hyperlink{pso_8h_0c2464ff08436288377b981af15bbb6d}{responseMethod\_\-type} \hyperlink{classSwarm_f051986abd458ad38f3905d8f190bdc8}{responseMethod}
+\begin{CompactList}\small\item\em How to respond to dynamic changes in the evaluation function. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classSwarm}{Swarm} class containing and controlling the individual birds. 
+
+The actions of the single birds are initiated from here and the information about the current best bird is kept here. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSwarm_9ab165396fc3ac7f37007c3942deb98f}{
+\index{Swarm@{Swarm}!Swarm@{Swarm}}
+\index{Swarm@{Swarm}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Swarm::Swarm ({\bf PSO} $\ast$ {\em pso\_\-p}, \/  int {\em size}, \/  int {\em dim}, \/  double {\em min\_\-x}, \/  double {\em max\_\-x}, \/  double {\em min\_\-v}, \/  double {\em max\_\-v}, \/  int {\em nrScouts\_\-in} = {\tt 0})}}
+\label{classSwarm_9ab165396fc3ac7f37007c3942deb98f}
+
+
+Constructor for the swarm. 
+
+\begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+pso\_\-p}]The \hyperlink{classPSO}{PSO} Algorithm for the parameters used \item[{\em 
+size}]The number of birds to create \item[{\em 
+dim}]The dimension of the search space, i.e. the function to be optimized, \item[{\em 
+min\_\-x}]Lower bound of x dimension, x0 chosen randomly \item[{\em 
+max\_\-x}]Upper bound of x dimension, x0 chosen randomly \item[{\em 
+min\_\-v}]Lower bound of v dimension, v0 chosen randomly \item[{\em 
+max\_\-v}]Upper bound of v dimension, v0 chosen randomly \item[{\em 
+nrScouts\_\-in}]The number of additional scouts, default = 0 \end{description}
+\end{Desc}
+\hypertarget{classSwarm_5d74bf7e768edf0d8930ba187005a583}{
+\index{Swarm@{Swarm}!$\sim$Swarm@{$\sim$Swarm}}
+\index{$\sim$Swarm@{$\sim$Swarm}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Swarm::$\sim$Swarm ()\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classSwarm_5d74bf7e768edf0d8930ba187005a583}
+
+
+The allocated ressources are freed. 
+
+Virtual destructor is used for derived Classes 
+
+\subsection{Member Function Documentation}
+\hypertarget{classSwarm_a76268fe09067ed70b04d8bd9d487a22}{
+\index{Swarm@{Swarm}!localSearch@{localSearch}}
+\index{localSearch@{localSearch}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::localSearch ()}}
+\label{classSwarm_a76268fe09067ed70b04d8bd9d487a22}
+
+
+\hypertarget{classSwarm_3e480dd422f3babe42d22d5af097c2ba}{
+\index{Swarm@{Swarm}!printSwarm@{printSwarm}}
+\index{printSwarm@{printSwarm}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::printSwarm ()\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classSwarm_3e480dd422f3babe42d22d5af097c2ba}
+
+
+
+
+Reimplemented in \hyperlink{classPyramidSwarm_85ec37731cf16f817ae7523e890a267e}{PyramidSwarm}.\hypertarget{classSwarm_7ab61f9797ce80e2edfb2bd881d7147c}{
+\index{Swarm@{Swarm}!step@{step}}
+\index{step@{step}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Swarm::step (int {\em steps} = {\tt 1})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classSwarm_7ab61f9797ce80e2edfb2bd881d7147c}
+
+
+The swarm does \hyperlink{runpso_8cpp_b4ae7205573977222eadd0795db193e2}{steps} steps. 
+
+Within one iteration the following actions are done for all the birds.\par
+ The current position is evaluated, the iteration best bird is determined and compared to the global best, the current velocity is adjusted to the global best bird and the birds are moved. 
+
+Reimplemented in \hyperlink{classPyramidSwarm_a9a21f0581b43dc3549fee12d6f2229e}{PyramidSwarm}, \hyperlink{classDynamicPyramidSwarm_ffcde6a425fd052c0bd5a65124a204a1}{DynamicPyramidSwarm}, \hyperlink{classAdaptivePyramidSwarm_0d2d0278504ad096f288d8efe5dbf360}{AdaptivePyramidSwarm}, \hyperlink{classRingSwarm_a5441ba339db7fc269f4784917189eab}{RingSwarm}, \hyperlink{classLocalSwarm_0321819616ea5252dde257b6d1f739db}{LocalSwarm}, and \hyperlink{classScoutSwarm_4b8c1a2e57b949b3259c118fbadcb781}{ScoutSwarm}.\hypertarget{classSwarm_29b92fc70b57a38a6db7a03d6f9df4ea}{
+\index{Swarm@{Swarm}!getGlobalBestValue@{getGlobalBestValue}}
+\index{getGlobalBestValue@{getGlobalBestValue}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double Swarm::getGlobalBestValue ()}}
+\label{classSwarm_29b92fc70b57a38a6db7a03d6f9df4ea}
+
+
+Return the overall best value found. 
+
+\hypertarget{classSwarm_1f6eec525de52241c5b1272a07361e20}{
+\index{Swarm@{Swarm}!get\_\-detectionMethod@{get\_\-detectionMethod}}
+\index{get\_\-detectionMethod@{get\_\-detectionMethod}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf detectionMethod\_\-type} Swarm::get\_\-detectionMethod ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classSwarm_1f6eec525de52241c5b1272a07361e20}
+
+
+\hypertarget{classSwarm_eee2a8aaef1290bf85df295881aab486}{
+\index{Swarm@{Swarm}!get\_\-responseMethod@{get\_\-responseMethod}}
+\index{get\_\-responseMethod@{get\_\-responseMethod}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf responseMethod\_\-type} Swarm::get\_\-responseMethod ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classSwarm_eee2a8aaef1290bf85df295881aab486}
+
+
+\hypertarget{classSwarm_b90bce798796c7b9cee3322e7531df34}{
+\index{Swarm@{Swarm}!set\_\-detectionMethod@{set\_\-detectionMethod}}
+\index{set\_\-detectionMethod@{set\_\-detectionMethod}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::set\_\-detectionMethod ({\bf detectionMethod\_\-type} {\em detectionMethod\_\-in})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classSwarm_b90bce798796c7b9cee3322e7531df34}
+
+
+\hypertarget{classSwarm_896cd984569235391fc53353d87a9337}{
+\index{Swarm@{Swarm}!set\_\-responseMethod@{set\_\-responseMethod}}
+\index{set\_\-responseMethod@{set\_\-responseMethod}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::set\_\-responseMethod ({\bf responseMethod\_\-type} {\em responseMethod\_\-in})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classSwarm_896cd984569235391fc53353d87a9337}
+
+
+\hypertarget{classSwarm_ba26dbec7b48abc3e5d964ac3b512ed0}{
+\index{Swarm@{Swarm}!setInitialSidestep@{setInitialSidestep}}
+\index{setInitialSidestep@{setInitialSidestep}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::setInitialSidestep (double {\em sidestep})}}
+\label{classSwarm_ba26dbec7b48abc3e5d964ac3b512ed0}
+
+
+\hypertarget{classSwarm_71be1e7ff66391d2f1e12f742ed9794d}{
+\index{Swarm@{Swarm}!getMeanPosition@{getMeanPosition}}
+\index{getMeanPosition@{getMeanPosition}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Swarm::getMeanPosition ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classSwarm_71be1e7ff66391d2f1e12f742ed9794d}
+
+
+Return the current mean position of the swarm. 
+
+\hypertarget{classSwarm_3f51b2c5d7a170f17b7290857c2ba3cb}{
+\index{Swarm@{Swarm}!getAverageDiversity@{getAverageDiversity}}
+\index{getAverageDiversity@{getAverageDiversity}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double Swarm::getAverageDiversity ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classSwarm_3f51b2c5d7a170f17b7290857c2ba3cb}
+
+
+\hypertarget{classSwarm_40ac578ec7abab1bfd2a0d4fc4051811}{
+\index{Swarm@{Swarm}!getMedianDiversity@{getMedianDiversity}}
+\index{getMedianDiversity@{getMedianDiversity}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double Swarm::getMedianDiversity ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classSwarm_40ac578ec7abab1bfd2a0d4fc4051811}
+
+
+\hypertarget{classSwarm_71dc0d0753bfea580e841234b9c63ebc}{
+\index{Swarm@{Swarm}!getAverageDiversitySubtree@{getAverageDiversitySubtree}}
+\index{getAverageDiversitySubtree@{getAverageDiversitySubtree}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual double Swarm::getAverageDiversitySubtree (int {\em subtreeNr})\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classSwarm_71dc0d0753bfea580e841234b9c63ebc}
+
+
+
+
+Reimplemented in \hyperlink{classPyramidSwarm_d8028bde5aa6ba3440350e3c6cca959f}{PyramidSwarm}.\hypertarget{classSwarm_4f31a2aeda867e79eab25b1a108f1c6f}{
+\index{Swarm@{Swarm}!getMedianDiversitySubtree@{getMedianDiversitySubtree}}
+\index{getMedianDiversitySubtree@{getMedianDiversitySubtree}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual double Swarm::getMedianDiversitySubtree (int {\em subtreeNr})\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classSwarm_4f31a2aeda867e79eab25b1a108f1c6f}
+
+
+
+
+Reimplemented in \hyperlink{classPyramidSwarm_d27c02e0ea3cad1e6ec3303bc64958e0}{PyramidSwarm}.\hypertarget{classSwarm_b762d426b74600501d4c80431df380a9}{
+\index{Swarm@{Swarm}!getBird@{getBird}}
+\index{getBird@{getBird}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Bird} $\ast$ Swarm::getBird (int {\em i})}}
+\label{classSwarm_b762d426b74600501d4c80431df380a9}
+
+
+Return the bird or scout with index i. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em i}]The index of the bird or scout (if index $>$= swarmsize) to be returned. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Pointer to the indexed bird or scout \end{Desc}
+\hypertarget{classSwarm_3459aae3e91fa3330ea467deccee3c13}{
+\index{Swarm@{Swarm}!getBirds@{getBirds}}
+\index{getBirds@{getBirds}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Bird}$\ast$$>$ Swarm::getBirds ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classSwarm_3459aae3e91fa3330ea467deccee3c13}
+
+
+\hypertarget{classSwarm_7636f17fe7017c9665678e85e20b9779}{
+\index{Swarm@{Swarm}!getGlobalBestBird@{getGlobalBestBird}}
+\index{getGlobalBestBird@{getGlobalBestBird}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Bird}$\ast$ Swarm::getGlobalBestBird ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classSwarm_7636f17fe7017c9665678e85e20b9779}
+
+
+Return the global best bird. 
+
+\begin{Desc}
+\item[Returns:]Pointer to the currently global best bird \end{Desc}
+\hypertarget{classSwarm_a94833190b28c495684e9681ee91b3b8}{
+\index{Swarm@{Swarm}!isScout@{isScout}}
+\index{isScout@{isScout}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool Swarm::isScout (int {\em i})}}
+\label{classSwarm_a94833190b28c495684e9681ee91b3b8}
+
+
+Determines whether bird i is a scout. 
+
+\hypertarget{classSwarm_98b6b325d8caffbc62010f80a229ad6c}{
+\index{Swarm@{Swarm}!getPyramidLevelBird@{getPyramidLevelBird}}
+\index{getPyramidLevelBird@{getPyramidLevelBird}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual int Swarm::getPyramidLevelBird (int {\em bird\_\-i})\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classSwarm_98b6b325d8caffbc62010f80a229ad6c}
+
+
+Just a stub that is implemented in \hyperlink{classPyramidSwarm_756af67d13a153ab3d2581673733b474}{PyramidSwarm::getPyramidLevelBird}. 
+
+
+
+Reimplemented in \hyperlink{classPyramidSwarm_756af67d13a153ab3d2581673733b474}{PyramidSwarm}.\hypertarget{classSwarm_c2cd792ce6be2f833f9a37377e1e0885}{
+\index{Swarm@{Swarm}!getPyramidSubtreeBird@{getPyramidSubtreeBird}}
+\index{getPyramidSubtreeBird@{getPyramidSubtreeBird}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual int Swarm::getPyramidSubtreeBird (int {\em bird\_\-i})\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classSwarm_c2cd792ce6be2f833f9a37377e1e0885}
+
+
+Just a stub that is implemented in \hyperlink{classPyramidSwarm_756af67d13a153ab3d2581673733b474}{PyramidSwarm::getPyramidLevelBird}. 
+
+
+
+Reimplemented in \hyperlink{classPyramidSwarm_c88d70f33dee3ffa27d63e2877c8a8ad}{PyramidSwarm}.\hypertarget{classSwarm_dc807f39f42c11f5ba10c0a82f1e6f4e}{
+\index{Swarm@{Swarm}!getUseScoutBird@{getUseScoutBird}}
+\index{getUseScoutBird@{getUseScoutBird}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual int Swarm::getUseScoutBird (int {\em bird\_\-i})\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classSwarm_dc807f39f42c11f5ba10c0a82f1e6f4e}
+
+
+Just a stub that is implemented in \hyperlink{classSwarm_dc807f39f42c11f5ba10c0a82f1e6f4e}{PyramidSwarm::getUseScoutBird}. 
+
+
+
+Reimplemented in \hyperlink{classScoutSwarm_9a2a45ebe72cf9302d5d30270efbca1d}{ScoutSwarm}.\hypertarget{classSwarm_73a690fe6e3d6550098dc8ffc2f977c2}{
+\index{Swarm@{Swarm}!getActualHeight@{getActualHeight}}
+\index{getActualHeight@{getActualHeight}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual int Swarm::getActualHeight ()\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classSwarm_73a690fe6e3d6550098dc8ffc2f977c2}
+
+
+Required for \hyperlink{classPyramidSwarm}{PyramidSwarm}. 
+
+
+
+Reimplemented in \hyperlink{classPyramidSwarm_651f505aa4513559e87f2481ea259443}{PyramidSwarm}.\hypertarget{classSwarm_c248592977868472b6874016ad273dbb}{
+\index{Swarm@{Swarm}!getBranches@{getBranches}}
+\index{getBranches@{getBranches}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual int Swarm::getBranches ()\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classSwarm_c248592977868472b6874016ad273dbb}
+
+
+Required for \hyperlink{classPyramidSwarm}{PyramidSwarm}. 
+
+
+
+Reimplemented in \hyperlink{classPyramidSwarm_9372ad747da64c8f3fd904da02c36d41}{PyramidSwarm}.\hypertarget{classSwarm_75d0b85dc6fa2ec069f1580e0386faee}{
+\index{Swarm@{Swarm}!isDivided@{isDivided}}
+\index{isDivided@{isDivided}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual bool Swarm::isDivided ()\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classSwarm_75d0b85dc6fa2ec069f1580e0386faee}
+
+
+Required for \hyperlink{classDynamicPyramidSwarm}{DynamicPyramidSwarm}. 
+
+
+
+Reimplemented in \hyperlink{classDynamicPyramidSwarm_65efd123a0e770211a47fd384c36af12}{DynamicPyramidSwarm}.\hypertarget{classSwarm_be7aff8e0df635ac00082fd6cd418356}{
+\index{Swarm@{Swarm}!decreaseBranchDegree@{decreaseBranchDegree}}
+\index{decreaseBranchDegree@{decreaseBranchDegree}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void Swarm::decreaseBranchDegree ()\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classSwarm_be7aff8e0df635ac00082fd6cd418356}
+
+
+Implemented in \hyperlink{classAdaptivePyramidSwarm}{AdaptivePyramidSwarm}. 
+
+
+
+Reimplemented in \hyperlink{classAdaptivePyramidSwarm_1882a87c019b03a0e39cde841f598aaf}{AdaptivePyramidSwarm}.\hypertarget{classSwarm_96527c398560529a5e3bf7cb4c2f5886}{
+\index{Swarm@{Swarm}!createBird@{createBird}}
+\index{createBird@{createBird}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Bird} $\ast$ Swarm::createBird (double {\em min\_\-x}, \/  double {\em max\_\-x}, \/  double {\em min\_\-v}, \/  double {\em max\_\-v}, \/  int {\em index} = {\tt {\bf MINUSONE}})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_96527c398560529a5e3bf7cb4c2f5886}
+
+
+Create a single bird. 
+
+Called by createSwarm, index not used for scouts (index=-1) \hypertarget{classSwarm_1ba247983a6f20d0e835c696748a530b}{
+\index{Swarm@{Swarm}!createSwarm@{createSwarm}}
+\index{createSwarm@{createSwarm}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::createSwarm (double {\em min\_\-x}, \/  double {\em max\_\-x}, \/  double {\em min\_\-v}, \/  double {\em max\_\-v})\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSwarm_1ba247983a6f20d0e835c696748a530b}
+
+
+Create the birds. 
+
+Called by the constructor \hypertarget{classSwarm_5371bfef5da1070085c0f98498d01783}{
+\index{Swarm@{Swarm}!createNewBird@{createNewBird}}
+\index{createNewBird@{createNewBird}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Bird} $\ast$ Swarm::createNewBird (double {\em min\_\-x}, \/  double {\em max\_\-x}, \/  double {\em min\_\-v}, \/  double {\em max\_\-v})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_5371bfef5da1070085c0f98498d01783}
+
+
+Create a new particle. 
+
+the particle is added to \hyperlink{classSwarm_74191c7a473df093f5537f8d6d5ca1a6}{birds} and \hyperlink{classSwarm_0ed97963cfeb4f2b8eee5c4fb6f6dcde}{swarmsize} and \hyperlink{classSwarm_9e9e482ef70387a81721eb5e2b998725}{lastBirdIndex} is increased \hypertarget{classSwarm_c4550c4e3a04350e6b3d1481b896ee8a}{
+\index{Swarm@{Swarm}!removeBird@{removeBird}}
+\index{removeBird@{removeBird}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::removeBird (int {\em index})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_c4550c4e3a04350e6b3d1481b896ee8a}
+
+
+Delete the particle with the given index. 
+
+Swarmsize is decreased \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em index}]The \hyperlink{classSwarm_74191c7a473df093f5537f8d6d5ca1a6}{birds} vector is search for particle with index, and the respective particle is deleted. \end{description}
+\end{Desc}
+\hypertarget{classSwarm_6f91dff59bba147f5983b8fb77a4db7c}{
+\index{Swarm@{Swarm}!createScouts@{createScouts}}
+\index{createScouts@{createScouts}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::createScouts (double {\em min\_\-x}, \/  double {\em max\_\-x}, \/  double {\em min\_\-v}, \/  double {\em max\_\-v})\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSwarm_6f91dff59bba147f5983b8fb77a4db7c}
+
+
+Create the scouts. 
+
+Called by the constructor \hypertarget{classSwarm_a7bea159365345bccd57ac10f06e812b}{
+\index{Swarm@{Swarm}!evaluatePos@{evaluatePos}}
+\index{evaluatePos@{evaluatePos}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Bird} $\ast$ Swarm::evaluatePos ()\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSwarm_a7bea159365345bccd57ac10f06e812b}
+
+
+All the particles in the swarm evaluate their current position. 
+
+If the current position is better than the previous best, it is stored. \begin{Desc}
+\item[Returns:]The iteration best individual \end{Desc}
+\hypertarget{classSwarm_e0647f4af56497d936dafc35aa7989bf}{
+\index{Swarm@{Swarm}!compare@{compare}}
+\index{compare@{compare}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::compare ({\bf Bird} $\ast$ {\em itrBestBird})\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSwarm_e0647f4af56497d936dafc35aa7989bf}
+
+
+Compare iteration best particle to the global best and update. 
+
+If iteration best is better than globalBest it becomes the new globalBest individual. 
+
+Reimplemented in \hyperlink{classRingSwarm_0c1b5e24190746a5880d95cf6dd16a15}{RingSwarm}.\hypertarget{classSwarm_be668c680f5bdd27bd2c4244a8a431bf}{
+\index{Swarm@{Swarm}!updateVel@{updateVel}}
+\index{updateVel@{updateVel}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::updateVel ()\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSwarm_be668c680f5bdd27bd2c4244a8a431bf}
+
+
+The velocity is updated according to the globalBestBird. 
+
+
+
+Reimplemented in \hyperlink{classPyramidSwarm_4f43e6459e6fede3785780facb4c5e1f}{PyramidSwarm}, \hyperlink{classRingSwarm_6af7a38a18e36ee6dfb3b6e4524f9da9}{RingSwarm}, \hyperlink{classLocalSwarm_08e4a17b8b74ff1c4da77975140613e7}{LocalSwarm}, and \hyperlink{classScoutSwarm_0a3e4d9f343702e42a6cb64349a25711}{ScoutSwarm}.\hypertarget{classSwarm_41d6aa35d312751a1f9cb6977a545beb}{
+\index{Swarm@{Swarm}!move@{move}}
+\index{move@{move}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::move ()\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSwarm_41d6aa35d312751a1f9cb6977a545beb}
+
+
+All the particles in the swarm are moved. 
+
+\hypertarget{classSwarm_39eaa4eed93a5d2731f5b1d5ecac8fa5}{
+\index{Swarm@{Swarm}!evaluateScouts@{evaluateScouts}}
+\index{evaluateScouts@{evaluateScouts}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Bird} $\ast$ Swarm::evaluateScouts ()\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSwarm_39eaa4eed93a5d2731f5b1d5ecac8fa5}
+
+
+All the scouts evaluate their current position. 
+
+If the current position is better than the previous best, it is stored. \begin{Desc}
+\item[Returns:]The iteration best scout \end{Desc}
+\hypertarget{classSwarm_a2b011c3d98a6f761691a0e52bec6001}{
+\index{Swarm@{Swarm}!compareScouts@{compareScouts}}
+\index{compareScouts@{compareScouts}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::compareScouts ({\bf Bird} $\ast$ {\em itrBestBird})\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSwarm_a2b011c3d98a6f761691a0e52bec6001}
+
+
+Compare iteration best scout to the currently best one and update. 
+
+If iteration best is better than globalBest it becomes the new globalBest scout, used for \hyperlink{classSwarm_8315401d37a75266d77f71a66660d1ae}{applyScout}. \hypertarget{classSwarm_9e891ddba8f8890e9f48a06067a76a73}{
+\index{Swarm@{Swarm}!updateScoutVel@{updateScoutVel}}
+\index{updateScoutVel@{updateScoutVel}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::updateScoutVel ()\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSwarm_9e891ddba8f8890e9f48a06067a76a73}
+
+
+The velocity is updated according to a randomly chosen position. 
+
+As gbest attractor a randomly chosen within the search space is selected. The pbest value is still used. \hypertarget{classSwarm_4fc3581725e33c1fe2d089f5980d3454}{
+\index{Swarm@{Swarm}!moveScouts@{moveScouts}}
+\index{moveScouts@{moveScouts}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::moveScouts ()\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSwarm_4fc3581725e33c1fe2d089f5980d3454}
+
+
+All the scouts are moved. 
+
+\hypertarget{classSwarm_7e8309edaf059226c469e7d6a05caddd}{
+\index{Swarm@{Swarm}!randomizeBird@{randomizeBird}}
+\index{randomizeBird@{randomizeBird}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::randomizeBird ({\bf Bird} $\ast$ {\em birdPtr}, \/  const vector$<$ double $>$ \& {\em bestVector}, \/  bool {\em useBestPos})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_7e8309edaf059226c469e7d6a05caddd}
+
+
+The bird is re-randomized. 
+
+A new random position and random velocity is assigned \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em birdPtr}]The particle that is randomized \item[{\em bestVector}]The space within which the particle is replaced can be moved \item[{\em useBestPos}]Whether the new position is shifted about the best position \end{description}
+\end{Desc}
+\hypertarget{classSwarm_93f011b4e32128da1ff11431ce98a577}{
+\index{Swarm@{Swarm}!randomizeReset@{randomizeReset}}
+\index{randomizeReset@{randomizeReset}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::randomizeReset (double {\em portion}, \/  bool {\em reset})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_93f011b4e32128da1ff11431ce98a577}
+
+
+A certain portion of the swarm is re-randomized. 
+
+The selected individuals are assigned a random position and a random velocity. Possibly the other individuals are reset. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em portion}]The randomly chosen portion of the swarm that is re-randomized \item[{\em reset}]The other individuals are reset (forget personal best) \end{description}
+\end{Desc}
+\hypertarget{classSwarm_8315401d37a75266d77f71a66660d1ae}{
+\index{Swarm@{Swarm}!applyScout@{applyScout}}
+\index{applyScout@{applyScout}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::applyScout (bool {\em force} = {\tt false})\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSwarm_8315401d37a75266d77f71a66660d1ae}
+
+
+If the best scout is better than the gbest individual it is reset. 
+
+The gbest particle is reset to the scout position and its best location is also updated. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em force}]The reset to the best scout position is forced, even if it's worse than gbest \end{description}
+\end{Desc}
+\hypertarget{classSwarm_40a832e5094cc0bef13d9c6ab83b98c5}{
+\index{Swarm@{Swarm}!updateMeanPosition@{updateMeanPosition}}
+\index{updateMeanPosition@{updateMeanPosition}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::updateMeanPosition ()\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_40a832e5094cc0bef13d9c6ab83b98c5}
+
+
+Determine the current mean position of the swarm. 
+
+All the birds current positions are averaged \hypertarget{classSwarm_5ef674f56c0bb5276aab56f456bd16b4}{
+\index{Swarm@{Swarm}!updateMaxDistance@{updateMaxDistance}}
+\index{updateMaxDistance@{updateMaxDistance}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::updateMaxDistance ()\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_5ef674f56c0bb5276aab56f456bd16b4}
+
+
+Determine the maximum distance between two birds. 
+
+Required to scale diversity \hypertarget{classSwarm_849d8809ea9c26d9bc0010968bf1020c}{
+\index{Swarm@{Swarm}!calculateDiversity@{calculateDiversity}}
+\index{calculateDiversity@{calculateDiversity}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::calculateDiversity ()\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSwarm_849d8809ea9c26d9bc0010968bf1020c}
+
+
+Calculate the diversity. 
+
+The average and median distance to the swarm's mean position are calculated \hypertarget{classSwarm_e8074ca91d00f4dd90b2d1101db2b9cd}{
+\index{Swarm@{Swarm}!calculateDimensionVariance@{calculateDimensionVariance}}
+\index{calculateDimensionVariance@{calculateDimensionVariance}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double $\ast$ Swarm::calculateDimensionVariance ()\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_e8074ca91d00f4dd90b2d1101db2b9cd}
+
+
+For each dimension calculate the variance of the best positions. 
+
+\hypertarget{classSwarm_2ff0a2521e41d8b26e031e5a08c583b5}{
+\index{Swarm@{Swarm}!detectDynamicChange@{detectDynamicChange}}
+\index{detectDynamicChange@{detectDynamicChange}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool Swarm::detectDynamicChange ()\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSwarm_2ff0a2521e41d8b26e031e5a08c583b5}
+
+
+Apply detection method for changed environment. 
+
+Depending on \hyperlink{classSwarm_fccbdf32a0ea11cb33665d64ffb15c56}{detectionMethod} it is checked for a change in the evalutation function. \begin{Desc}
+\item[Returns:]True if the environment changed. \end{Desc}
+
+
+Reimplemented in \hyperlink{classDynamicPyramidSwarm_ae6437872484ff8baa443d3c2beee820}{DynamicPyramidSwarm}.\hypertarget{classSwarm_f98488b9ca17c07c89a591040f360db6}{
+\index{Swarm@{Swarm}!respondToChange@{respondToChange}}
+\index{respondToChange@{respondToChange}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::respondToChange ()\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSwarm_f98488b9ca17c07c89a591040f360db6}
+
+
+Respond to the change in the environment. 
+
+
+
+Reimplemented in \hyperlink{classDynamicPyramidSwarm_fbbb06914f9500603fee564415d976ae}{DynamicPyramidSwarm}.\hypertarget{classSwarm_68f5ddc7a3335954f42cc01366ab374d}{
+\index{Swarm@{Swarm}!updateBestValues@{updateBestValues}}
+\index{updateBestValues@{updateBestValues}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Swarm::updateBestValues ()\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_68f5ddc7a3335954f42cc01366ab374d}
+
+
+All individuals update their personal best position. 
+
+The personal best is invalidated by the change of the environment 
+
+scouts already up to date \hypertarget{classSwarm_37d9b1abc4dac92ed426bcc50912fc76}{
+\index{Swarm@{Swarm}!noisyBirdIsBetter@{noisyBirdIsBetter}}
+\index{noisyBirdIsBetter@{noisyBirdIsBetter}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool Swarm::noisyBirdIsBetter ({\bf Bird} $\ast$ {\em newBird}, \/  {\bf Bird} $\ast$ {\em oldBird})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_37d9b1abc4dac92ed426bcc50912fc76}
+
+
+check whether the new position is better -- in the precense of noise 
+
+Considering a noisy function, the decision which position is better is based on the re-evaluation of the function value. In order to get a more precise estimate of the function values \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em newBird}]The new bird, sibling in HPSO \item[{\em oldBird}]The old bird, predecessor in HPSO \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]whether the new position is better \end{Desc}
+
+
+\subsection{Field Documentation}
+\hypertarget{classSwarm_0e0ea6b1259774c2b2390536e936bcfc}{
+\index{Swarm@{Swarm}!pso@{pso}}
+\index{pso@{pso}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf PSO}$\ast$ {\bf Swarm::pso}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_0e0ea6b1259774c2b2390536e936bcfc}
+
+
+The \hyperlink{classPSO}{PSO} algorithm with the parameters used. 
+
+\hypertarget{classSwarm_74191c7a473df093f5537f8d6d5ca1a6}{
+\index{Swarm@{Swarm}!birds@{birds}}
+\index{birds@{birds}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Bird}$\ast$$>$ {\bf Swarm::birds}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_74191c7a473df093f5537f8d6d5ca1a6}
+
+
+The individual birds. 
+
+\hypertarget{classSwarm_9520522dd61ae47abc1781be180c01e3}{
+\index{Swarm@{Swarm}!scouts@{scouts}}
+\index{scouts@{scouts}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Bird}$\ast$$\ast$ {\bf Swarm::scouts}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_9520522dd61ae47abc1781be180c01e3}
+
+
+The additional particles used for scouting are stored separately. 
+
+\hypertarget{classSwarm_0ed97963cfeb4f2b8eee5c4fb6f6dcde}{
+\index{Swarm@{Swarm}!swarmsize@{swarmsize}}
+\index{swarmsize@{swarmsize}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf Swarm::swarmsize}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_0ed97963cfeb4f2b8eee5c4fb6f6dcde}
+
+
+The number of birds. 
+
+\hypertarget{classSwarm_6ec8b4463d83af484788490c203ae166}{
+\index{Swarm@{Swarm}!nrScouts@{nrScouts}}
+\index{nrScouts@{nrScouts}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf Swarm::nrScouts}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_6ec8b4463d83af484788490c203ae166}
+
+
+The number of scouts. 
+
+
+
+Reimplemented in \hyperlink{classScoutSwarm_7a55b74b3e6528d7f16ac9a65357d43c}{ScoutSwarm}.\hypertarget{classSwarm_9e9e482ef70387a81721eb5e2b998725}{
+\index{Swarm@{Swarm}!lastBirdIndex@{lastBirdIndex}}
+\index{lastBirdIndex@{lastBirdIndex}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf Swarm::lastBirdIndex}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_9e9e482ef70387a81721eb5e2b998725}
+
+
+The last index given to a new particle. 
+
+Only interesting if new particles are added or removed \hypertarget{classSwarm_b504e23c39413573e3685a88435f5f85}{
+\index{Swarm@{Swarm}!min\_\-x@{min\_\-x}}
+\index{min\_\-x@{min\_\-x}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf Swarm::min\_\-x}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_b504e23c39413573e3685a88435f5f85}
+
+
+The range of the initial search space. 
+
+\hypertarget{classSwarm_e5075d21be96c1cdf441bc2b612177c1}{
+\index{Swarm@{Swarm}!max\_\-x@{max\_\-x}}
+\index{max\_\-x@{max\_\-x}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf Swarm::max\_\-x}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_e5075d21be96c1cdf441bc2b612177c1}
+
+
+\hypertarget{classSwarm_160c79397ea811636e17c0e4d6297729}{
+\index{Swarm@{Swarm}!min\_\-v@{min\_\-v}}
+\index{min\_\-v@{min\_\-v}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf Swarm::min\_\-v}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_160c79397ea811636e17c0e4d6297729}
+
+
+The range of the initial velocity. 
+
+\hypertarget{classSwarm_2b0dbde2c275f991580a07a745cb5ade}{
+\index{Swarm@{Swarm}!max\_\-v@{max\_\-v}}
+\index{max\_\-v@{max\_\-v}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf Swarm::max\_\-v}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_2b0dbde2c275f991580a07a745cb5ade}
+
+
+\hypertarget{classSwarm_5fd39f652507dce962342f4f3569b9e3}{
+\index{Swarm@{Swarm}!meanPosition@{meanPosition}}
+\index{meanPosition@{meanPosition}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ {\bf Swarm::meanPosition}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_5fd39f652507dce962342f4f3569b9e3}
+
+
+The current mean position of the swarm. 
+
+\hypertarget{classSwarm_74a5d2ee1990cb31d93ceff20080ec6c}{
+\index{Swarm@{Swarm}!averageDiversity@{averageDiversity}}
+\index{averageDiversity@{averageDiversity}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf Swarm::averageDiversity}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_74a5d2ee1990cb31d93ceff20080ec6c}
+
+
+The current average distance to the mean position. 
+
+\hypertarget{classSwarm_97f31d54d0cc328f7ca763c447338b02}{
+\index{Swarm@{Swarm}!medianDiversity@{medianDiversity}}
+\index{medianDiversity@{medianDiversity}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf Swarm::medianDiversity}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_97f31d54d0cc328f7ca763c447338b02}
+
+
+The current median distance to the mean position. 
+
+\hypertarget{classSwarm_a2cca0442b7f5e40f52dfd22d0d2b7e7}{
+\index{Swarm@{Swarm}!maxDistance@{maxDistance}}
+\index{maxDistance@{maxDistance}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf Swarm::maxDistance}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_a2cca0442b7f5e40f52dfd22d0d2b7e7}
+
+
+The maximum distance between two birds. 
+
+sort of the extension of the swarm \hypertarget{classSwarm_847c3f9482dcc400c9a0b6adf923c475}{
+\index{Swarm@{Swarm}!globalBestBird@{globalBestBird}}
+\index{globalBestBird@{globalBestBird}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Bird}$\ast$ {\bf Swarm::globalBestBird}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_847c3f9482dcc400c9a0b6adf923c475}
+
+
+Pointer to the current best bird. 
+
+\hypertarget{classSwarm_a584ad92de2862942728b4d4a38bafd1}{
+\index{Swarm@{Swarm}!globalBestScout@{globalBestScout}}
+\index{globalBestScout@{globalBestScout}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Bird}$\ast$ {\bf Swarm::globalBestScout}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_a584ad92de2862942728b4d4a38bafd1}
+
+
+Pointer to the current best scout. 
+
+\hypertarget{classSwarm_fccbdf32a0ea11cb33665d64ffb15c56}{
+\index{Swarm@{Swarm}!detectionMethod@{detectionMethod}}
+\index{detectionMethod@{detectionMethod}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf detectionMethod\_\-type} {\bf Swarm::detectionMethod}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_fccbdf32a0ea11cb33665d64ffb15c56}
+
+
+How to detect dynamic changes in the evaluation function. 
+
+\hypertarget{classSwarm_f051986abd458ad38f3905d8f190bdc8}{
+\index{Swarm@{Swarm}!responseMethod@{responseMethod}}
+\index{responseMethod@{responseMethod}!Swarm@{Swarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf responseMethod\_\-type} {\bf Swarm::responseMethod}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSwarm_f051986abd458ad38f3905d8f190bdc8}
+
+
+How to respond to dynamic changes in the evaluation function. 
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+/home/andrej/workspace/hpso/pso\_\-src/\hyperlink{swarm_8h}{swarm.h}\item 
+/home/andrej/workspace/hpso/pso\_\-src/\hyperlink{swarm_8cpp}{swarm.cpp}\end{CompactItemize}

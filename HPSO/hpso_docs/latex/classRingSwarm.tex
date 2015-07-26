@@ -1,0 +1,193 @@
+\hypertarget{classRingSwarm}{
+\section{RingSwarm Class Reference}
+\label{classRingSwarm}\index{RingSwarm@{RingSwarm}}
+}
+In the RealPyramidSwarm considerations of a real architecture were taken into account.  
+
+
+{\tt \#include $<$swarm.h$>$}
+
+Inheritance diagram for RingSwarm:Collaboration diagram for RingSwarm:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classRingSwarm_61b676fb64dbfd3888d0f1b714a9c188}{RingSwarm} (\hyperlink{classPSO}{PSO} $\ast$pso\_\-p, int \hyperlink{runpso_8cpp_70b5e28b5bc3d1b63a7435c5fe50b837}{dim}, double \hyperlink{classSwarm_b504e23c39413573e3685a88435f5f85}{min\_\-x}, double \hyperlink{classSwarm_e5075d21be96c1cdf441bc2b612177c1}{max\_\-x}, double \hyperlink{classSwarm_160c79397ea811636e17c0e4d6297729}{min\_\-v}, double \hyperlink{classSwarm_2b0dbde2c275f991580a07a745cb5ade}{max\_\-v}, int \hyperlink{classRingSwarm_ab4a1218eb2ea7858a4172370f5b51b4}{length}, int \hyperlink{classRingSwarm_f187d6157f05bba9d56617e47afcd11c}{branches}, int \hyperlink{classRingSwarm_bc6194060dcd54ddfa56ec3b56b15515}{swapDelay})
+\begin{CompactList}\small\item\em Constructor setting up the swarm and arranging it in a Ring shape. \item\end{CompactList}\item 
+\hyperlink{classRingSwarm_f498eeaf52d1053a4817b39413b77a48}{$\sim$RingSwarm} ()
+\begin{CompactList}\small\item\em The allocated ressources are freed. \item\end{CompactList}\item 
+int \hyperlink{classRingSwarm_a5441ba339db7fc269f4784917189eab}{step} (int \hyperlink{runpso_8cpp_b4ae7205573977222eadd0795db193e2}{steps}=1)
+\begin{CompactList}\small\item\em The Ringswarm does \hyperlink{runpso_8cpp_b4ae7205573977222eadd0795db193e2}{steps} steps. \item\end{CompactList}\item 
+void \hyperlink{classRingSwarm_747de173be4727e03eb584290f4d31d0}{printRing} ()
+\begin{CompactList}\small\item\em Formatted output of the Ring. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{classRingSwarm_0c1b5e24190746a5880d95cf6dd16a15}{compare} (\hyperlink{classBird}{Bird} $\ast$itrBestBird)
+\begin{CompactList}\small\item\em Within a ringnode the birds are compared. \item\end{CompactList}\item 
+void \hyperlink{classRingSwarm_37763e20c628ea4d47c2ddc5d0a2d985}{compareRing} ()
+\begin{CompactList}\small\item\em Between two ring nodes the better bestBird is passed on. \item\end{CompactList}\item 
+void \hyperlink{classRingSwarm_6af7a38a18e36ee6dfb3b6e4524f9da9}{updateVel} ()
+\begin{CompactList}\small\item\em The velocities of the birds are updated. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+bool \hyperlink{classRingSwarm_55b18dac3985e7cca8de7697b32d707a}{swapEnabled}
+\begin{CompactList}\small\item\em Controls whether in the current step a swap is allowed. \item\end{CompactList}\item 
+int \hyperlink{classRingSwarm_bc6194060dcd54ddfa56ec3b56b15515}{swapDelay}
+\begin{CompactList}\small\item\em A swap is only allowed every swapDelay steps. \item\end{CompactList}\item 
+int \hyperlink{classRingSwarm_ab4a1218eb2ea7858a4172370f5b51b4}{length}
+\begin{CompactList}\small\item\em The length (number ringnodes) of the Ring. \item\end{CompactList}\item 
+int \hyperlink{classRingSwarm_f187d6157f05bba9d56617e47afcd11c}{branches}
+\begin{CompactList}\small\item\em How many individuals per ringnode. \item\end{CompactList}\item 
+\hyperlink{classBird}{Bird} $\ast$$\ast$ \hyperlink{classRingSwarm_91d5d5b8fb3bfcb3e59d0724171fc894}{bestBirds}
+\begin{CompactList}\small\item\em Each ringnode neighbourhood stores the bestBird found. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+In the RealPyramidSwarm considerations of a real architecture were taken into account. 
+
+First the RealPyramidSwarm::compare operation takes place alternating for odd and even levels of the pyramid. Consecutively a swap occurs only between two adjacent levels in a single iteration.\par
+ Second the birds can be disabled, by using their Bird::active variable. When a swap operation is performed, the execution of Bird::evalCurrentPosition is delayed until the specified time required for a swap operation has passed. The \hyperlink{classRingSwarm}{RingSwarm} has the indivdiuals arranged in a ring Each ring node consists of a neighborhood of \hyperlink{classRingSwarm_f187d6157f05bba9d56617e47afcd11c}{branches} individuals and an extra storage for the current global best position found so far. This global best position is updated with the adjacent ringnodes, clockwise. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classRingSwarm_61b676fb64dbfd3888d0f1b714a9c188}{
+\index{RingSwarm@{RingSwarm}!RingSwarm@{RingSwarm}}
+\index{RingSwarm@{RingSwarm}!RingSwarm@{RingSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}RingSwarm::RingSwarm ({\bf PSO} $\ast$ {\em pso\_\-p}, \/  int {\em dim}, \/  double {\em min\_\-x}, \/  double {\em max\_\-x}, \/  double {\em min\_\-v}, \/  double {\em max\_\-v}, \/  int {\em length}, \/  int {\em branches}, \/  int {\em swapDelay})}}
+\label{classRingSwarm_61b676fb64dbfd3888d0f1b714a9c188}
+
+
+Constructor setting up the swarm and arranging it in a Ring shape. 
+
+\begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+pso\_\-p}]The \hyperlink{classPSO}{PSO} Algorithm for the parameters used \item[{\em 
+dim}]The dimension of the search space, i.e. the function to be optimized \item[{\em 
+min\_\-x}]Lower bound of x dimension, x0 chosen randomly \item[{\em 
+max\_\-x}]Upper bound of x dimension, x0 chosen randomly \item[{\em 
+min\_\-v}]Lower bound of v dimension, v0 chosen randomly \item[{\em 
+max\_\-v}]Upper bound of v dimension, v0 chosen randomly \item[{\em 
+length}]The length (ringnodes) of the Ring \item[{\em 
+branches}]How many individuals per ringnode \item[{\em 
+swapDelay}]A swap is only allowed every swapDelay steps \end{description}
+\end{Desc}
+\hypertarget{classRingSwarm_f498eeaf52d1053a4817b39413b77a48}{
+\index{RingSwarm@{RingSwarm}!$\sim$RingSwarm@{$\sim$RingSwarm}}
+\index{$\sim$RingSwarm@{$\sim$RingSwarm}!RingSwarm@{RingSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}RingSwarm::$\sim$RingSwarm ()}}
+\label{classRingSwarm_f498eeaf52d1053a4817b39413b77a48}
+
+
+The allocated ressources are freed. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classRingSwarm_a5441ba339db7fc269f4784917189eab}{
+\index{RingSwarm@{RingSwarm}!step@{step}}
+\index{step@{step}!RingSwarm@{RingSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int RingSwarm::step (int {\em steps} = {\tt 1})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classRingSwarm_a5441ba339db7fc269f4784917189eab}
+
+
+The Ringswarm does \hyperlink{runpso_8cpp_b4ae7205573977222eadd0795db193e2}{steps} steps. 
+
+Within one iteration the following actions are done for all the birds.\par
+ The current position is evaluated, within each neighbourhood the iteration best bird is determined and compared to the best bird of the following ringnode. If necessary the best bird is passed on. \par
+ Then the current velocity is adjusted to the neighbourhood best bird and the birds are moved. 
+
+Reimplemented from \hyperlink{classSwarm_7ab61f9797ce80e2edfb2bd881d7147c}{Swarm}.\hypertarget{classRingSwarm_747de173be4727e03eb584290f4d31d0}{
+\index{RingSwarm@{RingSwarm}!printRing@{printRing}}
+\index{printRing@{printRing}!RingSwarm@{RingSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void RingSwarm::printRing ()}}
+\label{classRingSwarm_747de173be4727e03eb584290f4d31d0}
+
+
+Formatted output of the Ring. 
+
+\hypertarget{classRingSwarm_0c1b5e24190746a5880d95cf6dd16a15}{
+\index{RingSwarm@{RingSwarm}!compare@{compare}}
+\index{compare@{compare}!RingSwarm@{RingSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void RingSwarm::compare ({\bf Bird} $\ast$ {\em itrBestBird})\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classRingSwarm_0c1b5e24190746a5880d95cf6dd16a15}
+
+
+Within a ringnode the birds are compared. 
+
+The birds in a neighbourhood are compared to each other and the respective best \hyperlink{classBird}{Bird} known 
+
+Reimplemented from \hyperlink{classSwarm_e0647f4af56497d936dafc35aa7989bf}{Swarm}.\hypertarget{classRingSwarm_37763e20c628ea4d47c2ddc5d0a2d985}{
+\index{RingSwarm@{RingSwarm}!compareRing@{compareRing}}
+\index{compareRing@{compareRing}!RingSwarm@{RingSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void RingSwarm::compareRing ()\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classRingSwarm_37763e20c628ea4d47c2ddc5d0a2d985}
+
+
+Between two ring nodes the better bestBird is passed on. 
+
+A node compares itself with the preceeding node and if necessary receives the bestBird\mbox{[}node+1\mbox{]} \hypertarget{classRingSwarm_6af7a38a18e36ee6dfb3b6e4524f9da9}{
+\index{RingSwarm@{RingSwarm}!updateVel@{updateVel}}
+\index{updateVel@{updateVel}!RingSwarm@{RingSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void RingSwarm::updateVel ()\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classRingSwarm_6af7a38a18e36ee6dfb3b6e4524f9da9}
+
+
+The velocities of the birds are updated. 
+
+The birds of each ringnode update their velocity with their stored bestBird as global best. 
+
+Reimplemented from \hyperlink{classSwarm_be668c680f5bdd27bd2c4244a8a431bf}{Swarm}.
+
+\subsection{Field Documentation}
+\hypertarget{classRingSwarm_55b18dac3985e7cca8de7697b32d707a}{
+\index{RingSwarm@{RingSwarm}!swapEnabled@{swapEnabled}}
+\index{swapEnabled@{swapEnabled}!RingSwarm@{RingSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool {\bf RingSwarm::swapEnabled}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classRingSwarm_55b18dac3985e7cca8de7697b32d707a}
+
+
+Controls whether in the current step a swap is allowed. 
+
+\hypertarget{classRingSwarm_bc6194060dcd54ddfa56ec3b56b15515}{
+\index{RingSwarm@{RingSwarm}!swapDelay@{swapDelay}}
+\index{swapDelay@{swapDelay}!RingSwarm@{RingSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf RingSwarm::swapDelay}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classRingSwarm_bc6194060dcd54ddfa56ec3b56b15515}
+
+
+A swap is only allowed every swapDelay steps. 
+
+\hypertarget{classRingSwarm_ab4a1218eb2ea7858a4172370f5b51b4}{
+\index{RingSwarm@{RingSwarm}!length@{length}}
+\index{length@{length}!RingSwarm@{RingSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf RingSwarm::length}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classRingSwarm_ab4a1218eb2ea7858a4172370f5b51b4}
+
+
+The length (number ringnodes) of the Ring. 
+
+\hypertarget{classRingSwarm_f187d6157f05bba9d56617e47afcd11c}{
+\index{RingSwarm@{RingSwarm}!branches@{branches}}
+\index{branches@{branches}!RingSwarm@{RingSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf RingSwarm::branches}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classRingSwarm_f187d6157f05bba9d56617e47afcd11c}
+
+
+How many individuals per ringnode. 
+
+\hypertarget{classRingSwarm_91d5d5b8fb3bfcb3e59d0724171fc894}{
+\index{RingSwarm@{RingSwarm}!bestBirds@{bestBirds}}
+\index{bestBirds@{bestBirds}!RingSwarm@{RingSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Bird}$\ast$$\ast$ {\bf RingSwarm::bestBirds}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classRingSwarm_91d5d5b8fb3bfcb3e59d0724171fc894}
+
+
+Each ringnode neighbourhood stores the bestBird found. 
+
+Whether found by itself or the adjacent neighbourhood 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+/home/andrej/workspace/hpso/pso\_\-src/\hyperlink{swarm_8h}{swarm.h}\item 
+/home/andrej/workspace/hpso/pso\_\-src/\hyperlink{swarm_8cpp}{swarm.cpp}\end{CompactItemize}

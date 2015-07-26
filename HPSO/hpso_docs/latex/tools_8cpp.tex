@@ -1,0 +1,162 @@
+\hypertarget{tools_8cpp}{
+\section{/home/andrej/workspace/hpso/pso\_\-src/tools.cpp File Reference}
+\label{tools_8cpp}\index{/home/andrej/workspace/hpso/pso\_\-src/tools.cpp@{/home/andrej/workspace/hpso/pso\_\-src/tools.cpp}}
+}
+{\tt \#include \char`\"{}tools.h\char`\"{}}\par
+{\tt \#include $<$ctime$>$}\par
+
+
+Include dependency graph for tools.cpp:\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int \hyperlink{tools_8cpp_408603fbae06f78007387a2af6fd60c4}{getMaxHeight} (int minDegree, int swarmsize)
+\begin{CompactList}\small\item\em Little helper function calculating the maximum height. \item\end{CompactList}\item 
+void \hyperlink{tools_8cpp_f394aa73d9d7e8bc72ee8233f6c74fbc}{freeRng} ()
+\begin{CompactList}\small\item\em Free the RNG ressources. \item\end{CompactList}\item 
+double \hyperlink{tools_8cpp_4e18622b1241fd9510728a92cc37c471}{randDoubleGaussian} (double sigma)
+\begin{CompactList}\small\item\em Return gaussian distributed double from \mbox{[}0;1). \item\end{CompactList}\item 
+void \hyperlink{tools_8cpp_ea080d716cc71d1a8bad850f4397f240}{fixSeed} (unsigned seed)
+\item 
+double \hyperlink{tools_8cpp_f2a7cdf42aa11ce7d0b94e306f4226bc}{randDouble} ()
+\begin{CompactList}\small\item\em Return double from \mbox{[}0;1). \item\end{CompactList}\item 
+int \hyperlink{tools_8cpp_5112f83bc0660a5a31f59132cfc50716}{randIntRange} (int min, int max)
+\begin{CompactList}\small\item\em Wrapper to GSL \hyperlink{classFunction}{Function} call. \item\end{CompactList}\item 
+double \hyperlink{tools_8cpp_9ace512de549f107381a747c6677e990}{randDoubleRange} (double min, double max)
+\begin{CompactList}\small\item\em Wrapper to GSL \hyperlink{classFunction}{Function} call. \item\end{CompactList}\item 
+string \hyperlink{tools_8cpp_d7aa76daee98b16913a0e7f380896510}{printVec} (const vector$<$ double $>$ \&v)
+\item 
+double \hyperlink{tools_8cpp_a9e6ed8a690638455cc83a18b1755042}{euclideanDistance} (const vector$<$ double $>$ \&v1, const vector$<$ double $>$ \&v2)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+int \hyperlink{tools_8cpp_5064504bf5b7c9547bec5a73db938948}{indentLevel} = 0
+\item 
+string \hyperlink{tools_8cpp_e2955012a234eb73d729ff4576aa4776}{BLANKLINE}
+\item 
+gsl\_\-rng $\ast$ \hyperlink{tools_8cpp_6a0de65458d478a530b48cb1cf2cf962}{rng}
+\item 
+time\_\-t \hyperlink{tools_8cpp_a559b2f4e7fa951d5a42a01764f40acf}{t1}
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{tools_8cpp_a9e6ed8a690638455cc83a18b1755042}{
+\index{tools.cpp@{tools.cpp}!euclideanDistance@{euclideanDistance}}
+\index{euclideanDistance@{euclideanDistance}!tools.cpp@{tools.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double euclideanDistance (const vector$<$ double $>$ \& {\em v1}, \/  const vector$<$ double $>$ \& {\em v2})}}
+\label{tools_8cpp_a9e6ed8a690638455cc83a18b1755042}
+
+
+\hypertarget{tools_8cpp_ea080d716cc71d1a8bad850f4397f240}{
+\index{tools.cpp@{tools.cpp}!fixSeed@{fixSeed}}
+\index{fixSeed@{fixSeed}!tools.cpp@{tools.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void fixSeed (unsigned {\em seed})}}
+\label{tools_8cpp_ea080d716cc71d1a8bad850f4397f240}
+
+
+\hypertarget{tools_8cpp_f394aa73d9d7e8bc72ee8233f6c74fbc}{
+\index{tools.cpp@{tools.cpp}!freeRng@{freeRng}}
+\index{freeRng@{freeRng}!tools.cpp@{tools.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void freeRng ()}}
+\label{tools_8cpp_f394aa73d9d7e8bc72ee8233f6c74fbc}
+
+
+Free the RNG ressources. 
+
+\hypertarget{tools_8cpp_408603fbae06f78007387a2af6fd60c4}{
+\index{tools.cpp@{tools.cpp}!getMaxHeight@{getMaxHeight}}
+\index{getMaxHeight@{getMaxHeight}!tools.cpp@{tools.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int getMaxHeight (int {\em minDegree}, \/  int {\em swarmsize})}}
+\label{tools_8cpp_408603fbae06f78007387a2af6fd60c4}
+
+
+Little helper function calculating the maximum height. 
+
+of a regularly built pyramid of \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em minDegree}]minimum degree \end{description}
+\end{Desc}
+\hypertarget{tools_8cpp_d7aa76daee98b16913a0e7f380896510}{
+\index{tools.cpp@{tools.cpp}!printVec@{printVec}}
+\index{printVec@{printVec}!tools.cpp@{tools.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}string printVec (const vector$<$ double $>$ \& {\em v})}}
+\label{tools_8cpp_d7aa76daee98b16913a0e7f380896510}
+
+
+\hypertarget{tools_8cpp_f2a7cdf42aa11ce7d0b94e306f4226bc}{
+\index{tools.cpp@{tools.cpp}!randDouble@{randDouble}}
+\index{randDouble@{randDouble}!tools.cpp@{tools.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double randDouble ()}}
+\label{tools_8cpp_f2a7cdf42aa11ce7d0b94e306f4226bc}
+
+
+Return double from \mbox{[}0;1). 
+
+\hypertarget{tools_8cpp_4e18622b1241fd9510728a92cc37c471}{
+\index{tools.cpp@{tools.cpp}!randDoubleGaussian@{randDoubleGaussian}}
+\index{randDoubleGaussian@{randDoubleGaussian}!tools.cpp@{tools.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double randDoubleGaussian (double {\em sigma})}}
+\label{tools_8cpp_4e18622b1241fd9510728a92cc37c471}
+
+
+Return gaussian distributed double from \mbox{[}0;1). 
+
+\hypertarget{tools_8cpp_9ace512de549f107381a747c6677e990}{
+\index{tools.cpp@{tools.cpp}!randDoubleRange@{randDoubleRange}}
+\index{randDoubleRange@{randDoubleRange}!tools.cpp@{tools.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double randDoubleRange (double {\em min}, \/  double {\em max})}}
+\label{tools_8cpp_9ace512de549f107381a747c6677e990}
+
+
+Wrapper to GSL \hyperlink{classFunction}{Function} call. 
+
+Returns double from range \mbox{[}min,max) \hypertarget{tools_8cpp_5112f83bc0660a5a31f59132cfc50716}{
+\index{tools.cpp@{tools.cpp}!randIntRange@{randIntRange}}
+\index{randIntRange@{randIntRange}!tools.cpp@{tools.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int randIntRange (int {\em min}, \/  int {\em max})}}
+\label{tools_8cpp_5112f83bc0660a5a31f59132cfc50716}
+
+
+Wrapper to GSL \hyperlink{classFunction}{Function} call. 
+
+Returns int from range \mbox{[}min,max\mbox{]} 
+
+\subsection{Variable Documentation}
+\hypertarget{tools_8cpp_e2955012a234eb73d729ff4576aa4776}{
+\index{tools.cpp@{tools.cpp}!BLANKLINE@{BLANKLINE}}
+\index{BLANKLINE@{BLANKLINE}!tools.cpp@{tools.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}string {\bf BLANKLINE}}}
+\label{tools_8cpp_e2955012a234eb73d729ff4576aa4776}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim} "                                                                        \
+                                                                                           \
+                                                                                           \
+                                                                                           "
+\end{verbatim}
+\end{Code}
+\hypertarget{tools_8cpp_5064504bf5b7c9547bec5a73db938948}{
+\index{tools.cpp@{tools.cpp}!indentLevel@{indentLevel}}
+\index{indentLevel@{indentLevel}!tools.cpp@{tools.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf indentLevel} = 0}}
+\label{tools_8cpp_5064504bf5b7c9547bec5a73db938948}
+
+
+\hypertarget{tools_8cpp_6a0de65458d478a530b48cb1cf2cf962}{
+\index{tools.cpp@{tools.cpp}!rng@{rng}}
+\index{rng@{rng}!tools.cpp@{tools.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}gsl\_\-rng$\ast$ {\bf rng}}}
+\label{tools_8cpp_6a0de65458d478a530b48cb1cf2cf962}
+
+
+\hypertarget{tools_8cpp_a559b2f4e7fa951d5a42a01764f40acf}{
+\index{tools.cpp@{tools.cpp}!t1@{t1}}
+\index{t1@{t1}!tools.cpp@{tools.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}time\_\-t {\bf t1}}}
+\label{tools_8cpp_a559b2f4e7fa951d5a42a01764f40acf}
+
+

@@ -1,0 +1,173 @@
+\hypertarget{classScoutSwarm}{
+\section{ScoutSwarm Class Reference}
+\label{classScoutSwarm}\index{ScoutSwarm@{ScoutSwarm}}
+}
+The \hyperlink{classScoutSwarm}{ScoutSwarm} uses scouts and workers for dynamic problems.  
+
+
+{\tt \#include $<$swarm.h$>$}
+
+Inheritance diagram for ScoutSwarm:Collaboration diagram for ScoutSwarm:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classScoutSwarm_2698fea9f0ae474d43aee1c246235ed3}{ScoutSwarm} (\hyperlink{classPSO}{PSO} $\ast$pso\_\-p, int size\_\-in, int \hyperlink{runpso_8cpp_70b5e28b5bc3d1b63a7435c5fe50b837}{dim}, double \hyperlink{classSwarm_b504e23c39413573e3685a88435f5f85}{min\_\-x}, double \hyperlink{classSwarm_e5075d21be96c1cdf441bc2b612177c1}{max\_\-x}, double \hyperlink{classSwarm_160c79397ea811636e17c0e4d6297729}{min\_\-v}, double \hyperlink{classSwarm_2b0dbde2c275f991580a07a745cb5ade}{max\_\-v}, int nrScouts\_\-in, int nrWorkers\_\-in, int \hyperlink{classScoutSwarm_337dd6e4974bfe13d02985c393657bf2}{swapDelay})
+\begin{CompactList}\small\item\em Constructor setting up the swarm. \item\end{CompactList}\item 
+\hyperlink{classScoutSwarm_00b7c0dcdeeeec07fe2d70eb66fe0a65}{$\sim$ScoutSwarm} ()
+\begin{CompactList}\small\item\em The allocated ressources are freed. \item\end{CompactList}\item 
+int \hyperlink{classScoutSwarm_4b8c1a2e57b949b3259c118fbadcb781}{step} (int \hyperlink{runpso_8cpp_b4ae7205573977222eadd0795db193e2}{steps}=1)
+\begin{CompactList}\small\item\em The Localswarm does \hyperlink{runpso_8cpp_b4ae7205573977222eadd0795db193e2}{steps} steps. \item\end{CompactList}\item 
+int \hyperlink{classScoutSwarm_9a2a45ebe72cf9302d5d30270efbca1d}{getUseScoutBird} (int bird\_\-i)
+\begin{CompactList}\small\item\em Returns the scout that bird\_\-i is following. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{classScoutSwarm_0a3e4d9f343702e42a6cb64349a25711}{updateVel} ()
+\begin{CompactList}\small\item\em The velocities of the birds are updated. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+bool \hyperlink{classScoutSwarm_f68e3920742ea9b04176330a517f586f}{swapEnabled}
+\begin{CompactList}\small\item\em Controls whether in the current step a swap is allowed. \item\end{CompactList}\item 
+int \hyperlink{classScoutSwarm_337dd6e4974bfe13d02985c393657bf2}{swapDelay}
+\begin{CompactList}\small\item\em A swap is only allowed every swapDelay steps. \item\end{CompactList}\item 
+int \hyperlink{classScoutSwarm_7a55b74b3e6528d7f16ac9a65357d43c}{nrScouts}
+\begin{CompactList}\small\item\em The number of scouts to be used. \item\end{CompactList}\item 
+int \hyperlink{classScoutSwarm_83e2982030ed6a6b503b6f577edfdc09}{nrWorkers}
+\begin{CompactList}\small\item\em The number of workers per scout. \item\end{CompactList}\item 
+vector$<$ int $>$ \hyperlink{classScoutSwarm_150661cd2f47adf19273d8cc838e4b0c}{useScout}
+\begin{CompactList}\small\item\em In this vector the respective scout of bird\_\-i is stored. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classScoutSwarm}{ScoutSwarm} uses scouts and workers for dynamic problems. 
+
+The scouts are exploring the search space only guided by previous personal experience, the workers are assigned to a specific scout and use its best Position for the velocity update 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classScoutSwarm_2698fea9f0ae474d43aee1c246235ed3}{
+\index{ScoutSwarm@{ScoutSwarm}!ScoutSwarm@{ScoutSwarm}}
+\index{ScoutSwarm@{ScoutSwarm}!ScoutSwarm@{ScoutSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}ScoutSwarm::ScoutSwarm ({\bf PSO} $\ast$ {\em pso\_\-p}, \/  int {\em size\_\-in}, \/  int {\em dim}, \/  double {\em min\_\-x}, \/  double {\em max\_\-x}, \/  double {\em min\_\-v}, \/  double {\em max\_\-v}, \/  int {\em nrScouts\_\-in}, \/  int {\em nrWorkers\_\-in}, \/  int {\em swapDelay})}}
+\label{classScoutSwarm_2698fea9f0ae474d43aee1c246235ed3}
+
+
+Constructor setting up the swarm. 
+
+\begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+pso\_\-p}]The \hyperlink{classPSO}{PSO} Algorithm for the parameters used \item[{\em 
+size\_\-in}]The swarm size \item[{\em 
+dim}]The dimension of the search space, i.e. the function to be optimized \item[{\em 
+min\_\-x}]Lower bound of x dimension, x0 chosen randomly \item[{\em 
+max\_\-x}]Upper bound of x dimension, x0 chosen randomly \item[{\em 
+min\_\-v}]Lower bound of v dimension, v0 chosen randomly \item[{\em 
+max\_\-v}]Upper bound of v dimension, v0 chosen randomly \item[{\em 
+nrScouts\_\-in}]The number of scouts \item[{\em 
+nrWorkers\_\-in}]The number of workers per scout \item[{\em 
+swapDelay}]A swap is only allowed every swapDelay steps -- not used yet \end{description}
+\end{Desc}
+\hypertarget{classScoutSwarm_00b7c0dcdeeeec07fe2d70eb66fe0a65}{
+\index{ScoutSwarm@{ScoutSwarm}!$\sim$ScoutSwarm@{$\sim$ScoutSwarm}}
+\index{$\sim$ScoutSwarm@{$\sim$ScoutSwarm}!ScoutSwarm@{ScoutSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}ScoutSwarm::$\sim$ScoutSwarm ()}}
+\label{classScoutSwarm_00b7c0dcdeeeec07fe2d70eb66fe0a65}
+
+
+The allocated ressources are freed. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classScoutSwarm_4b8c1a2e57b949b3259c118fbadcb781}{
+\index{ScoutSwarm@{ScoutSwarm}!step@{step}}
+\index{step@{step}!ScoutSwarm@{ScoutSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int ScoutSwarm::step (int {\em steps} = {\tt 1})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classScoutSwarm_4b8c1a2e57b949b3259c118fbadcb781}
+
+
+The Localswarm does \hyperlink{runpso_8cpp_b4ae7205573977222eadd0795db193e2}{steps} steps. 
+
+Within one iteration the following actions are done for all the birds.\par
+ The current position is evaluated and within each neighbourhood the iteration best bird is determined. \par
+ Then the current velocity is adjusted to the neighbourhood best bird and the birds are moved. 
+
+Reimplemented from \hyperlink{classSwarm_7ab61f9797ce80e2edfb2bd881d7147c}{Swarm}.\hypertarget{classScoutSwarm_9a2a45ebe72cf9302d5d30270efbca1d}{
+\index{ScoutSwarm@{ScoutSwarm}!getUseScoutBird@{getUseScoutBird}}
+\index{getUseScoutBird@{getUseScoutBird}!ScoutSwarm@{ScoutSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int ScoutSwarm::getUseScoutBird (int {\em bird\_\-i})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classScoutSwarm_9a2a45ebe72cf9302d5d30270efbca1d}
+
+
+Returns the scout that bird\_\-i is following. 
+
+If bird\_\-i happens to be a scout -1 is returned 
+
+Reimplemented from \hyperlink{classSwarm_dc807f39f42c11f5ba10c0a82f1e6f4e}{Swarm}.\hypertarget{classScoutSwarm_0a3e4d9f343702e42a6cb64349a25711}{
+\index{ScoutSwarm@{ScoutSwarm}!updateVel@{updateVel}}
+\index{updateVel@{updateVel}!ScoutSwarm@{ScoutSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void ScoutSwarm::updateVel ()\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classScoutSwarm_0a3e4d9f343702e42a6cb64349a25711}
+
+
+The velocities of the birds are updated. 
+
+Each bird updates its velocity according to the respective scout, whose index is stored in \hyperlink{classScoutSwarm_150661cd2f47adf19273d8cc838e4b0c}{useScout} 
+
+Reimplemented from \hyperlink{classSwarm_be668c680f5bdd27bd2c4244a8a431bf}{Swarm}.
+
+\subsection{Field Documentation}
+\hypertarget{classScoutSwarm_f68e3920742ea9b04176330a517f586f}{
+\index{ScoutSwarm@{ScoutSwarm}!swapEnabled@{swapEnabled}}
+\index{swapEnabled@{swapEnabled}!ScoutSwarm@{ScoutSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool {\bf ScoutSwarm::swapEnabled}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classScoutSwarm_f68e3920742ea9b04176330a517f586f}
+
+
+Controls whether in the current step a swap is allowed. 
+
+\hypertarget{classScoutSwarm_337dd6e4974bfe13d02985c393657bf2}{
+\index{ScoutSwarm@{ScoutSwarm}!swapDelay@{swapDelay}}
+\index{swapDelay@{swapDelay}!ScoutSwarm@{ScoutSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf ScoutSwarm::swapDelay}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classScoutSwarm_337dd6e4974bfe13d02985c393657bf2}
+
+
+A swap is only allowed every swapDelay steps. 
+
+\hypertarget{classScoutSwarm_7a55b74b3e6528d7f16ac9a65357d43c}{
+\index{ScoutSwarm@{ScoutSwarm}!nrScouts@{nrScouts}}
+\index{nrScouts@{nrScouts}!ScoutSwarm@{ScoutSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf ScoutSwarm::nrScouts}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classScoutSwarm_7a55b74b3e6528d7f16ac9a65357d43c}
+
+
+The number of scouts to be used. 
+
+
+
+Reimplemented from \hyperlink{classSwarm_6ec8b4463d83af484788490c203ae166}{Swarm}.\hypertarget{classScoutSwarm_83e2982030ed6a6b503b6f577edfdc09}{
+\index{ScoutSwarm@{ScoutSwarm}!nrWorkers@{nrWorkers}}
+\index{nrWorkers@{nrWorkers}!ScoutSwarm@{ScoutSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf ScoutSwarm::nrWorkers}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classScoutSwarm_83e2982030ed6a6b503b6f577edfdc09}
+
+
+The number of workers per scout. 
+
+\hypertarget{classScoutSwarm_150661cd2f47adf19273d8cc838e4b0c}{
+\index{ScoutSwarm@{ScoutSwarm}!useScout@{useScout}}
+\index{useScout@{useScout}!ScoutSwarm@{ScoutSwarm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ {\bf ScoutSwarm::useScout}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classScoutSwarm_150661cd2f47adf19273d8cc838e4b0c}
+
+
+In this vector the respective scout of bird\_\-i is stored. 
+
+Scouts have an index of -1 stored 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+/home/andrej/workspace/hpso/pso\_\-src/\hyperlink{swarm_8h}{swarm.h}\item 
+/home/andrej/workspace/hpso/pso\_\-src/\hyperlink{swarm_8cpp}{swarm.cpp}\end{CompactItemize}

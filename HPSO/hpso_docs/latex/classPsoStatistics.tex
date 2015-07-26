@@ -1,0 +1,559 @@
+\hypertarget{classPsoStatistics}{
+\section{PsoStatistics Class Reference}
+\label{classPsoStatistics}\index{PsoStatistics@{PsoStatistics}}
+}
+All of the data for evaluation is collected here.  
+
+
+{\tt \#include $<$pso\_\-statistics.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classPsoStatistics_33694c00160dc114f263bd4bb53ad326}{PsoStatistics} (int steps\_\-in=1000, int \hyperlink{runpso_8cpp_d12fc34ce789bce6c8a05d8a17138534}{height}=0, int \hyperlink{runpso_8cpp_862f1f1b7a79e1acd3a882c444a7fa62}{branches}=0)
+\begin{CompactList}\small\item\em The constructor for the statistics logging. \item\end{CompactList}\item 
+\hyperlink{classPsoStatistics_4ac7c7d98d5b2e7f7f402ffae750e01d}{$\sim$PsoStatistics} ()
+\item 
+void \hyperlink{classPsoStatistics_1d3cbd813114a32bf18cc71c6a86251e}{addGlobalBest} (double val)
+\item 
+void \hyperlink{classPsoStatistics_22645aac349492460cb782a7c87ed3f4}{addActualGlobalBest} (double val)
+\begin{CompactList}\small\item\em For noisy functions, the value at the best perceived position. \item\end{CompactList}\item 
+void \hyperlink{classPsoStatistics_05194411c59d0027efa884a4cee08fd3}{addIterationBest} (double val)
+\item 
+void \hyperlink{classPsoStatistics_1fd7ea6e68ab77ad741a0dea3a26012e}{addCurrentError} (double val)
+\begin{CompactList}\small\item\em Log the current function error. \item\end{CompactList}\item 
+void \hyperlink{classPsoStatistics_3d49bfd4ef524a1e00bdc3fd60fec100}{addGbestInSubswarm} (int subswarm)
+\begin{CompactList}\small\item\em Log the gbest in the divided \hyperlink{classDynamicPyramidSwarm}{DynamicPyramidSwarm}. \item\end{CompactList}\item 
+void \hyperlink{classPsoStatistics_f6a8ad5a404e02507a2e8bbaa1235c0f}{initAverage} ()
+\item 
+void \hyperlink{classPsoStatistics_6ff0044f38bab5187ac001bce0d73a5d}{addAverage} (double val)
+\item 
+void \hyperlink{classPsoStatistics_d3e52ecec8fefe72150dd6b53abe6c12}{finishAverage} (int \hyperlink{runpso_8cpp_439227feff9d7f55384e8780cfc2eb82}{size})
+\item 
+void \hyperlink{classPsoStatistics_c9c254251cc94ff10cd386024aa9596d}{swapped} (int level)
+\item 
+void \hyperlink{classPsoStatistics_b2d2a9dcc6d8768be003c8a32d99c308}{evaluated} ()
+\item 
+void \hyperlink{classPsoStatistics_84f90498fd9477122cf1dd5541a18691}{changeDetected} (bool change)
+\item 
+double \hyperlink{classPsoStatistics_73939838a30fc8acd1ae82f8565775a6}{getGlobalBest} (int step)
+\item 
+double \hyperlink{classPsoStatistics_da296b91e976a0d5789e7a79e4b1dccf}{getActualGlobalBest} (int step)
+\item 
+double \hyperlink{classPsoStatistics_dabe260a05e09982ab891075ac380450}{getIterationBest} (int step)
+\item 
+double \hyperlink{classPsoStatistics_643bb60f8bef5aa5015c8d562bd4785b}{getAverage} (int step)
+\item 
+int \hyperlink{classPsoStatistics_891f35f4f6e8a29f47b4e8537ba23e4b}{getNrSwapped} (int step)
+\begin{CompactList}\small\item\em Get the number of all swaps in \hyperlink{classPyramidSwarm}{PyramidSwarm} until step. \item\end{CompactList}\item 
+int \hyperlink{classPsoStatistics_fbff3218d9cf6a42ba38ac14d9c92fdd}{getNrSwappedAt} (int step)
+\begin{CompactList}\small\item\em Get the number of swaps in \hyperlink{classPyramidSwarm}{PyramidSwarm} at step. \item\end{CompactList}\item 
+int \hyperlink{classPsoStatistics_b40a0814c7489543ab403ca96deefbf8}{getCurrentNrSwapped} ()
+\begin{CompactList}\small\item\em Get the current number of swaps in \hyperlink{classPyramidSwarm}{PyramidSwarm} this iteration. \item\end{CompactList}\item 
+int \hyperlink{classPsoStatistics_510212cbbf51016b23b7fa5137da665d}{getNrSwappedLevel} (int step, int level)
+\begin{CompactList}\small\item\em Get the number of swaps until step in the given level of \hyperlink{classPyramidSwarm}{PyramidSwarm}. \item\end{CompactList}\item 
+int \hyperlink{classPsoStatistics_381381c8157a927f1c10eb1a0c7160e1}{getNrEvaluations} (int step)
+\begin{CompactList}\small\item\em The number of functions evaluations until step. \item\end{CompactList}\item 
+bool \hyperlink{classPsoStatistics_bb314ded9c4e4e3119c0db22946d5064}{isChangeDetected} (int step)
+\begin{CompactList}\small\item\em Whether a change was detected at step int. \item\end{CompactList}\item 
+double \hyperlink{classPsoStatistics_edd03fdca35f19935b9b503078d694df}{getCurrentError} (int step)
+\begin{CompactList}\small\item\em Return the current error for step. \item\end{CompactList}\item 
+int \hyperlink{classPsoStatistics_8f0897278274f87ddbc510a16f31bc33}{getGbestInSubswarm} (int step)
+\begin{CompactList}\small\item\em Return the gbest position in the divided \hyperlink{classDynamicPyramidSwarm}{DynamicPyramidSwarm}, -1 otherwise. \item\end{CompactList}\item 
+void \hyperlink{classPsoStatistics_7716ae0c84ec1c5a46410eb3ca8ba61f}{addDiversitySubtree} (int subtree, double diversity)
+\begin{CompactList}\small\item\em Collect the diversity for the given subtree. \item\end{CompactList}\item 
+double \hyperlink{classPsoStatistics_f67cf355e48366ad9dcd5c0a08f42d87}{getDiversitySubtree} (int step, int subtree)
+\begin{CompactList}\small\item\em Return the diversity for the given subtree at step. \item\end{CompactList}\item 
+void \hyperlink{classPsoStatistics_6eeabeed3d61750743e14c6edadffd6d}{psoStepDone} ()
+\begin{CompactList}\small\item\em Increase \hyperlink{classPsoStatistics_6f6a1e27328b88d53224fa45138bb1ef}{psoStep}. \item\end{CompactList}\item 
+void \hyperlink{classPsoStatistics_5a4bd7d3c0f620a4441263aa366c7ef9}{goalReached} ()
+\begin{CompactList}\small\item\em Called by \hyperlink{classPSO}{PSO} if the given goal for the optimization function is reached. \item\end{CompactList}\item 
+int \hyperlink{classPsoStatistics_bef775b48736dda499fdff45c9e047c0}{getGoalReachedStep} ()
+\begin{CompactList}\small\item\em Returns the step in which the given goal was reached. \item\end{CompactList}\item 
+void \hyperlink{classPsoStatistics_032e6c1d794cf3c6dd083c20d3a6ad17}{optReached} ()
+\begin{CompactList}\small\item\em Called by \hyperlink{classPSO}{PSO} if the given optimum value for the optimization function is reached. \item\end{CompactList}\item 
+int \hyperlink{classPsoStatistics_eebf5de7f3d5d624caba604747d149c4}{getOptReachedStep} ()
+\begin{CompactList}\small\item\em Returns the step in which the given optimum was reached. \item\end{CompactList}\item 
+int \hyperlink{classPsoStatistics_7f0b1661dfa4627c0e2e15020ab6b83e}{getCurrentStep} ()
+\item 
+double $\ast$ \hyperlink{classPsoStatistics_ac6c4899720fbe600b094ad171839f9d}{calculateSidestepStats} (double initSidestep, vector$<$ \hyperlink{classBird}{Bird} $\ast$ $>$ \hyperlink{runpso_8cpp_d109228d8e9242dab1ff75e8dc3e6787}{swarm}, int nrBirds, int \hyperlink{runpso_8cpp_70b5e28b5bc3d1b63a7435c5fe50b837}{dim})
+\end{CompactItemize}
+\subsection*{Data Fields}
+\begin{CompactItemize}
+\item 
+int \hyperlink{classPsoStatistics_5044b5ce808f338d3b4048db731ccc2a}{currNrSwapped}
+\begin{CompactList}\small\item\em The number of swaps performed in the current iteration. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+double \hyperlink{classPsoStatistics_12fc174bcbad0248b48a356cf3304b29}{iterationAverage}
+\item 
+int \hyperlink{classPsoStatistics_9f08ad8f8051708b7eb1783cbe17219e}{numberLevels}
+\item 
+int \hyperlink{classPsoStatistics_2116d71d39a38afe58c096278ab054b3}{subtrees}
+\begin{CompactList}\small\item\em The number of subtrees for diversitySubtree. \item\end{CompactList}\item 
+vector$<$ int $>$ $\ast$ \hyperlink{classPsoStatistics_77332ba8e781b613b82602e0ddbbe8fe}{swappedPerLevel}
+\begin{CompactList}\small\item\em The number of swaps occured per step in \hyperlink{classPyramidSwarm}{PyramidSwarm}. \item\end{CompactList}\item 
+vector$<$ double $>$ $\ast$ \hyperlink{classPsoStatistics_08cbf891f34ca4f5b71545588d30cb9d}{diversitySubtree}
+\begin{CompactList}\small\item\em Diversity in the different subtrees. \item\end{CompactList}\item 
+vector$<$ double $>$ \hyperlink{classPsoStatistics_d722cb30c693021e23678f7ea04e59cb}{globalBest}
+\item 
+vector$<$ double $>$ \hyperlink{classPsoStatistics_eed25ec71564e096eaacad2fbf0dc5cc}{actualGlobalBest}
+\item 
+vector$<$ double $>$ \hyperlink{classPsoStatistics_aaf855c6f7fbf4fc3e2f297d3b047541}{iterationBest}
+\item 
+vector$<$ double $>$ \hyperlink{classPsoStatistics_916e5a0000c614dc4e29a59f83f0fba8}{average}
+\item 
+vector$<$ int $>$ \hyperlink{classPsoStatistics_de2e6696a7c404891fe80ff4c2bfcaa3}{nrEvaluations}
+\begin{CompactList}\small\item\em Total number of function evaluations. \item\end{CompactList}\item 
+vector$<$ bool $>$ \hyperlink{classPsoStatistics_003f8a7beb9d9f89fb3d035d018b18a4}{detectedChanges}
+\item 
+vector$<$ double $>$ \hyperlink{classPsoStatistics_7e0361a41053ac76931c909d97831487}{currentError}
+\begin{CompactList}\small\item\em The current Error from the global optimum. \item\end{CompactList}\item 
+vector$<$ int $>$ \hyperlink{classPsoStatistics_3b08f43d32d136b9cf3eac9001d7e6de}{gbestInSubswarm}
+\begin{CompactList}\small\item\em In which subswarm of the divided \hyperlink{classDynamicPyramidSwarm}{DynamicPyramidSwarm} is the gbest. \item\end{CompactList}\item 
+int \hyperlink{classPsoStatistics_d4b9e6fa2b084958183b90d555103b15}{goalReachedStep}
+\begin{CompactList}\small\item\em The step in which the given goal for the optimization function is reached. \item\end{CompactList}\item 
+int \hyperlink{classPsoStatistics_714187ea1f5645543c0250d19018d344}{optReachedStep}
+\begin{CompactList}\small\item\em The step in which the global optimum for the optimization function is reached. \item\end{CompactList}\item 
+int \hyperlink{classPsoStatistics_6f6a1e27328b88d53224fa45138bb1ef}{psoStep}
+\begin{CompactList}\small\item\em The number of iterations done. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+All of the data for evaluation is collected here. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPsoStatistics_33694c00160dc114f263bd4bb53ad326}{
+\index{PsoStatistics@{PsoStatistics}!PsoStatistics@{PsoStatistics}}
+\index{PsoStatistics@{PsoStatistics}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}PsoStatistics::PsoStatistics (int {\em steps\_\-in} = {\tt 1000}, \/  int {\em height} = {\tt 0}, \/  int {\em branches} = {\tt 0})}}
+\label{classPsoStatistics_33694c00160dc114f263bd4bb53ad326}
+
+
+The constructor for the statistics logging. 
+
+Defining the size of \hyperlink{classPsoStatistics_77332ba8e781b613b82602e0ddbbe8fe}{swappedPerLevel} for the \hyperlink{classPyramidSwarm}{PyramidSwarm} \begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+steps\_\-in}]The reserved size for the vectors \end{description}
+\end{Desc}
+\hypertarget{classPsoStatistics_4ac7c7d98d5b2e7f7f402ffae750e01d}{
+\index{PsoStatistics@{PsoStatistics}!$\sim$PsoStatistics@{$\sim$PsoStatistics}}
+\index{$\sim$PsoStatistics@{$\sim$PsoStatistics}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}PsoStatistics::$\sim$PsoStatistics ()}}
+\label{classPsoStatistics_4ac7c7d98d5b2e7f7f402ffae750e01d}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPsoStatistics_1d3cbd813114a32bf18cc71c6a86251e}{
+\index{PsoStatistics@{PsoStatistics}!addGlobalBest@{addGlobalBest}}
+\index{addGlobalBest@{addGlobalBest}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void PsoStatistics::addGlobalBest (double {\em val})}}
+\label{classPsoStatistics_1d3cbd813114a32bf18cc71c6a86251e}
+
+
+\hypertarget{classPsoStatistics_22645aac349492460cb782a7c87ed3f4}{
+\index{PsoStatistics@{PsoStatistics}!addActualGlobalBest@{addActualGlobalBest}}
+\index{addActualGlobalBest@{addActualGlobalBest}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void PsoStatistics::addActualGlobalBest (double {\em val})}}
+\label{classPsoStatistics_22645aac349492460cb782a7c87ed3f4}
+
+
+For noisy functions, the value at the best perceived position. 
+
+\hypertarget{classPsoStatistics_05194411c59d0027efa884a4cee08fd3}{
+\index{PsoStatistics@{PsoStatistics}!addIterationBest@{addIterationBest}}
+\index{addIterationBest@{addIterationBest}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void PsoStatistics::addIterationBest (double {\em val})}}
+\label{classPsoStatistics_05194411c59d0027efa884a4cee08fd3}
+
+
+\hypertarget{classPsoStatistics_1fd7ea6e68ab77ad741a0dea3a26012e}{
+\index{PsoStatistics@{PsoStatistics}!addCurrentError@{addCurrentError}}
+\index{addCurrentError@{addCurrentError}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void PsoStatistics::addCurrentError (double {\em val})}}
+\label{classPsoStatistics_1fd7ea6e68ab77ad741a0dea3a26012e}
+
+
+Log the current function error. 
+
+\hypertarget{classPsoStatistics_3d49bfd4ef524a1e00bdc3fd60fec100}{
+\index{PsoStatistics@{PsoStatistics}!addGbestInSubswarm@{addGbestInSubswarm}}
+\index{addGbestInSubswarm@{addGbestInSubswarm}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void PsoStatistics::addGbestInSubswarm (int {\em subswarm})}}
+\label{classPsoStatistics_3d49bfd4ef524a1e00bdc3fd60fec100}
+
+
+Log the gbest in the divided \hyperlink{classDynamicPyramidSwarm}{DynamicPyramidSwarm}. 
+
+\hypertarget{classPsoStatistics_f6a8ad5a404e02507a2e8bbaa1235c0f}{
+\index{PsoStatistics@{PsoStatistics}!initAverage@{initAverage}}
+\index{initAverage@{initAverage}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void PsoStatistics::initAverage ()}}
+\label{classPsoStatistics_f6a8ad5a404e02507a2e8bbaa1235c0f}
+
+
+\hypertarget{classPsoStatistics_6ff0044f38bab5187ac001bce0d73a5d}{
+\index{PsoStatistics@{PsoStatistics}!addAverage@{addAverage}}
+\index{addAverage@{addAverage}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void PsoStatistics::addAverage (double {\em val})}}
+\label{classPsoStatistics_6ff0044f38bab5187ac001bce0d73a5d}
+
+
+\hypertarget{classPsoStatistics_d3e52ecec8fefe72150dd6b53abe6c12}{
+\index{PsoStatistics@{PsoStatistics}!finishAverage@{finishAverage}}
+\index{finishAverage@{finishAverage}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void PsoStatistics::finishAverage (int {\em size})}}
+\label{classPsoStatistics_d3e52ecec8fefe72150dd6b53abe6c12}
+
+
+\hypertarget{classPsoStatistics_c9c254251cc94ff10cd386024aa9596d}{
+\index{PsoStatistics@{PsoStatistics}!swapped@{swapped}}
+\index{swapped@{swapped}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void PsoStatistics::swapped (int {\em level})}}
+\label{classPsoStatistics_c9c254251cc94ff10cd386024aa9596d}
+
+
+\hypertarget{classPsoStatistics_b2d2a9dcc6d8768be003c8a32d99c308}{
+\index{PsoStatistics@{PsoStatistics}!evaluated@{evaluated}}
+\index{evaluated@{evaluated}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void PsoStatistics::evaluated ()}}
+\label{classPsoStatistics_b2d2a9dcc6d8768be003c8a32d99c308}
+
+
+\hypertarget{classPsoStatistics_84f90498fd9477122cf1dd5541a18691}{
+\index{PsoStatistics@{PsoStatistics}!changeDetected@{changeDetected}}
+\index{changeDetected@{changeDetected}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void PsoStatistics::changeDetected (bool {\em change})}}
+\label{classPsoStatistics_84f90498fd9477122cf1dd5541a18691}
+
+
+\hypertarget{classPsoStatistics_73939838a30fc8acd1ae82f8565775a6}{
+\index{PsoStatistics@{PsoStatistics}!getGlobalBest@{getGlobalBest}}
+\index{getGlobalBest@{getGlobalBest}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double PsoStatistics::getGlobalBest (int {\em step})}}
+\label{classPsoStatistics_73939838a30fc8acd1ae82f8565775a6}
+
+
+\hypertarget{classPsoStatistics_da296b91e976a0d5789e7a79e4b1dccf}{
+\index{PsoStatistics@{PsoStatistics}!getActualGlobalBest@{getActualGlobalBest}}
+\index{getActualGlobalBest@{getActualGlobalBest}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double PsoStatistics::getActualGlobalBest (int {\em step})}}
+\label{classPsoStatistics_da296b91e976a0d5789e7a79e4b1dccf}
+
+
+\hypertarget{classPsoStatistics_dabe260a05e09982ab891075ac380450}{
+\index{PsoStatistics@{PsoStatistics}!getIterationBest@{getIterationBest}}
+\index{getIterationBest@{getIterationBest}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double PsoStatistics::getIterationBest (int {\em step})}}
+\label{classPsoStatistics_dabe260a05e09982ab891075ac380450}
+
+
+\hypertarget{classPsoStatistics_643bb60f8bef5aa5015c8d562bd4785b}{
+\index{PsoStatistics@{PsoStatistics}!getAverage@{getAverage}}
+\index{getAverage@{getAverage}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double PsoStatistics::getAverage (int {\em step})}}
+\label{classPsoStatistics_643bb60f8bef5aa5015c8d562bd4785b}
+
+
+\hypertarget{classPsoStatistics_891f35f4f6e8a29f47b4e8537ba23e4b}{
+\index{PsoStatistics@{PsoStatistics}!getNrSwapped@{getNrSwapped}}
+\index{getNrSwapped@{getNrSwapped}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int PsoStatistics::getNrSwapped (int {\em step})}}
+\label{classPsoStatistics_891f35f4f6e8a29f47b4e8537ba23e4b}
+
+
+Get the number of all swaps in \hyperlink{classPyramidSwarm}{PyramidSwarm} until step. 
+
+\hypertarget{classPsoStatistics_fbff3218d9cf6a42ba38ac14d9c92fdd}{
+\index{PsoStatistics@{PsoStatistics}!getNrSwappedAt@{getNrSwappedAt}}
+\index{getNrSwappedAt@{getNrSwappedAt}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int PsoStatistics::getNrSwappedAt (int {\em step})}}
+\label{classPsoStatistics_fbff3218d9cf6a42ba38ac14d9c92fdd}
+
+
+Get the number of swaps in \hyperlink{classPyramidSwarm}{PyramidSwarm} at step. 
+
+\hypertarget{classPsoStatistics_b40a0814c7489543ab403ca96deefbf8}{
+\index{PsoStatistics@{PsoStatistics}!getCurrentNrSwapped@{getCurrentNrSwapped}}
+\index{getCurrentNrSwapped@{getCurrentNrSwapped}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int PsoStatistics::getCurrentNrSwapped ()}}
+\label{classPsoStatistics_b40a0814c7489543ab403ca96deefbf8}
+
+
+Get the current number of swaps in \hyperlink{classPyramidSwarm}{PyramidSwarm} this iteration. 
+
+\hypertarget{classPsoStatistics_510212cbbf51016b23b7fa5137da665d}{
+\index{PsoStatistics@{PsoStatistics}!getNrSwappedLevel@{getNrSwappedLevel}}
+\index{getNrSwappedLevel@{getNrSwappedLevel}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int PsoStatistics::getNrSwappedLevel (int {\em step}, \/  int {\em level})}}
+\label{classPsoStatistics_510212cbbf51016b23b7fa5137da665d}
+
+
+Get the number of swaps until step in the given level of \hyperlink{classPyramidSwarm}{PyramidSwarm}. 
+
+\hypertarget{classPsoStatistics_381381c8157a927f1c10eb1a0c7160e1}{
+\index{PsoStatistics@{PsoStatistics}!getNrEvaluations@{getNrEvaluations}}
+\index{getNrEvaluations@{getNrEvaluations}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int PsoStatistics::getNrEvaluations (int {\em step})}}
+\label{classPsoStatistics_381381c8157a927f1c10eb1a0c7160e1}
+
+
+The number of functions evaluations until step. 
+
+\hypertarget{classPsoStatistics_bb314ded9c4e4e3119c0db22946d5064}{
+\index{PsoStatistics@{PsoStatistics}!isChangeDetected@{isChangeDetected}}
+\index{isChangeDetected@{isChangeDetected}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool PsoStatistics::isChangeDetected (int {\em step})}}
+\label{classPsoStatistics_bb314ded9c4e4e3119c0db22946d5064}
+
+
+Whether a change was detected at step int. 
+
+\hypertarget{classPsoStatistics_edd03fdca35f19935b9b503078d694df}{
+\index{PsoStatistics@{PsoStatistics}!getCurrentError@{getCurrentError}}
+\index{getCurrentError@{getCurrentError}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double PsoStatistics::getCurrentError (int {\em step})}}
+\label{classPsoStatistics_edd03fdca35f19935b9b503078d694df}
+
+
+Return the current error for step. 
+
+\hypertarget{classPsoStatistics_8f0897278274f87ddbc510a16f31bc33}{
+\index{PsoStatistics@{PsoStatistics}!getGbestInSubswarm@{getGbestInSubswarm}}
+\index{getGbestInSubswarm@{getGbestInSubswarm}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int PsoStatistics::getGbestInSubswarm (int {\em step})}}
+\label{classPsoStatistics_8f0897278274f87ddbc510a16f31bc33}
+
+
+Return the gbest position in the divided \hyperlink{classDynamicPyramidSwarm}{DynamicPyramidSwarm}, -1 otherwise. 
+
+\hypertarget{classPsoStatistics_7716ae0c84ec1c5a46410eb3ca8ba61f}{
+\index{PsoStatistics@{PsoStatistics}!addDiversitySubtree@{addDiversitySubtree}}
+\index{addDiversitySubtree@{addDiversitySubtree}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void PsoStatistics::addDiversitySubtree (int {\em subtree}, \/  double {\em diversity})}}
+\label{classPsoStatistics_7716ae0c84ec1c5a46410eb3ca8ba61f}
+
+
+Collect the diversity for the given subtree. 
+
+The random subtree is stored last, before that are the \hyperlink{runpso_8cpp_862f1f1b7a79e1acd3a882c444a7fa62}{branches} subtrees below the root \hypertarget{classPsoStatistics_f67cf355e48366ad9dcd5c0a08f42d87}{
+\index{PsoStatistics@{PsoStatistics}!getDiversitySubtree@{getDiversitySubtree}}
+\index{getDiversitySubtree@{getDiversitySubtree}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double PsoStatistics::getDiversitySubtree (int {\em step}, \/  int {\em subtree})}}
+\label{classPsoStatistics_f67cf355e48366ad9dcd5c0a08f42d87}
+
+
+Return the diversity for the given subtree at step. 
+
+The random subtree is stored last, before that are the \hyperlink{runpso_8cpp_862f1f1b7a79e1acd3a882c444a7fa62}{branches} subtrees below the root \hypertarget{classPsoStatistics_6eeabeed3d61750743e14c6edadffd6d}{
+\index{PsoStatistics@{PsoStatistics}!psoStepDone@{psoStepDone}}
+\index{psoStepDone@{psoStepDone}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void PsoStatistics::psoStepDone ()}}
+\label{classPsoStatistics_6eeabeed3d61750743e14c6edadffd6d}
+
+
+Increase \hyperlink{classPsoStatistics_6f6a1e27328b88d53224fa45138bb1ef}{psoStep}. 
+
+\hypertarget{classPsoStatistics_5a4bd7d3c0f620a4441263aa366c7ef9}{
+\index{PsoStatistics@{PsoStatistics}!goalReached@{goalReached}}
+\index{goalReached@{goalReached}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void PsoStatistics::goalReached ()}}
+\label{classPsoStatistics_5a4bd7d3c0f620a4441263aa366c7ef9}
+
+
+Called by \hyperlink{classPSO}{PSO} if the given goal for the optimization function is reached. 
+
+The iteration in which the goal is first reached is stored in \hyperlink{classPsoStatistics_d4b9e6fa2b084958183b90d555103b15}{goalReachedStep} \hypertarget{classPsoStatistics_bef775b48736dda499fdff45c9e047c0}{
+\index{PsoStatistics@{PsoStatistics}!getGoalReachedStep@{getGoalReachedStep}}
+\index{getGoalReachedStep@{getGoalReachedStep}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int PsoStatistics::getGoalReachedStep ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classPsoStatistics_bef775b48736dda499fdff45c9e047c0}
+
+
+Returns the step in which the given goal was reached. 
+
+\hypertarget{classPsoStatistics_032e6c1d794cf3c6dd083c20d3a6ad17}{
+\index{PsoStatistics@{PsoStatistics}!optReached@{optReached}}
+\index{optReached@{optReached}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void PsoStatistics::optReached ()}}
+\label{classPsoStatistics_032e6c1d794cf3c6dd083c20d3a6ad17}
+
+
+Called by \hyperlink{classPSO}{PSO} if the given optimum value for the optimization function is reached. 
+
+The iteration in which the optimum is first reached is stored in \hyperlink{classPsoStatistics_d4b9e6fa2b084958183b90d555103b15}{goalReachedStep} \hypertarget{classPsoStatistics_eebf5de7f3d5d624caba604747d149c4}{
+\index{PsoStatistics@{PsoStatistics}!getOptReachedStep@{getOptReachedStep}}
+\index{getOptReachedStep@{getOptReachedStep}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int PsoStatistics::getOptReachedStep ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classPsoStatistics_eebf5de7f3d5d624caba604747d149c4}
+
+
+Returns the step in which the given optimum was reached. 
+
+\hypertarget{classPsoStatistics_7f0b1661dfa4627c0e2e15020ab6b83e}{
+\index{PsoStatistics@{PsoStatistics}!getCurrentStep@{getCurrentStep}}
+\index{getCurrentStep@{getCurrentStep}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int PsoStatistics::getCurrentStep ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classPsoStatistics_7f0b1661dfa4627c0e2e15020ab6b83e}
+
+
+\hypertarget{classPsoStatistics_ac6c4899720fbe600b094ad171839f9d}{
+\index{PsoStatistics@{PsoStatistics}!calculateSidestepStats@{calculateSidestepStats}}
+\index{calculateSidestepStats@{calculateSidestepStats}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double $\ast$ PsoStatistics::calculateSidestepStats (double {\em initSidestep}, \/  vector$<$ {\bf Bird} $\ast$ $>$ {\em swarm}, \/  int {\em nrBirds}, \/  int {\em dim})}}
+\label{classPsoStatistics_ac6c4899720fbe600b094ad171839f9d}
+
+
+
+
+\subsection{Field Documentation}
+\hypertarget{classPsoStatistics_5044b5ce808f338d3b4048db731ccc2a}{
+\index{PsoStatistics@{PsoStatistics}!currNrSwapped@{currNrSwapped}}
+\index{currNrSwapped@{currNrSwapped}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf PsoStatistics::currNrSwapped}}}
+\label{classPsoStatistics_5044b5ce808f338d3b4048db731ccc2a}
+
+
+The number of swaps performed in the current iteration. 
+
+Required for \hyperlink{pso_8h_ea087f59f65df7bbf4798bccd8a0241614e6414cc28d2d7ed30881a1cc02c4db}{hierarchyChangeDetect} \hypertarget{classPsoStatistics_12fc174bcbad0248b48a356cf3304b29}{
+\index{PsoStatistics@{PsoStatistics}!iterationAverage@{iterationAverage}}
+\index{iterationAverage@{iterationAverage}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf PsoStatistics::iterationAverage}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classPsoStatistics_12fc174bcbad0248b48a356cf3304b29}
+
+
+\hypertarget{classPsoStatistics_9f08ad8f8051708b7eb1783cbe17219e}{
+\index{PsoStatistics@{PsoStatistics}!numberLevels@{numberLevels}}
+\index{numberLevels@{numberLevels}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf PsoStatistics::numberLevels}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classPsoStatistics_9f08ad8f8051708b7eb1783cbe17219e}
+
+
+\hypertarget{classPsoStatistics_2116d71d39a38afe58c096278ab054b3}{
+\index{PsoStatistics@{PsoStatistics}!subtrees@{subtrees}}
+\index{subtrees@{subtrees}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf PsoStatistics::subtrees}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classPsoStatistics_2116d71d39a38afe58c096278ab054b3}
+
+
+The number of subtrees for diversitySubtree. 
+
+required to ignore diversitySubtree for seqSwarm etc. \hypertarget{classPsoStatistics_77332ba8e781b613b82602e0ddbbe8fe}{
+\index{PsoStatistics@{PsoStatistics}!swappedPerLevel@{swappedPerLevel}}
+\index{swappedPerLevel@{swappedPerLevel}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$$\ast$ {\bf PsoStatistics::swappedPerLevel}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classPsoStatistics_77332ba8e781b613b82602e0ddbbe8fe}
+
+
+The number of swaps occured per step in \hyperlink{classPyramidSwarm}{PyramidSwarm}. 
+
+For each level the number of swaps in \hyperlink{classPyramidSwarm}{PyramidSwarm} is counted cumulative Starting with the top level \hypertarget{classPsoStatistics_08cbf891f34ca4f5b71545588d30cb9d}{
+\index{PsoStatistics@{PsoStatistics}!diversitySubtree@{diversitySubtree}}
+\index{diversitySubtree@{diversitySubtree}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$$\ast$ {\bf PsoStatistics::diversitySubtree}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classPsoStatistics_08cbf891f34ca4f5b71545588d30cb9d}
+
+
+Diversity in the different subtrees. 
+
+The random subtree is stored last, before that are the \hyperlink{runpso_8cpp_862f1f1b7a79e1acd3a882c444a7fa62}{branches} subtrees below the root \hypertarget{classPsoStatistics_d722cb30c693021e23678f7ea04e59cb}{
+\index{PsoStatistics@{PsoStatistics}!globalBest@{globalBest}}
+\index{globalBest@{globalBest}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ {\bf PsoStatistics::globalBest}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classPsoStatistics_d722cb30c693021e23678f7ea04e59cb}
+
+
+\hypertarget{classPsoStatistics_eed25ec71564e096eaacad2fbf0dc5cc}{
+\index{PsoStatistics@{PsoStatistics}!actualGlobalBest@{actualGlobalBest}}
+\index{actualGlobalBest@{actualGlobalBest}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ {\bf PsoStatistics::actualGlobalBest}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classPsoStatistics_eed25ec71564e096eaacad2fbf0dc5cc}
+
+
+\hypertarget{classPsoStatistics_aaf855c6f7fbf4fc3e2f297d3b047541}{
+\index{PsoStatistics@{PsoStatistics}!iterationBest@{iterationBest}}
+\index{iterationBest@{iterationBest}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ {\bf PsoStatistics::iterationBest}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classPsoStatistics_aaf855c6f7fbf4fc3e2f297d3b047541}
+
+
+\hypertarget{classPsoStatistics_916e5a0000c614dc4e29a59f83f0fba8}{
+\index{PsoStatistics@{PsoStatistics}!average@{average}}
+\index{average@{average}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ {\bf PsoStatistics::average}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classPsoStatistics_916e5a0000c614dc4e29a59f83f0fba8}
+
+
+\hypertarget{classPsoStatistics_de2e6696a7c404891fe80ff4c2bfcaa3}{
+\index{PsoStatistics@{PsoStatistics}!nrEvaluations@{nrEvaluations}}
+\index{nrEvaluations@{nrEvaluations}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ {\bf PsoStatistics::nrEvaluations}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classPsoStatistics_de2e6696a7c404891fe80ff4c2bfcaa3}
+
+
+Total number of function evaluations. 
+
+\hypertarget{classPsoStatistics_003f8a7beb9d9f89fb3d035d018b18a4}{
+\index{PsoStatistics@{PsoStatistics}!detectedChanges@{detectedChanges}}
+\index{detectedChanges@{detectedChanges}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}vector$<$bool$>$ {\bf PsoStatistics::detectedChanges}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classPsoStatistics_003f8a7beb9d9f89fb3d035d018b18a4}
+
+
+\hypertarget{classPsoStatistics_7e0361a41053ac76931c909d97831487}{
+\index{PsoStatistics@{PsoStatistics}!currentError@{currentError}}
+\index{currentError@{currentError}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ {\bf PsoStatistics::currentError}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classPsoStatistics_7e0361a41053ac76931c909d97831487}
+
+
+The current Error from the global optimum. 
+
+Currently only used for moving\_\-peaks \hypertarget{classPsoStatistics_3b08f43d32d136b9cf3eac9001d7e6de}{
+\index{PsoStatistics@{PsoStatistics}!gbestInSubswarm@{gbestInSubswarm}}
+\index{gbestInSubswarm@{gbestInSubswarm}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ {\bf PsoStatistics::gbestInSubswarm}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classPsoStatistics_3b08f43d32d136b9cf3eac9001d7e6de}
+
+
+In which subswarm of the divided \hyperlink{classDynamicPyramidSwarm}{DynamicPyramidSwarm} is the gbest. 
+
+Only used for \hyperlink{classDynamicPyramidSwarm}{DynamicPyramidSwarm} and only if it is divided \hypertarget{classPsoStatistics_d4b9e6fa2b084958183b90d555103b15}{
+\index{PsoStatistics@{PsoStatistics}!goalReachedStep@{goalReachedStep}}
+\index{goalReachedStep@{goalReachedStep}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf PsoStatistics::goalReachedStep}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classPsoStatistics_d4b9e6fa2b084958183b90d555103b15}
+
+
+The step in which the given goal for the optimization function is reached. 
+
+\hypertarget{classPsoStatistics_714187ea1f5645543c0250d19018d344}{
+\index{PsoStatistics@{PsoStatistics}!optReachedStep@{optReachedStep}}
+\index{optReachedStep@{optReachedStep}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf PsoStatistics::optReachedStep}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classPsoStatistics_714187ea1f5645543c0250d19018d344}
+
+
+The step in which the global optimum for the optimization function is reached. 
+
+\hypertarget{classPsoStatistics_6f6a1e27328b88d53224fa45138bb1ef}{
+\index{PsoStatistics@{PsoStatistics}!psoStep@{psoStep}}
+\index{psoStep@{psoStep}!PsoStatistics@{PsoStatistics}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf PsoStatistics::psoStep}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classPsoStatistics_6f6a1e27328b88d53224fa45138bb1ef}
+
+
+The number of iterations done. 
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+/home/andrej/workspace/hpso/pso\_\-src/\hyperlink{pso__statistics_8h}{pso\_\-statistics.h}\item 
+/home/andrej/workspace/hpso/pso\_\-src/\hyperlink{pso__statistics_8cpp}{pso\_\-statistics.cpp}\end{CompactItemize}
