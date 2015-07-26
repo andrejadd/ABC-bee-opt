@@ -1,9 +1,0 @@
-<area shape="rect" href="$classBird.html#ce844c5f8c4b379fcbf7dac32689d651" title="Return the personal best position." alt="" coords="191,78,311,102">
-<area shape="rect" href="$classBird.html#96328be626963fe73475a97290ffb54c" title="Update velocity according to global best." alt="" coords="183,126,319,150">
-<area shape="rect" href="$classPSO.html#3ff735011be4811df1ab4d4366f84190" title="Restrict v to vmax." alt="" coords="379,6,507,30">
-<area shape="rect" href="$classPSO.html#93bb160787761b05a7a8512771ac0117" title="The c1 parameter is returned." alt="" coords="395,54,491,78">
-<area shape="rect" href="$classPSO.html#39340d6c779a00395bca0b293aa081a9" title="The c2 parameter is returned." alt="" coords="395,102,491,126">
-<area shape="rect" href="$classPSO.html#13988ca5dfb95908547160ba71cf8c00" title="The constriction factor is returned." alt="" coords="368,150,517,174">
-<area shape="rect" href="$classPSO.html#cb91e8b9fd0329a817d7d435ca75c718" title="The w parameter is returned." alt="" coords="397,198,488,222">
-<area shape="rect" href="$tools_8cpp.html#f2a7cdf42aa11ce7d0b94e306f4226bc" title="Return double from [0;1)." alt="" coords="400,246,485,270">
-<area shape="rect" href="$classSwarm.html#73a690fe6e3d6550098dc8ffc2f977c2" title="Required for PyramidSwarm." alt="" coords="567,198,727,222">

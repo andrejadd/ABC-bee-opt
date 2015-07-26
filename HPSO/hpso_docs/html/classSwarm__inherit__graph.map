@@ -1,6 +1,0 @@
-<area shape="rect" href="$classLocalSwarm.html" title="The LocalSwarm has a local neighbourhood for each indivdiual." alt="" coords="8,82,99,106">
-<area shape="rect" href="$classPyramidSwarm.html" title="The PyramidSwarm implements the hierarchical version of Swarm." alt="" coords="123,82,232,106">
-<area shape="rect" href="$classRingSwarm.html" title="In the RealPyramidSwarm considerations of a real architecture were taken into account..." alt="" coords="256,82,344,106">
-<area shape="rect" href="$classScoutSwarm.html" title="The ScoutSwarm uses scouts and workers for dynamic problems." alt="" coords="368,82,464,106">
-<area shape="rect" href="$classAdaptivePyramidSwarm.html" title="The AdaptivePyramidSwarm can dynamically change its tree structure." alt="" coords="5,156,165,180">
-<area shape="rect" href="$classDynamicPyramidSwarm.html" title="The DynamicPyramidSwarm incorporates detection and response mechanisms for dynamic..." alt="" coords="189,156,349,180">

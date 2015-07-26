@@ -1,6 +1,0 @@
-<area shape="rect" href="$classPSO.html#eb56dd8010afe48a363ed5aa7b4cece5" title="return the initial sidestepwidth to be used" alt="" coords="268,54,457,78">
-<area shape="rect" href="$classSwarm.html#ba26dbec7b48abc3e5d964ac3b512ed0" title="Swarm::setInitialSidestep" alt="" coords="279,102,447,126">
-<area shape="rect" href="$classFunction.html#add009c15298f8cbbf62958f62e49b0e" title="Function::get_max_x" alt="" coords="511,6,655,30">
-<area shape="rect" href="$classFunction.html#8831e5c15811e7090a9fcc2cdae162b6" title="Function::get_min_x" alt="" coords="513,54,652,78">
-<area shape="rect" href="$classBird.html#618371d1ca2da9ff13657855dda09a85" title="Bird::initializeSidestep" alt="" coords="508,102,657,126">
-<area shape="rect" href="$classPSO.html#9da7242360b57a226143a6b60547021b" title="The dimension of the search space is returned." alt="" coords="707,102,811,126">
