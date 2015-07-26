@@ -1,0 +1,41 @@
+
+
+set term postscript enhanced
+set output "fig_sc.eps"
+
+set lmargin 5
+set rmargin 1
+
+
+
+set xrange [0:146]
+
+
+# SCHAFFFER -----------------
+
+set title "Sschaffer"
+set output "fig_sc.eps"
+
+set yrange [0:60000]
+
+set lmargin 4
+set xlabel "Nr. of Onlooker Bees"
+set ylabel "mean fct evaluations"
+
+plot 'sc_5' with lines title "neb=5", 'sc_10' with lines title "neb=10", 'sc_20' with lines title "neb=20", 'sc_30' with lines title "neb=30", 'sc_50' with lines title "neb=50", 'sc_70' with lines title "neb=70"
+
+# SPHERE --------------------
+
+set output "fig_sm.eps"
+
+set xlabel ""
+set ylabel ""
+set lmargin 1
+
+set title "Sphere"
+set yrange [2500:25000]
+
+
+plot 'sm_5' with lines title "neb=5", 'sm_10' with lines title "neb=10", 'sm_20' with lines title "neb=20", 'sm_30' with lines title "neb=30", 'sm_50' with lines title "neb=50", 'sm_70' with lines title "neb=70"
+
+

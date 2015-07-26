@@ -1,0 +1,29 @@
+
+
+set term postscript enhanced
+set output "fig_sc.eps"
+
+set lmargin 5
+set rmargin 1
+
+
+
+set xrange [0:146]
+
+
+
+# SPHERE --------------------
+
+set output "fig_sm.eps"
+
+set xlabel ""
+set ylabel ""
+set lmargin 1
+
+set title "Sphere"
+set yrange [2000:40000]
+
+
+plot 'sm_5' with lines title "neb=5", 'sm_10' with lines title "neb=10", 'sm_20' with lines title "neb=20", 'sm_30' with lines title "neb=30", 'sm_50' with lines title "neb=50", 'sm_70' with lines title "neb=70"
+
+

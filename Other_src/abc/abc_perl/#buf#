@@ -1,0 +1,29 @@
+	
+		try {
+			String line;
+	        String[] cmd = new String[1];
+	        cmd[0]= "./runWilcoxon.sh";
+	        Process p = Runtime.getRuntime().exec(cmd);
+	        BufferedReader input = new BufferedReader (new InputStreamReader(p.getInputStream()));
+	            
+	        Pattern lC_pa = Pattern.compile("p-value");
+	            
+	        while ((line = input.readLine()) != null) {
+	            	
+	        	Matcher m = lC_pa.matcher(line);
+	            if(m.find()) {
+	            	String s = line.split( " " )[5];
+	            	//String s = line.substring( 1, line.length() - 1 ).split( " " )[4] ;
+	                ld_pvalue = Double.valueOf(s);
+	                //System.out.println("p-value: " + ld_pvalue);
+	                break;
+	            }
+	         }
+	         input.close();
+	     } catch (Exception err) {
+	    	 err.printStackTrace();
+	     }
+	     	     
+		 return ld_pvalue;
+	}
+}

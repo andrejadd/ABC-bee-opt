@@ -1,0 +1,39 @@
+#!/usr/bin/perl
+
+#use s_abc;
+#use m3_abc;
+use s_abc_ratiov1;
+use statistics;
+use functions;
+
+my $runs = 1;
+my $repbest = 0;
+my $optvalue = 0.001;
+my $feval = \&functions::sphere;
+my $lb = -100;
+my $ub = 100;
+my $dim = 30;
+my $MCN = 10000;
+
+
+my @valx;
+my @valy;
+
+while($runs--) {
+
+    my ($valx, $cyclex) = s_abc::abc($repbest, 100, $optvalue, $feval, $dim, $MCN, $lb, $ub); 
+    my ($valy, $cycley) = s_abc::abc($repbest, 100, $optvalue, $feval, $dim, $MCN, $lb, $ub); 
+
+    push @x, $cyclex;
+    push @y, $cycley;
+ 
+    print $cyclex . " - " . $valx . "\t" . $cycley . " - " . $valy . "\n";
+}
+
+print "\nmean x: " . statistics::mean(@x) . "\t" . ", y: " . statistics::mean(@y) . "\n";
+
+print "p-value: " . statistics::WilcoxonRankSum(\@x, \@y) . "\n";
+
+exit;
+
+
