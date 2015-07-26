@@ -1,0 +1,41 @@
+
+package global;
+
+import TestFunction;
+
+public class Agent {
+
+    //    public Blackboard bb;
+    public TestFunction fct;    
+    public double[] position;
+    public double value;
+
+    public Agent(TestFunction fct; double[] position) {
+
+	//this.bb = blackboard;
+	this.fct = fct;
+	this.position = position;
+    }
+
+    public double[] getposition() {
+	return position;
+    }
+
+    public double solve() {
+	return fct.solve(position);
+	
+    }
+    
+    public double solve(double[] pos) {
+	return fct.solve(pos);
+    }
+
+    // ? does onlooker needs this ? put into EmployedBee if not
+    // determine which solution x1 or x2 is better, but this is defined in the fitness function fct
+    // defined here because employed and onlooker needs it
+    public boolean better(double ad_x1, double ad_x2){
+	return fct.better(ad_x1, ad_x2);
+    }
+    
+
+}

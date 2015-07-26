@@ -1,0 +1,77 @@
+
+package global;
+
+//import java.util.ArrayList;
+import java.util.Random;
+
+public class TestFunction {
+
+    Random generator;
+    private int dimension;
+    private double gd_lowerbound = -6000;
+    private double gd_upperbound = 6000;
+
+    public TestFunction(int dimension) {
+	generator = new Random(System.currentTimeMillis());
+	this.dimension = dimension;
+    }
+
+    // DO GENERATE RANDOM PARAMETER HERE BECAUSE IS FUNCTION DEPENDENT
+    public double[] getRandomParam() {
+	
+	double[] ret = new double[dimension];
+	
+	// im Interval [-600, 600]
+	for(int i = 0; i < dimension; i++) {
+	    ret[i] = (generator.nextDouble() * 1200) - 600; // nextDouble() produces in [0,1]
+	}
+	
+	return ret;
+    }
+
+    public double solve(double[] param) {
+	
+	if(dimension != param.length) {
+	    return -1; // through exception here
+	}
+
+	double sum = 0;
+	double prod = 1;
+
+	for(int i = 0; i < dimension; i++) { 
+	    //	    System.out.println("param[" + i + "] = " + param[i]);
+
+	    sum += ( param[i] * param[i] );
+	    //System.out.println("sum = " + sum);
+
+	    prod *= ( Math.cos( param[i] / Math.sqrt(i+1)));
+
+	    //System.out.println("cos(x) = " +  Math.cos( param[i]));
+	    //System.out.println("prod = " + prod);
+	}
+	
+	return (1/4000 * sum - prod + 1);
+
+    }
+
+    // if first arg matches criterio over second arg, return true
+    public boolean better(double ad_x1, double ad_x2) {
+
+	// minimize .. 
+	if(ad_x1 <= ad_x2) {
+	    return true;
+	}
+	return false;
+    }
+
+    public double checkrange(double ad_param) {
+	if(ad_param < gd_lowerbound) {
+	    return gd_lowerbound;
+	}
+	if(ad_param > gd_upperbound) {
+	    return gd_upperbound;
+	}
+
+	return ad_param;
+    }
+}

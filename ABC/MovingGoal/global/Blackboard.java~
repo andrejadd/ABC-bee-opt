@@ -1,0 +1,53 @@
+
+package global;
+
+import java.util.ArrayList;
+import global.Solution;
+
+public class Blackboard {
+
+    public ArrayList solutions;
+    
+    public Blackboard(int nrsolutions, int possize) {
+
+	solutions = new ArrayList(nrsolutions);
+
+	for(int i = 0; i < nrsolutions; i++) {
+	    Solution tmpsol = new Solution(possize);
+	    solutions.add(tmpsol);
+	}
+    }
+
+
+    public void post(int index, double[] position, double value) {
+
+	Solution sol = (Solution) solutions.get(index);
+	sol.set(position, value);
+    }
+
+    public void printall() {
+	for(int i = 0; i < solutions.size(); i++) {
+	    Solution tmpsol = (Solution) solutions.get(i);
+	    System.out.print("blackboard: ");
+	    for(int j = 0; j < tmpsol.position.length; j++) {
+		System.out.print("\t " + tmpsol.position[j]);
+	    }
+	    System.out.print(", f = " + tmpsol.value + "\n");
+	}
+
+    }
+
+    public Solution getSolution(int index) {
+	
+	return (Solution) solutions.get(index);
+	
+    }
+
+    public ArrayList getAllSolutions() {
+	
+	return solutions;
+    }
+	
+
+}
+

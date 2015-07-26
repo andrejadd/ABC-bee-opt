@@ -1,0 +1,24 @@
+
+package global;
+
+public class Solution implements Cloneable {
+
+    public double[] position;
+    public double value;
+    public double select_prob;
+
+    public Solution(int pos_size) {
+	this.position = new double[pos_size];
+    }
+
+    //	public void init(int possize) {
+    //    double[] posx = new double[possize];
+    //}
+
+    public void set(double[] ada_position, double ad_value) {
+	
+	this.position = ada_position;
+	this.value = ad_value;
+    }
+}
+
